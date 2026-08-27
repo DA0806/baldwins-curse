@@ -12,9 +12,9 @@ func _ready() -> void:
 	# Busca el inventario del jugador automáticamente en la escena actual
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
-		var inv: PlayerInventory = player.get_node_or_null("PlayerInventory")
+		var inv: PlayerInventory = player.get_node_or_null("PlayerInventory") as PlayerInventory
 		if not inv and "inventory" in player:
-			inv = player.inventory
+			inv = player.get("inventory") as PlayerInventory
 		if inv:
 			setup_inventory(inv)
 

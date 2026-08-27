@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d6rjnoedd0rf"]
+
+[ext_resource type="Script" uid="uid://slmr1c0jrisj" path="res://Scripts/ItemPickup.gd" id="1_u1r6s"]
+[ext_resource type="Shader" uid="uid://c5xk871nufs2k" path="res://Shaders/ItemShineHighlight.gdshader" id="2_uxge0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(46, 44)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u1r6s"]
+shader = ExtResource("2_uxge0")
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/shine_progress = 0.0
+shader_parameter/shine_size = 0.1
+shader_parameter/shine_angle = 45.0
+
+[node name="ItemPickup" type="Area2D" unique_id=1863476225]
+script = ExtResource("1_u1r6s")
+metadata/_custom_type_script = "uid://slmr1c0jrisj"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1142969743]
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1532940681]
+material = SubResource("ShaderMaterial_u1r6s")
+
+[node name="Label" type="Label" parent="." unique_id=105204843]
+offset_left = -31.0
+offset_top = -36.0
+offset_right = 31.0
+offset_bottom = -13.0
+horizontal_alignment = 1
+vertical_alignment = 1

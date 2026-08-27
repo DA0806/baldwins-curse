@@ -7,7 +7,30 @@ extends Area2D
 		update_appearance()
 
 # Si quieres que solo diga el nombre ("Espada") o con tecla ("[E] Espada")
-@export var show_key_prompt: bool = true 
+@export var show_key_prompt: bool = true
+
+# ==============================================================
+#  VISUALES — brillo que barre el ítem (shader de shine)
+# ==============================================================
+@export_group("Brillo")
+
+## Color del destello. El canal alfa controla la intensidad.
+@export var shine_color: Color = Color(1.0, 1.0, 1.0, 0.6)
+
+## Duración de cada barrido (el "SHINE_TIME" del ejemplo original).
+@export_range(0.1, 3.0, 0.05) var shine_duration: float = 0.8
+
+## Pausa entre barrido y barrido.
+@export_range(0.0, 5.0, 0.1) var shine_pause: float = 1.6
+
+## Ángulo del brillo en grados.
+@export_range(0.0, 89.9, 0.1) var shine_angle: float = 45.0
+
+# Ancho del brillo al inicio/fin de cada barrido (valores del ejemplo original)
+const SHINE_SIZE_MAX := 0.13
+const SHINE_SIZE_MIN := 0.01
+
+var _shine_tween: Tween
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label
@@ -24,6 +47,58 @@ func _ready() -> void:
 		prompt_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	
 	update_appearance()
+	_setup_shine()
+
+# ==============================================================
+#  VISUALES — implementación
+# ==============================================================
+func _setup_shine() -> void:
+	if not sprite.material is ShaderMaterial:
+		push_warning("ItemPickup (%s): el Sprite2D necesita un ShaderMaterial con el shader de brillo." % name)
+		return
+	
+	# Duplicamos el material para que cada pickup anime el suyo propio.
+	# Si no, todos los ítems del mapa compartirían el mismo material
+	# y sus brillos se pisarían entre sí.
+	var mat := sprite.material.duplicate() as ShaderMaterial
+	sprite.material = mat
+	
+	# Valores iniciales (equivalen a los "from" del ejemplo original)
+	mat.set_shader_parameter("shine_color", shine_color)
+	mat.set_shader_parameter("shine_angle", shine_angle)
+	mat.set_shader_parameter("shine_size", SHINE_SIZE_MAX)
+	mat.set_shader_parameter("shine_progress", 1.0)
+	
+	_start_shine_loop(mat)
+
+
+func _start_shine_loop(mat: ShaderMaterial) -> void:
+	_shine_tween = create_tween()
+	_shine_tween.set_loops()
+	
+	# --- Barrido de ida: el brillo cruza el ítem (progreso 1.0 → 0.0) ---
+	_shine_tween.set_parallel(true)
+	_shine_tween.tween_property(mat, "shader_parameter/shine_progress", 0.0, shine_duration) \
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+	# El brillo se adelgaza (arranca al 25% del barrido)
+	_shine_tween.tween_property(mat, "shader_parameter/shine_size", SHINE_SIZE_MIN, shine_duration * 0.75) \
+		.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN) \
+		.set_delay(shine_duration * 0.25)
+	
+	# --- Barrido de vuelta: el brillo regresa (progreso 0.0 → 1.0) ---
+	_shine_tween.set_parallel(false)
+	_shine_tween.tween_property(mat, "shader_parameter/shine_progress", 1.0, 0)
+	# El brillo vuelve a engordar
+	_shine_tween.parallel().tween_property(mat, "shader_parameter/shine_size", SHINE_SIZE_MAX, 0) \
+		\
+		.set_delay(shine_duration * 0.25)
+	
+	# --- Pausa antes de repetir ---
+	_shine_tween.tween_interval(shine_pause)
+
+# ==============================================================
+#  (Todo tu código original sin cambios desde aquí)
+# ==============================================================
 
 func update_appearance() -> void:
 	if not is_inside_tree() or not prompt_label or not sprite:
@@ -39,11 +114,9 @@ func update_appearance() -> void:
 		sprite.texture = null
 		prompt_label.text = ""
 	
-	# Empieza oculto hasta que el jugador se acerque
 	prompt_label.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
-	# Recoger con la tecla E (acción "interact")
 	if player_in_range and event.is_action_pressed("interact") and not event.is_echo():
 		pick_up()
 
@@ -54,22 +127,22 @@ func pick_up() -> void:
 	var dropped_item: ItemData = null
 	
 	if item_data is WeaponData:
-		dropped_item = player_in_range.equip_weapon(0, item_data as WeaponData)
+		dropped_item = player_in_range.equip_or_swap_weapon(item_data as WeaponData)
 	elif item_data is MaskData:
 		dropped_item = player_in_range.add_or_swap_mask(item_data as MaskData)
 		
 	if dropped_item:
-		# Si expulsó un item del inventario, lo dejamos en el suelo
 		item_data = dropped_item
 		update_appearance()
 	else:
-		# Si había espacio libre, el pickup desaparece del mapa
 		queue_free()
 
-func _get_player_inventory(body: Node2D) -> PlayerInventory:
-	var inv: PlayerInventory = body.get_node_or_null("PlayerInventory")
+func _get_player_inventory(body: Node) -> PlayerInventory:
+	if not body:
+		return null
+	var inv: PlayerInventory = body.get_node_or_null("PlayerInventory") as PlayerInventory
 	if not inv and "inventory" in body:
-		inv = body.inventory as PlayerInventory
+		inv = body.get("inventory") as PlayerInventory
 	return inv
 
 func _on_body_entered(body: Node2D) -> void:
