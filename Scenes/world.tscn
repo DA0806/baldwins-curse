@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://ctb5fsy2hy3xd"]
 
 [ext_resource type="Script" uid="uid://j2623whot5mn" path="res://Scripts/Player.gd" id="1_go701"]
+[ext_resource type="PackedScene" uid="uid://klv1ndqnc3fn" path="res://Scenes/InventoryHUD.tscn" id="1_o06y3"]
 [ext_resource type="Texture2D" uid="uid://c10nnxceaw3oh" path="res://icon.svg" id="2_5a7ea"]
+[ext_resource type="Script" uid="uid://x2fjxeulppav" path="res://Scripts/camera_follow.gd" id="3_5a7ea"]
+[ext_resource type="Script" uid="uid://slmr1c0jrisj" path="res://Scripts/ItemPickup.gd" id="4_fo5ed"]
+[ext_resource type="Resource" uid="uid://cyp805rgvnaym" path="res://Items/Weapons/Copper_Sword_test.tres" id="5_5ukr8"]
+[ext_resource type="Script" uid="uid://bbea22sum40t1" path="res://Scripts/PlayerInventory.gd" id="6_5ukr8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(640, 48)
@@ -9,7 +14,12 @@ size = Vector2(640, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(64, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(72, 64)
+
 [node name="World" type="Node2D" unique_id=871301412]
+
+[node name="InventoryHUD" parent="." unique_id=2110751570 instance=ExtResource("1_o06y3")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=882411664]
 
@@ -23,8 +33,9 @@ offset_right = 640.0
 offset_bottom = 304.0
 color = Color(0.20777261, 0.13248652, 0.059733137, 1)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1540776905]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1540776905 groups=["player"]]
 position = Vector2(320, 184)
+collision_layer = 3
 script = ExtResource("1_go701")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=791922729]
@@ -41,3 +52,37 @@ rotation = 3.1415927
 [node name="RayRight" type="RayCast2D" parent="CharacterBody2D" unique_id=283118598]
 position = Vector2(24, -32)
 rotation = 3.1415927
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=867107268]
+position_smoothing_enabled = true
+script = ExtResource("3_5a7ea")
+look_ahead_distance = 120.0
+look_ahead_speed = 1.5
+
+[node name="PlayerInventory" type="Node" parent="CharacterBody2D" unique_id=1168588483]
+script = ExtResource("6_5ukr8")
+metadata/_custom_type_script = "uid://bbea22sum40t1"
+
+[node name="ItemPickup" type="Area2D" parent="." unique_id=941392861]
+position = Vector2(200, 248)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_fo5ed")
+item_data = ExtResource("5_5ukr8")
+metadata/_custom_type_script = "uid://slmr1c0jrisj"
+
+[node name="Sprite2D" type="Sprite2D" parent="ItemPickup" unique_id=111688473]
+position = Vector2(-12, -12)
+scale = Vector2(0.625, 0.625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemPickup" unique_id=1741093418]
+position = Vector2(-12, -16)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="Label" type="Label" parent="ItemPickup" unique_id=1726923680]
+visible = false
+offset_left = -40.000008
+offset_top = -48.0
+offset_right = 23.999992
+offset_bottom = -25.0
+horizontal_alignment = 1

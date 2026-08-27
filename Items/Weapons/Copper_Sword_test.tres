@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://cyp805rgvnaym"]
+
+[ext_resource type="Texture2D" uid="uid://c67bln8s0mpff" path="res://Sprites/Items/Weapons/Copper_Sword.png" id="1_4tlhe"]
+[ext_resource type="Script" uid="uid://212wcwlgtnod" path="res://Scripts/Classes/WeaponData.gd" id="1_ql3g7"]
+
+[resource]
+script = ExtResource("1_ql3g7")
+name = "Copper Sword"
+icon = ExtResource("1_4tlhe")
+metadata/_custom_type_script = "uid://212wcwlgtnod"

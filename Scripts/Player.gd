@@ -124,3 +124,27 @@ func update_sprite_direction() -> void:
 		sprite.flip_h = false
 	elif velocity.x < -5:
 		sprite.flip_h = true
+		
+@onready var inventory: PlayerInventory = $PlayerInventory
+
+# --------------------------------------
+# --------- Lógica de combate ----------
+#---------------------------------------
+
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("next_mask"):
+		inventory.cycle_mask(1)
+	elif Input.is_action_just_pressed("prev_mask"):
+		inventory.cycle_mask(-1)
+
+	if Input.is_action_just_pressed("attack_weapon_1"):
+		execute_attack(inventory.weapons[0])
+	elif Input.is_action_just_pressed("attack_weapon_2"):
+		execute_attack(inventory.weapons[1])
+
+func execute_attack(weapon: WeaponData) -> void:
+	if not weapon:
+		return
+	var active_mask: MaskData = inventory.get_active_mask()
+	# Aquí aplicas el daño base del arma modificado por la máscara activa
+	print("Atacando con: ", weapon.name, " | Máscara activa: ", active_mask.name if active_mask else "Ninguna")
