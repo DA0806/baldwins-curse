@@ -49,7 +49,7 @@ custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
 
-[node name="WeaponIcon0" type="TextureRect" parent="MarginContainer/HBoxContainer/WeaponSlot1" unique_id=283071622]
+[node name="WeaponIcon1" type="TextureRect" parent="MarginContainer/HBoxContainer/WeaponSlot1" unique_id=283071622]
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5

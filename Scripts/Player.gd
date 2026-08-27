@@ -131,7 +131,7 @@ func update_sprite_direction() -> void:
 # --------- Lógica de combate ----------
 #---------------------------------------
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("next_mask"):
 		inventory.cycle_mask(1)
 	elif Input.is_action_just_pressed("prev_mask"):

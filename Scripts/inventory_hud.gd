@@ -50,6 +50,8 @@ func _on_mask_changed(new_mask: MaskData, _old_mask: MaskData) -> void:
 	_update_slot_icon(mask_icon, new_mask)
 
 func _update_slot_icon(target_rect: TextureRect, item: ItemData) -> void:
+	if not target_rect:
+		return
 	if item and item.icon:
 		target_rect.texture = item.icon
 		target_rect.visible = true
