@@ -1,18 +1,12 @@
 [gd_scene format=3 uid="uid://ctb5fsy2hy3xd"]
 
-[ext_resource type="Script" uid="uid://j2623whot5mn" path="res://Scripts/Player.gd" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://klv1ndqnc3fn" path="res://Scenes/InventoryHUD.tscn" id="1_o06y3"]
-[ext_resource type="Texture2D" uid="uid://c10nnxceaw3oh" path="res://icon.svg" id="2_5a7ea"]
-[ext_resource type="Script" uid="uid://x2fjxeulppav" path="res://Scripts/camera_follow.gd" id="3_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://cqj6jjqmsgd5h" path="res://Scenes/player.tscn" id="4_8j60k"]
 [ext_resource type="Resource" uid="uid://cyp805rgvnaym" path="res://Items/Weapons/Copper_Sword_test.tres" id="5_5ukr8"]
-[ext_resource type="Script" uid="uid://bbea22sum40t1" path="res://Scripts/PlayerInventory.gd" id="6_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://d6rjnoedd0rf" path="res://Scenes/Items/ItemPickup.tscn" id="6_o06y3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(640, 48)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
-size = Vector2(64, 64)
 
 [node name="World" type="Node2D" unique_id=871301412]
 
@@ -30,36 +24,6 @@ offset_right = 640.0
 offset_bottom = 304.0
 color = Color(0.20777261, 0.13248652, 0.059733137, 1)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1540776905 groups=["player"]]
-position = Vector2(320, 184)
-collision_layer = 3
-script = ExtResource("1_go701")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=791922729]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_5a7ea")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1538150778]
-shape = SubResource("RectangleShape2D_yf5fn")
-
-[node name="RayLeft" type="RayCast2D" parent="CharacterBody2D" unique_id=1334386053]
-position = Vector2(-24, -32)
-rotation = 3.1415927
-
-[node name="RayRight" type="RayCast2D" parent="CharacterBody2D" unique_id=283118598]
-position = Vector2(24, -32)
-rotation = 3.1415927
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=867107268]
-position_smoothing_enabled = true
-script = ExtResource("3_5a7ea")
-look_ahead_distance = 120.0
-look_ahead_speed = 1.5
-
-[node name="PlayerInventory" type="Node" parent="CharacterBody2D" unique_id=1168588483]
-script = ExtResource("6_5ukr8")
-metadata/_custom_type_script = "uid://bbea22sum40t1"
-
 [node name="ItemPickup" parent="." unique_id=1863476225 instance=ExtResource("6_o06y3")]
 position = Vector2(186, 230)
 item_data = ExtResource("5_5ukr8")
@@ -67,3 +31,6 @@ item_data = ExtResource("5_5ukr8")
 [node name="ItemPickup2" parent="." unique_id=633862914 instance=ExtResource("6_o06y3")]
 position = Vector2(468, 230)
 item_data = ExtResource("5_5ukr8")
+
+[node name="CharacterBody2D" parent="." unique_id=577177923 instance=ExtResource("4_8j60k")]
+position = Vector2(320, 224)

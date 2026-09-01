@@ -21,14 +21,28 @@ extends CharacterBody2D
 @export var jump_buffer_max: float = 0.14 # Segundos para registrar salto antes de tocar suelo
 @export var corner_correction_distance: float = 3.0 # Píxeles que se ajusta el personaje
 
+# Máquina de estados
+enum State {
+	IDLE,
+	WALK,
+	JUMP,
+	ATTACK,
+}
+var current_state: State = State.IDLE
+
 # Timers internos
 var coyote_timer: float = 0.0
 var jump_buffer_timer: float = 0.0
 
 # Referencias a Nodos
-@onready var sprite: Sprite2D = $Sprite2D # O AnimatedSprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_left: RayCast2D = $RayLeft
 @onready var ray_right: RayCast2D = $RayRight
+@onready var inventory: PlayerInventory = $PlayerInventory
+
+func _ready() -> void:
+	sprite.animation_finished.connect(_on_animation_finished)
+	sprite.play("Idle")
 
 func _physics_process(delta: float) -> void:
 	# 1. Actualizar timers
@@ -58,6 +72,9 @@ func _physics_process(delta: float) -> void:
 	
 	# 9. Orientar el Sprite según la dirección
 	update_sprite_direction()
+	
+	# 10. Actualizar máquina de estados y animaciones
+	update_animation_state()
 
 # ==========================================
 # LÓGICA DE JUGABILIDAD
@@ -124,8 +141,44 @@ func update_sprite_direction() -> void:
 		sprite.flip_h = false
 	elif velocity.x < -5:
 		sprite.flip_h = true
-		
-@onready var inventory: PlayerInventory = $PlayerInventory
+
+func update_animation_state() -> void:
+	# Si está atacando, se deja correr la animación hasta que termine
+	if current_state == State.ATTACK:
+		return
+	
+	if not is_on_floor():
+		change_state(State.JUMP)
+	elif abs(velocity.x) > 5.0:
+		change_state(State.WALK)
+	else:
+		change_state(State.IDLE)
+
+func change_state(new_state: State) -> void:
+	# Permitir reiniciar animación si es ataque o si cambia de estado
+	if current_state == new_state and new_state != State.ATTACK:
+		return
+	
+	current_state = new_state
+	match current_state:
+		State.IDLE:
+			sprite.play("Idle")
+		State.WALK:
+			sprite.play("Walk")
+		State.JUMP:
+			sprite.play("Jump")
+		State.ATTACK:
+			sprite.play("Attack")
+
+func _on_animation_finished() -> void:
+	# Al terminar la animación de ataque, regresar al estado que corresponda
+	if current_state == State.ATTACK:
+		if not is_on_floor():
+			change_state(State.JUMP)
+		elif abs(velocity.x) > 5.0:
+			change_state(State.WALK)
+		else:
+			change_state(State.IDLE)
 
 # --------------------------------------
 # --------- Lógica de combate ----------
@@ -143,6 +196,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 		execute_attack(inventory.weapons[1])
 
 func execute_attack(weapon: WeaponData) -> void:
+	change_state(State.ATTACK)
 	if not weapon:
 		return
 	var active_mask: MaskData = inventory.get_active_mask()
