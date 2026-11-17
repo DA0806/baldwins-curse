@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MaskData" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Classes/MaskData.gd" id="1_mask"]
+[ext_resource type="Texture2D" path="res://Sprites/Items/Masks/Mask_Vow.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_mask")
+effect = 1
+passive_stat_multiplier = 0.8
+description = "−20 % daño recibido"
+combo_effect_id = ""
+swap_cooldown = 1.0
+id = "mask_vow"
+name = "Máscara del Voto"
+icon = ExtResource("2_icon")
+item_type = 1

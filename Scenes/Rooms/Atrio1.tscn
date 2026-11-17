@@ -1,0 +1,149 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="1_r"]
+[ext_resource type="PackedScene" path="res://Scenes/InventoryHUD.tscn" id="2_r"]
+[ext_resource type="Script" path="res://Scripts/Room.gd" id="3_r"]
+[ext_resource type="AudioStream" path="res://Audio/amb_atrio.wav" id="4_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/bg_far.png" id="5_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/bg_mid.png" id="6_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/BlockGeometry.gd" id="7_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/floor_fill.png" id="8_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/floor_top.png" id="9_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/candelabra.png" id="10_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/urn.png" id="11_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/tomb.png" id="12_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/pedestal.png" id="13_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/arch_exit.png" id="14_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/HintLabel.gd" id="15_r"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/ItemPickup.tscn" id="16_r"]
+[ext_resource type="Resource" path="res://Items/Weapons/Copper_Sword_test.tres" id="17_r"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/TrainingDummy.tscn" id="18_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/RoomExit.gd" id="19_r"]
+
+[sub_resource type="RectangleShape2D" id="Shape_kill"]
+size = Vector2(1600, 60)
+
+[node name="Atrio1" type="Node2D"]
+script = ExtResource("3_r")
+room_id = "atrio_1"
+ambience = ExtResource("4_r")
+room_rect = Rect2i(0, 0, 1280, 360)
+
+[node name="Far" type="Parallax2D" parent="."]
+z_index = -20
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="Far"]
+texture = ExtResource("5_r")
+centered = false
+
+[node name="Mid" type="Parallax2D" parent="."]
+z_index = -15
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="Mid"]
+texture = ExtResource("6_r")
+centered = false
+
+[node name="Geometry" type="StaticBody2D" parent="."]
+script = ExtResource("7_r")
+blocks = Array[Rect2]([Rect2(-32, 256, 1344, 104), Rect2(-32, 0, 32, 256), Rect2(1280, 0, 32, 256), Rect2(560, 224, 96, 32)])
+color = Color(0.188, 0.231, 0.29, 1)
+fill_texture = ExtResource("8_r")
+top_texture = ExtResource("9_r")
+
+[node name="Props" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Candle0" type="Sprite2D" parent="Props"]
+position = Vector2(120, 240)
+texture = ExtResource("10_r")
+
+[node name="Urn1" type="Sprite2D" parent="Props"]
+position = Vector2(300, 248)
+texture = ExtResource("11_r")
+
+[node name="Candle2" type="Sprite2D" parent="Props"]
+position = Vector2(720, 240)
+texture = ExtResource("10_r")
+
+[node name="Tomb3" type="Sprite2D" parent="Props"]
+position = Vector2(860, 248)
+texture = ExtResource("12_r")
+
+[node name="Candle4" type="Sprite2D" parent="Props"]
+position = Vector2(1000, 240)
+texture = ExtResource("10_r")
+
+[node name="Pedestal0" type="Sprite2D" parent="Props"]
+position = Vector2(220, 248)
+texture = ExtResource("13_r")
+
+[node name="ExitArch" type="Sprite2D" parent="Props"]
+position = Vector2(1256, 208)
+texture = ExtResource("14_r")
+
+[node name="Hints" type="Node2D" parent="."]
+
+[node name="Hint0" type="Label" parent="Hints"]
+offset_left = 24.0
+offset_top = 120.0
+theme_override_font_sizes/font_size = 10
+text = "{move_left} {move_right} caminar · {jump} saltar"
+script = ExtResource("15_r")
+
+[node name="Hint1" type="Label" parent="Hints"]
+offset_left = 180.0
+offset_top = 150.0
+theme_override_font_sizes/font_size = 10
+text = "{interact} recoger"
+script = ExtResource("15_r")
+
+[node name="Hint2" type="Label" parent="Hints"]
+offset_left = 330.0
+offset_top = 120.0
+theme_override_font_sizes/font_size = 10
+text = "{attack_weapon_1} ataca con la ranura 1 · {attack_weapon_2} con la 2"
+script = ExtResource("15_r")
+
+[node name="Hint3" type="Label" parent="Hints"]
+offset_left = 540.0
+offset_top = 170.0
+theme_override_font_sizes/font_size = 10
+text = "{jump} para subir"
+script = ExtResource("15_r")
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(64, 224)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="KillZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(640, 450)
+shape = SubResource("Shape_kill")
+
+[node name="Sword" parent="." instance=ExtResource("16_r")]
+position = Vector2(220, 212)
+item_data = ExtResource("17_r")
+unique_id = "atrio_1/copper_sword"
+
+[node name="TrainingDummy" parent="." instance=ExtResource("18_r")]
+position = Vector2(420, 232)
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1256, 208)
+script = ExtResource("19_r")
+target_room = "atrio_2"
+target_spawn = "from_atrio_1"
+draw_frame = false
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_r")]
+position = Vector2(64, 224)
+
+[node name="InventoryHUD" parent="." instance=ExtResource("2_r")]

@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-5fdd-738d-a475-486273302ae7",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 827375508,
+  "prompt": "iron brazier on a slender pedestal with a copper bowl full of burning embers, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923325885,
+  "progress": 100,
+  "started_at": 1794923325896,
+  "finished_at": 1794923368699,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-5fdd-738d-a475-486273302ae7/output/model.glb?Expires=4948473600&Signature=l2IZjYme0vumr0wteUXug4K3kryh45~HSn~2dEas3ktGTU4XPwxuAxIRVUzUsGF73KaCJt~5im8FqaFxDX5vLDOLBju9RGGMTN~Dw-8cWhed7WRjFEDBDIwIoEQipA0RdorMIupzMVIY0gNPBdbPUZq6OmCKUjmVKZEYY05OIEg3Q5DvHLfO8t2Au-DjpsbMD4Cde82w~d7iHE1KIMFZNUaDuQjJu9ErzHB49o-wkQsoO7n03eTzHwEC~OenWCze~FhIDFF~YoS28q8XUjTMz5XVnxcoF8LcCCejhpaO~9iRBKDRWRIIeakW7hTxobwHWesPP4MsTedGwxYEaD2LSA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-5fdd-738d-a475-486273302ae7/output/preview.png?Expires=4948473600&Signature=UPMKKYh4NgU7fRhIOHKCQFrtxgynHfbWZJQ~DV7xKtF1YPHbXXsRp9rTymn5HF6I5MfOOoqQuw-qisy81yFEPPImGa1AqfoVpvghOieLGll6rAJyArMbLbr3IdIvxTh2edk4nl8gaT3DxA3ZBPHGbYTXq3RFXqUrXjruxPmCM7d6vbm0UhPZjFaYDbQJTx6F41981jkYJyEo-y-ZIULC8b6l6Ri1Kl~M1O3oQwF2z2kEA7vKuQKBSH1yzcr73L~vThCQrI1Qfkd2DkbJgZC476RsG7n7-p9M~G3PtUzKFP2kfDCz2ak2I0cDAuHf5lmDNsyQ1XhM3iV7idl8exSrqA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

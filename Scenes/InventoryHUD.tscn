@@ -8,7 +8,7 @@ border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.83137256, 0.6862745, 0.21568628, 1)
+border_color = Color(0.941, 0.655, 0.345, 1)
 corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
@@ -71,3 +71,31 @@ stretch_mode = 5
 [node name="KeyLabel" type="Label" parent="MarginContainer/HBoxContainer/MaskSlot" unique_id=1136654250]
 layout_mode = 2
 horizontal_alignment = 2
+
+[node name="MaskInfo" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 0
+
+[node name="MaskName" type="Label" parent="MarginContainer/HBoxContainer/MaskInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Sin máscara"
+
+[node name="MaskEffect" type="Label" parent="MarginContainer/HBoxContainer/MaskInfo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.898, 0.839, 0.702, 1)
+theme_override_font_sizes/font_size = 10
+
+[node name="MaskCooldown" type="ProgressBar" parent="MarginContainer/HBoxContainer/MaskInfo"]
+custom_minimum_size = Vector2(60, 4)
+layout_mode = 2
+show_percentage = false
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = 20.0
+offset_top = 12.0
+offset_right = 140.0
+offset_bottom = 24.0
+value = 100.0
+show_percentage = false

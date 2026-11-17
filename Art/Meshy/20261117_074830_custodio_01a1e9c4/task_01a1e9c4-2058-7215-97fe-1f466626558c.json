@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-2058-7215-97fe-1f466626558c",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1528496908,
+  "prompt": "hooded robed monk guardian standing upright, holding a long straight sword at its side, face hidden in shadow with two glowing ember eyes, copper sash, A-pose, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923309700,
+  "progress": 100,
+  "started_at": 1794923309708,
+  "finished_at": 1794923338478,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-2058-7215-97fe-1f466626558c/output/model.glb?Expires=4948473600&Signature=eXy6bZ8KnrRR6sudORCa2L4BmhjZWc-67hZiPLs5rVR46zYRDfpWISbBHQ-PW5sOfddjEVpGbmP1IkzhFY3SpTjMrsQRhURjcHIT9jLRFTDNUmJyt-1s6yzsJgppCujVMG8xnSJsRfLSF~y525~lsnIxSjLUzoIUhowQ2bd13AyfIg5OpQlmHkMjica5nX~dguvQAlzIP9W1KmNRjTHMOlfNrLTThf0USj7D9j-CD2i67alz9bW4Ezpz9MRSn8Iz4~SSB9CJ46h8dXif27V~6B4HFROnFcGBMpiUas0n05s~WxALZPHmUZrOMGkA~3pEFtfWDtYcHJ4NGv2fjqjfrw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-2058-7215-97fe-1f466626558c/output/preview.png?Expires=4948473600&Signature=fHxw0bfF~On1Br1jbVVWOIAW4GWs2OnXKYNjoCTo~bm5WR5iCKDWdTbw2w4cNzKELQLNgpfhVtJvIo8rkorP9psVVP8w6u7izUfLcgHRIb3QKx6wK~FdB2zZ~Z5YdsaDy0yz2tMe13A~pam9HYIPoIqVmPYP1Gf2JHNg3PT0z-bixr-kBpdFc7VNQdiFsrPXHF4OZchF3QL9qBKnWU7FL4qRsBbEEhQZ9lUZ7Kil1RLvKfAhhJ8oBYGdYqiP3kvpbgGOfyeA15woxGEYeGSzRGo6OWuhXpjNilNr8ba~1WSLNKpyUjitVVvBAsD3vzNp8Fu1s77bCyF9KxqAElB2qg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

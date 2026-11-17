@@ -1,0 +1,27 @@
+{
+  "id": "01a1e9c6-b8ad-70a7-97dc-d20f7cc71f9a",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 4215004187,
+  "prompt": "pointed triangular copper face mask shaped like a flame with glowing ember eye holes, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923477187,
+  "progress": 100,
+  "started_at": 1794923479573,
+  "finished_at": 1794923512390,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8ad-70a7-97dc-d20f7cc71f9a/output/model.glb?Expires=4948473600&Signature=F8PaeQVcU33t68aVnhMZbFfgJMsuh9A9dr2n9Rc97f0~HrihdaHdoKrE8naXVT3~CENa-aW06ZK0ol6lX1Se7p~TP7A~tjbF4WWBgy7jrbHvLEFQdrnGiOjYtg~QXSpqmUPN6oQQnGjA7s9oVqg80rerChsAtYyRq6db0mK-J~qYoxIEZ-iqG9T3fm~UOg6XfLGbyw3keMxX2u4pAmxafS45oc1Q1UxVKNu36BhhgrcwS8u8dkhI2lTF8HK28~QofyE2WtQqc~3QKR3voLxzyyWl1PEKN5aGpOfoty58mT6bTHboqmChXjVBPUCK0nSY4UoN5SZZonPcbqxOs4OFaQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8ad-70a7-97dc-d20f7cc71f9a/output/preview.png?Expires=4948473600&Signature=CMNhTvDo-IfEoCu0luih2GYgR5nfodamA8Rgyrb1eomd7J4KVAlIi5nnCPvRsSizru5KiqjKyQSSoPdaw71nX8tRjSSG1Y7WN4OfpxaGlz4jLPxoPgYYVMpjPlaXGU2aNtFW4IopdiqverZCvvXGa8c5~1C94gRt4Hz1sFdmjwnALPTTSg4DNcBUvhGRN3qGmwiXPrLKSI79jqykt1rEXgmT2QcV34BkxmZY4tguggdXuUNJiZsbwl8WpOYg~CzkuibDLCSxMT7oODsQz5Dyx~XXATUZylgeG8tEEHMKTK1Ur~2lDudfSRdqEaDVMeYfHVoFiWH1FldRSckWkq1z2Q__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8ad-70a7-97dc-d20f7cc71f9a/output/texture_0.png?Expires=4948473600&Signature=IskO6ti32KdWLNmGFOvscyo2l9Q38uJrKdPQKK4vZtJL4fyrNnQFKn8NGw7wWSkRhM6Gz1x14mw9cA9QmcKKdoaij7kbuXccb3gVZ5t6lyCivQ~egogSjXdQFHpfNhRvzOlBwMRgfEH0V3fsSFO6fJSu9mXf~8MBqB1ZFPnWFx1YTF7aZ9-bEcNOhnGx9uGPlSHzi1IunUKfY7bEcKmCTujRkQZF~Pw-LfhWD8SmKNsDQTqcj~XKCDJ~6NVcZsGKxwplNUJCh~borbqtduFy30n0MYQASIbLY1TlgmDSfTMhBXCAnawHDTe7CDOKy32GattfRTry1yozK3cvClPdgQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

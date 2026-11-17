@@ -1,0 +1,27 @@
+{
+  "id": "01a1e9c6-b7f6-7146-aac5-fe99466754dc",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2806227996,
+  "prompt": "hooded robed monk guardian standing upright, holding a long straight sword at its side, face hidden in shadow with two glowing ember eyes, copper sash, A-pose, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923477021,
+  "progress": 100,
+  "started_at": 1794923479321,
+  "finished_at": 1794923517656,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7f6-7146-aac5-fe99466754dc/output/model.glb?Expires=4948473600&Signature=fBV80rLA43jn34FZcBLuEgIBuNpzNLOYnTcKrod35tBiBiHsR89IIQVMuaAr178yxkqydIpa67VzQlCf7bZlOx2pG7V8TEvZjD7xjzUzuqT715pf49pCid873v7yPRHuowhySjfx4tz4MOINshpXpAwaoHbdfpDWwcWdR95Zw18kdCW181hMo0d6ETCCx7~HMnCpx3e32ij0dgC6PGwSZcZ~mjKi0QLBrVsG8L8vvcZyG81iYPQUs3KNR3xcAmt039d6YgaK22~WNt95JCZamG-wS53L9wo2iaVOqSE48AEDY9HGoidxv5C4vuzN~kwj~z4fJU~nw-zyljbw8K6SVw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7f6-7146-aac5-fe99466754dc/output/preview.png?Expires=4948473600&Signature=WyLttZXgNPPiNC5ZsDiO1QHupkbtasoXp2gVS6-GBDLOUaFoZY5QY7ur281~KaiefbBp8UzCCYVJm4HU1~W4H-kN5WlD9PcuHtXffA3oPqqeT1Ii3SG-gYdqnAc9BzznEK7MabrgP76G3oW3JPsgizgkmFIf65be7qMM0ve96tXiYpJ0wHjTOcmerFxVKIJX0XMmrNDJfSNr9eN2WTZ4fqWldDnyvHg6~uNeUwtWT7BCEK008Fa5eGHODpOksBX-YTF6qO9fcJ92UOVXR-CJjHGdBdHXwhQYuUSKpK37F8M3vMzYSjX1C-nHjBHsfKYrBYmko6uhl9M-KbnlV50jMw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7f6-7146-aac5-fe99466754dc/output/texture_0.png?Expires=4948473600&Signature=bISZ0Tj3X4FGHh~xgUDLcHga8U1aOlnftH1eptaaFCVRvVsw1mLs-U5Ogadl0VTmNKa48DQN29W4~WKbGc5Ofs-J41Wos9aQzKPF8ouFptiKrZz037dmOcNB5vmp9BWlMavwdNmE~WHnXieqa2~qCBoIHgJ7-tX8L-RMuJcvFQfrgcgI8wtff3Y4YV66IA~zRwk38V741gBMeSlvVUG4xuM3CDja2C06nlWnuWMesqa3qiPR7D4i-c36sNUZIzxQ3xBQafu7WREar93-cElv9yFWFIS~c2xcBBjDZiWWlI-5~unuKR3MiGmSTik3O0ddWKxA7qzxtRJtNT7dWLrW8g__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

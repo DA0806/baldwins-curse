@@ -6,6 +6,11 @@ extends Area2D
 		item_data = value
 		update_appearance()
 
+## ID de recogida única ("sala/objeto"). Si GameSession ya lo tiene como
+## recogido, el pickup no aparece. Vacío = objeto transitorio (laboratorio,
+## arma soltada en un intercambio).
+@export var unique_id: String = ""
+
 # Si quieres que solo diga el nombre ("Espada") o con tecla ("[E] Espada")
 @export var show_key_prompt: bool = true
 
@@ -32,12 +37,20 @@ const SHINE_SIZE_MIN := 0.01
 
 var _shine_tween: Tween
 
+## Grupo donde se registran todos los pickups. El jugador lo recorre para
+## elegir un único objetivo por pulsación.
+const GROUP: StringName = &"item_pickups"
+
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label
 
 var player_in_range: PlayerInventory = null
 
 func _ready() -> void:
+	if not unique_id.is_empty() and RunSession.of(self).is_collected(unique_id):
+		queue_free()
+		return
+	add_to_group(GROUP)
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	
@@ -107,35 +120,42 @@ func update_appearance() -> void:
 	if item_data:
 		sprite.texture = item_data.icon
 		if show_key_prompt:
-			prompt_label.text = "[R] " + item_data.name
+			prompt_label.text = "[%s] %s" % [InputHints.key_text(&"interact"), item_data.name]
 		else:
 			prompt_label.text = item_data.name
 	else:
 		sprite.texture = null
 		prompt_label.text = ""
 	
-	prompt_label.visible = false
+	# El aviso sigue visible mientras haya un jugador en rango y algo que recoger
+	# (por ejemplo, el objeto desplazado tras un intercambio).
+	prompt_label.visible = player_in_range != null and item_data != null
 
-func _unhandled_input(event: InputEvent) -> void:
-	if player_in_range and event.is_action_pressed("interact") and not event.is_echo():
-		pick_up()
+## ¿Puede este inventario recoger el objeto ahora mismo?
+func can_be_picked_by(inventory: PlayerInventory) -> bool:
+	return item_data != null and inventory != null \
+		and player_in_range == inventory and not is_queued_for_deletion()
 
-func pick_up() -> void:
+## Entrega el objeto al inventario en rango. La entrada la decide el jugador
+## (Player.try_interact): el pickup ya no escucha el teclado por su cuenta.
+## Devuelve un PlayerInventory.PickupStatus.
+func pick_up() -> int:
 	if not item_data or not player_in_range:
-		return
-		
-	var dropped_item: ItemData = null
+		return PlayerInventory.PickupStatus.REJECTED
 	
-	if item_data is WeaponData:
-		dropped_item = player_in_range.equip_or_swap_weapon(item_data as WeaponData)
-	elif item_data is MaskData:
-		dropped_item = player_in_range.add_or_swap_mask(item_data as MaskData)
-		
-	if dropped_item:
-		item_data = dropped_item
-		update_appearance()
-	else:
-		queue_free()
+	var outcome := player_in_range.pick_up_item(item_data)
+	if outcome.status != PlayerInventory.PickupStatus.REJECTED:
+		# Lo que quede aquí (el objeto desplazado) ya es transitorio.
+		if not unique_id.is_empty():
+			RunSession.of(self).mark_collected(unique_id)
+			unique_id = ""
+	match outcome.status:
+		PlayerInventory.PickupStatus.SWAPPED:
+			# El objeto desplazado queda en el suelo, en este mismo pickup.
+			item_data = outcome.dropped
+		PlayerInventory.PickupStatus.STORED:
+			queue_free()
+	return outcome.status
 
 func _get_player_inventory(body: Node) -> PlayerInventory:
 	if not body:
@@ -149,11 +169,9 @@ func _on_body_entered(body: Node2D) -> void:
 	var inv: PlayerInventory = _get_player_inventory(body)
 	if inv:
 		player_in_range = inv
-		if prompt_label and item_data:
-			prompt_label.visible = true
+		update_appearance()
 
 func _on_body_exited(body: Node2D) -> void:
 	if player_in_range and _get_player_inventory(body) == player_in_range:
 		player_in_range = null
-		if prompt_label:
-			prompt_label.visible = false
+		update_appearance()

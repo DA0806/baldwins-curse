@@ -1,0 +1,152 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="1_r"]
+[ext_resource type="PackedScene" path="res://Scenes/InventoryHUD.tscn" id="2_r"]
+[ext_resource type="Script" path="res://Scripts/Room.gd" id="3_r"]
+[ext_resource type="AudioStream" path="res://Audio/amb_atrio.wav" id="4_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/bg_far.png" id="5_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/bg_mid.png" id="6_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/BlockGeometry.gd" id="7_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/floor_fill.png" id="8_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/floor_top.png" id="9_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/candelabra.png" id="10_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/tomb.png" id="11_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/urn.png" id="12_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/arch_exit.png" id="13_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/Checkpoint.gd" id="14_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/brazier.png" id="15_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/Encounter.gd" id="16_r"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/GroundEnemy.tscn" id="17_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Enemies/custodio.png" id="18_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/RoomExit.gd" id="19_r"]
+
+[sub_resource type="RectangleShape2D" id="Shape_kill"]
+size = Vector2(1280, 60)
+
+[node name="Atrio3" type="Node2D"]
+script = ExtResource("3_r")
+room_id = "atrio_3"
+ambience = ExtResource("4_r")
+room_rect = Rect2i(0, 0, 960, 360)
+
+[node name="Far" type="Parallax2D" parent="."]
+z_index = -20
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="Far"]
+texture = ExtResource("5_r")
+centered = false
+
+[node name="Mid" type="Parallax2D" parent="."]
+z_index = -15
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="Mid"]
+texture = ExtResource("6_r")
+centered = false
+
+[node name="Geometry" type="StaticBody2D" parent="."]
+script = ExtResource("7_r")
+blocks = Array[Rect2]([Rect2(-32, 256, 1024, 104), Rect2(-32, 0, 32, 256), Rect2(960, 0, 32, 256)])
+color = Color(0.188, 0.231, 0.29, 1)
+fill_texture = ExtResource("8_r")
+top_texture = ExtResource("9_r")
+
+[node name="Props" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Candle0" type="Sprite2D" parent="Props"]
+position = Vector2(260, 240)
+texture = ExtResource("10_r")
+
+[node name="Tomb1" type="Sprite2D" parent="Props"]
+position = Vector2(600, 248)
+texture = ExtResource("11_r")
+
+[node name="Urn2" type="Sprite2D" parent="Props"]
+position = Vector2(820, 248)
+texture = ExtResource("12_r")
+
+[node name="ExitArch" type="Sprite2D" parent="Props"]
+position = Vector2(928, 208)
+texture = ExtResource("13_r")
+
+[node name="Hints" type="Node2D" parent="."]
+
+[node name="Hint0" type="Label" parent="Hints"]
+offset_left = 200.0
+offset_top = 110.0
+theme_override_font_sizes/font_size = 10
+text = "Vence a los dos guardianes para abrir la reja"
+
+[node name="Hint1" type="Label" parent="Hints"]
+offset_left = 200.0
+offset_top = 126.0
+theme_override_font_sizes/font_size = 10
+text = "El guardián grande pega fuerte: el Voto amortigua sus golpes"
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(48, 224)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="from_atrio_2" type="Marker2D" parent="Spawns"]
+position = Vector2(48, 224)
+
+[node name="checkpoint_atrio_3" type="Area2D" parent="Spawns"]
+position = Vector2(130, 224)
+script = ExtResource("14_r")
+
+[node name="Art" type="Sprite2D" parent="Spawns/checkpoint_atrio_3"]
+position = Vector2(0, 16)
+texture = ExtResource("15_r")
+hframes = 4
+
+[node name="KillZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(480, 450)
+shape = SubResource("Shape_kill")
+
+[node name="Gate" type="StaticBody2D" parent="."]
+script = ExtResource("7_r")
+blocks = Array[Rect2]([Rect2(872, 160, 16, 96)])
+color = Color(0.427, 0.51, 0.592, 1)
+
+[node name="Encounter" type="Node2D" parent="." node_paths=PackedStringArray("gate")]
+script = ExtResource("16_r")
+gate = NodePath("../Gate")
+
+[node name="Guard" parent="Encounter" instance=ExtResource("17_r")]
+position = Vector2(480, 232)
+max_health_override = 100.0
+attack_damage = 20.0
+
+[node name="Art" type="Sprite2D" parent="Encounter/Guard"]
+z_index = 1
+texture = ExtResource("18_r")
+hframes = 4
+
+[node name="Raider" parent="Encounter" instance=ExtResource("17_r")]
+position = Vector2(720, 232)
+
+[node name="Art" type="Sprite2D" parent="Encounter/Raider"]
+z_index = 1
+texture = ExtResource("18_r")
+hframes = 4
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(928, 208)
+script = ExtResource("19_r")
+target_room = "cripta_1"
+target_spawn = "from_atrio_3"
+draw_frame = false
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_r")]
+position = Vector2(48, 224)
+
+[node name="InventoryHUD" parent="." instance=ExtResource("2_r")]

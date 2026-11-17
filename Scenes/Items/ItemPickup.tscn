@@ -24,6 +24,7 @@ shape = SubResource("RectangleShape2D_g4v7s")
 material = SubResource("ShaderMaterial_u1r6s")
 
 [node name="Label" type="Label" parent="." unique_id=105204843]
+z_index = 5
 offset_left = -31.0
 offset_top = -36.0
 offset_right = 31.0

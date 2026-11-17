@@ -1,0 +1,27 @@
+{
+  "id": "01a1e9c6-b7e9-7111-bbdc-c7900e6dc467",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 614109060,
+  "prompt": "low stone grave slab with a carved ivory cross, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923476988,
+  "progress": 100,
+  "started_at": 1794923477126,
+  "finished_at": 1794923517177,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7e9-7111-bbdc-c7900e6dc467/output/model.glb?Expires=4948473600&Signature=NreYOcb0I2lsu9U6vXYztviFen6nq9pFbuNbDxVZx7SsUDsJpeCZUQ~ohpGx3CiVrWwtYSP~46GNngyu6oNVpkyhbR6nfJwPpiaFjnPTd-5KHpDI2szmku~RwHuQ~9J3C8ji8gbThaIE54D94uwsIkwKJ0wxc21HsBOjy1oS0XDShkq5tJ-7o2lgWiScgTj5iFb~KwvTI-TODfG6CSGFopVIha3aiClD8g7lgoN2ojkXp4Ob0S~ZrcNRPmUovitTf-p4GZrn1UGM8V-31irVdvpmBb4JfGrDJ23xMRPWMkpn2enfFcJ-hqdlk2dNRIEPTpd0yY9fqbvUFlMhlL5org__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7e9-7111-bbdc-c7900e6dc467/output/preview.png?Expires=4948473600&Signature=Lp-p5Y4a5Ac-fl~BIZun44g7fItqYidRIHNf7M56oWEAlLDxjHKUTa97uyZjV30jvNLqGePGe1xiJMSD~yZrsn3vExfyXFzmaPk3gGLeOxM2jo69g3sjdfph~xc662funJ~Gm9vfUZ3jBajwR4Ztht4lO1NNecnOQUe2UN2UCqe4ARm7KrS7YVMt6P~Q~t6Gi1uYkgIemDUg6GivEdcQS2beddQqnAjT~bsBzQOIvFXSWldO4i619pWDmiZ5aImBIBuXxJPLeDuyRbtOWCihh-uXpT583n9UmP92B~eLeCx8mPW86~mDLgRBQGMqACLO1giIZI2wK-k0Ps3SLw-92w__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7e9-7111-bbdc-c7900e6dc467/output/texture_0.png?Expires=4948473600&Signature=lN2ghDFB6OKsURX0NHeGL-bHCPWYwBjsQXclD5Urqg-wWz7EN~3YuJ1vppM0jhQ74HcN06WUCgWRZ~YciJu6xPuOrRnWElFppEhl4juW2C1aLeFyf3ZDsDaWqf1JbeaqoE4NmT7EqYobHI4dOYLrfsAVOtoc5VFbn2k48~Mp-l-dQyBwoPlsuernOvDLv9JFYKK22t473xL-VodULPjtqlHoEDl8JBEuCFhsD8N~0eGbzTOFmad44sqHqEgdO7u3Gm6JpvUS1o2dVRNUBOOQC2Ds845j1yieesBel-ew2pGbEgy9v2Wzr~WW71k9qB8n4hzpW0TbZ4wJeDtfqIZbqw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

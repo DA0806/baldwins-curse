@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-4c39-70b2-b825-57ef7108000d",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 680144420,
+  "prompt": "pointed triangular copper face mask shaped like a flame with glowing ember eye holes, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923320410,
+  "progress": 100,
+  "started_at": 1794923320420,
+  "finished_at": 1794923345256,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-4c39-70b2-b825-57ef7108000d/output/model.glb?Expires=4948473600&Signature=J9ihw9iTf4woPAzNS3bJUVttrKE20MVyUcZoBlW0HzBMr-nbRwwXmJVqBc5n1ItMOCnYl1egFiz8YXpxp3Mv1ICsxxM5PmbJ7midRwd6VG9OHWBOBc~2TFYx4CDdLxsAnFnTZEDH0Nkea74ZzW65f4RtM5KfbVQWRTfrvg9T3p6b5gFFkOqZuS-pp7EprL2ZnlW5wAbOL5hrz-PQ7A06uvzc7-hg2z16dDgCuJ3djgPB49Uv9XjMriJk4XYotgm2T2SSEThpa3FVPe7Z~ihN2yF3dMW5JwRfXdCqGSrcmpkme8XHnSd9mnA7o~YdAAUP0gJVCdqcCwrrPFpfnS2e3Q__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-4c39-70b2-b825-57ef7108000d/output/preview.png?Expires=4948473600&Signature=q2nnFYvLdpKfuXU-dDraQmQzL6GkKCAgLUW1eumMO8cBPAotrKsrJteLqtjsX8XgB2DeaNd9bJJYSLI8BHNvhv39mdzxewjcGZRPfFcLE-3kJoNUx0xRK9t7Lvrdyv6vM~AsotN6OO8BsXoXYQb9wXZJDFIr~5BH-8g8yPWLY1~Zhnv05UrJT5pSorUex4TGdKwzWD-U4rWqZFiHlh67HwcOV8TdF6NK~LKM7V6vz3bJHzU8i9RQsrfbxxZcI8-DOB-vqkziCMxTGss7dEkF-E8eh3gN~c~a2PpGb0Fgaz9dCIS6yC~7y83nxsm-LXE9BCdXUxDFfLR0EaBFrFrHPg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

@@ -1,0 +1,97 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Bosses/Boss.gd" id="1_boss"]
+[ext_resource type="Script" path="res://Scripts/Combat/Health.gd" id="2_health"]
+[ext_resource type="Script" path="res://Scripts/Combat/Hurtbox.gd" id="3_hurtbox"]
+[ext_resource type="Script" path="res://Scripts/Combat/MeleeAttack.gd" id="4_attack"]
+[ext_resource type="Script" path="res://Scripts/Combat/Hitbox.gd" id="5_hitbox"]
+
+[sub_resource type="RectangleShape2D" id="Shape_body"]
+size = Vector2(48, 112)
+
+[node name="Boss" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_boss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("Shape_body")
+
+[node name="Body" type="ColorRect" parent="."]
+offset_left = -24.0
+offset_top = -56.0
+offset_right = 24.0
+offset_bottom = 56.0
+color = Color(0.243, 0.294, 0.369, 1)
+
+[node name="Seal" type="ColorRect" parent="."]
+offset_left = -5.0
+offset_top = -30.0
+offset_right = 5.0
+offset_bottom = -20.0
+color = Color(0.137, 0.169, 0.216, 1)
+
+[node name="Scythe" type="ColorRect" parent="."]
+visible = false
+offset_right = 6.0
+offset_bottom = 70.0
+color = Color(0.427, 0.51, 0.592, 1)
+
+[node name="Censer" type="ColorRect" parent="."]
+visible = false
+offset_left = -8.0
+offset_top = -86.0
+offset_right = 8.0
+offset_bottom = -70.0
+color = Color(0.94, 0.65, 0.35, 1)
+
+[node name="Alert" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -96.0
+offset_right = 20.0
+offset_bottom = -73.0
+text = "!"
+horizontal_alignment = 1
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("2_health")
+max_health = 300.0
+
+[node name="Hurtbox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("3_hurtbox")
+health = NodePath("../Health")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("Shape_body")
+
+[node name="MeleeAttack" type="Node2D" parent="."]
+position = Vector2(0, 44)
+script = ExtResource("4_attack")
+
+[node name="Hitbox" type="Area2D" parent="MeleeAttack"]
+collision_layer = 64
+collision_mask = 8
+script = ExtResource("5_hitbox")
+
+[node name="BossBar" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Name" type="Label" parent="BossBar"]
+offset_left = 220.0
+offset_top = 4.0
+offset_right = 420.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 10
+text = "El Abad Sellado"
+horizontal_alignment = 1
+
+[node name="Bar" type="ProgressBar" parent="BossBar"]
+offset_left = 220.0
+offset_top = 19.0
+offset_right = 420.0
+offset_bottom = 25.0
+max_value = 300.0
+value = 300.0
+show_percentage = false
