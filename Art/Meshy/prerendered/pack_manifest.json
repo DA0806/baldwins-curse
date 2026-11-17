@@ -1,0 +1,1427 @@
+{
+  "source_scale": 4,
+  "resize": "LANCZOS in premultiplied RGBa; one resize; no recenter",
+  "alpha_threshold": 110,
+  "alpha_output": "0 or 255",
+  "palette_rgb": [
+    [
+      21,
+      25,
+      36
+    ],
+    [
+      22,
+      27,
+      38
+    ],
+    [
+      24,
+      28,
+      39
+    ],
+    [
+      25,
+      30,
+      41
+    ],
+    [
+      26,
+      32,
+      43
+    ],
+    [
+      27,
+      33,
+      45
+    ],
+    [
+      29,
+      35,
+      46
+    ],
+    [
+      30,
+      36,
+      48
+    ],
+    [
+      31,
+      38,
+      50
+    ],
+    [
+      32,
+      40,
+      52
+    ],
+    [
+      34,
+      41,
+      53
+    ],
+    [
+      35,
+      43,
+      55
+    ],
+    [
+      36,
+      44,
+      57
+    ],
+    [
+      37,
+      46,
+      58
+    ],
+    [
+      39,
+      47,
+      60
+    ],
+    [
+      40,
+      49,
+      62
+    ],
+    [
+      41,
+      50,
+      64
+    ],
+    [
+      42,
+      52,
+      65
+    ],
+    [
+      43,
+      53,
+      67
+    ],
+    [
+      44,
+      55,
+      69
+    ],
+    [
+      46,
+      56,
+      71
+    ],
+    [
+      47,
+      58,
+      72
+    ],
+    [
+      48,
+      59,
+      74
+    ],
+    [
+      49,
+      60,
+      76
+    ],
+    [
+      51,
+      62,
+      78
+    ],
+    [
+      52,
+      63,
+      79
+    ],
+    [
+      53,
+      65,
+      81
+    ],
+    [
+      54,
+      66,
+      83
+    ],
+    [
+      56,
+      68,
+      85
+    ],
+    [
+      57,
+      69,
+      87
+    ],
+    [
+      58,
+      71,
+      89
+    ],
+    [
+      59,
+      72,
+      90
+    ],
+    [
+      61,
+      74,
+      92
+    ],
+    [
+      62,
+      75,
+      94
+    ],
+    [
+      66,
+      80,
+      99
+    ],
+    [
+      71,
+      85,
+      104
+    ],
+    [
+      75,
+      90,
+      110
+    ],
+    [
+      79,
+      95,
+      115
+    ],
+    [
+      83,
+      100,
+      120
+    ],
+    [
+      88,
+      105,
+      125
+    ],
+    [
+      92,
+      110,
+      130
+    ],
+    [
+      96,
+      115,
+      135
+    ],
+    [
+      100,
+      120,
+      141
+    ],
+    [
+      105,
+      125,
+      146
+    ],
+    [
+      109,
+      130,
+      151
+    ],
+    [
+      114,
+      132,
+      149
+    ],
+    [
+      120,
+      135,
+      147
+    ],
+    [
+      125,
+      137,
+      145
+    ],
+    [
+      131,
+      139,
+      143
+    ],
+    [
+      136,
+      142,
+      141
+    ],
+    [
+      142,
+      144,
+      138
+    ],
+    [
+      147,
+      147,
+      136
+    ],
+    [
+      153,
+      149,
+      134
+    ],
+    [
+      158,
+      151,
+      132
+    ],
+    [
+      164,
+      154,
+      130
+    ],
+    [
+      169,
+      156,
+      128
+    ],
+    [
+      174,
+      161,
+      133
+    ],
+    [
+      180,
+      167,
+      137
+    ],
+    [
+      185,
+      172,
+      142
+    ],
+    [
+      191,
+      177,
+      147
+    ],
+    [
+      196,
+      182,
+      151
+    ],
+    [
+      202,
+      188,
+      156
+    ],
+    [
+      207,
+      193,
+      160
+    ],
+    [
+      213,
+      198,
+      165
+    ],
+    [
+      218,
+      203,
+      170
+    ],
+    [
+      224,
+      209,
+      174
+    ],
+    [
+      229,
+      214,
+      179
+    ],
+    [
+      24,
+      27,
+      36
+    ],
+    [
+      28,
+      28,
+      36
+    ],
+    [
+      31,
+      30,
+      35
+    ],
+    [
+      34,
+      31,
+      35
+    ],
+    [
+      38,
+      33,
+      35
+    ],
+    [
+      41,
+      34,
+      35
+    ],
+    [
+      45,
+      36,
+      35
+    ],
+    [
+      48,
+      37,
+      35
+    ],
+    [
+      51,
+      39,
+      34
+    ],
+    [
+      55,
+      40,
+      34
+    ],
+    [
+      58,
+      42,
+      34
+    ],
+    [
+      64,
+      43,
+      34
+    ],
+    [
+      70,
+      45,
+      34
+    ],
+    [
+      75,
+      46,
+      34
+    ],
+    [
+      81,
+      48,
+      34
+    ],
+    [
+      87,
+      49,
+      34
+    ],
+    [
+      93,
+      51,
+      34
+    ],
+    [
+      99,
+      52,
+      34
+    ],
+    [
+      105,
+      54,
+      34
+    ],
+    [
+      110,
+      55,
+      34
+    ],
+    [
+      116,
+      57,
+      34
+    ],
+    [
+      122,
+      58,
+      34
+    ],
+    [
+      128,
+      62,
+      37
+    ],
+    [
+      133,
+      67,
+      41
+    ],
+    [
+      139,
+      71,
+      44
+    ],
+    [
+      145,
+      75,
+      47
+    ],
+    [
+      151,
+      80,
+      51
+    ],
+    [
+      156,
+      84,
+      54
+    ],
+    [
+      162,
+      89,
+      58
+    ],
+    [
+      168,
+      93,
+      61
+    ],
+    [
+      174,
+      97,
+      64
+    ],
+    [
+      179,
+      102,
+      68
+    ],
+    [
+      185,
+      106,
+      71
+    ],
+    [
+      190,
+      112,
+      73
+    ],
+    [
+      195,
+      117,
+      74
+    ],
+    [
+      200,
+      123,
+      76
+    ],
+    [
+      205,
+      128,
+      77
+    ],
+    [
+      210,
+      134,
+      79
+    ],
+    [
+      215,
+      139,
+      80
+    ],
+    [
+      220,
+      145,
+      82
+    ],
+    [
+      225,
+      150,
+      83
+    ],
+    [
+      230,
+      156,
+      85
+    ],
+    [
+      235,
+      161,
+      86
+    ],
+    [
+      240,
+      167,
+      88
+    ],
+    [
+      241,
+      171,
+      94
+    ],
+    [
+      243,
+      175,
+      100
+    ],
+    [
+      244,
+      180,
+      106
+    ],
+    [
+      245,
+      184,
+      112
+    ],
+    [
+      247,
+      188,
+      118
+    ],
+    [
+      248,
+      192,
+      124
+    ],
+    [
+      250,
+      196,
+      130
+    ],
+    [
+      251,
+      200,
+      136
+    ],
+    [
+      252,
+      205,
+      142
+    ],
+    [
+      254,
+      209,
+      148
+    ],
+    [
+      255,
+      213,
+      154
+    ],
+    [
+      253,
+      213,
+      156
+    ],
+    [
+      250,
+      213,
+      159
+    ],
+    [
+      248,
+      213,
+      161
+    ],
+    [
+      246,
+      213,
+      163
+    ],
+    [
+      243,
+      213,
+      165
+    ],
+    [
+      241,
+      214,
+      168
+    ],
+    [
+      238,
+      214,
+      170
+    ],
+    [
+      236,
+      214,
+      172
+    ],
+    [
+      234,
+      214,
+      174
+    ],
+    [
+      231,
+      214,
+      177
+    ],
+    [
+      40,
+      48,
+      58
+    ],
+    [
+      46,
+      52,
+      61
+    ],
+    [
+      51,
+      57,
+      64
+    ],
+    [
+      57,
+      61,
+      67
+    ],
+    [
+      62,
+      66,
+      70
+    ],
+    [
+      68,
+      70,
+      73
+    ],
+    [
+      73,
+      75,
+      76
+    ],
+    [
+      79,
+      79,
+      79
+    ],
+    [
+      84,
+      84,
+      82
+    ],
+    [
+      90,
+      88,
+      85
+    ],
+    [
+      95,
+      93,
+      88
+    ],
+    [
+      102,
+      99,
+      92
+    ],
+    [
+      108,
+      104,
+      95
+    ],
+    [
+      115,
+      110,
+      99
+    ],
+    [
+      122,
+      116,
+      103
+    ],
+    [
+      129,
+      122,
+      106
+    ],
+    [
+      135,
+      127,
+      110
+    ],
+    [
+      142,
+      133,
+      113
+    ],
+    [
+      149,
+      139,
+      117
+    ],
+    [
+      156,
+      145,
+      121
+    ],
+    [
+      162,
+      150,
+      124
+    ]
+  ],
+  "dither": "NONE",
+  "installed": true,
+  "sheets": [
+    {
+      "file": "Characters/Baldwin/Idle.png",
+      "size": [
+        512,
+        128
+      ],
+      "frames": 4,
+      "frame_bboxes": [
+        [
+          17,
+          64,
+          73,
+          128
+        ],
+        [
+          17,
+          65,
+          73,
+          128
+        ],
+        [
+          18,
+          65,
+          73,
+          128
+        ],
+        [
+          17,
+          64,
+          73,
+          128
+        ]
+      ],
+      "sha256": "ad1188932f11b6c8d5ee7c865389962dfb49eb385ac9523dfc23c80af71e12cd",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Idle/000.png",
+          "sha256": "b9d939fd74e0fc4ebff096ca6c70b657b024cd439618890b2856c219882aa718"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Idle/001.png",
+          "sha256": "f3d6df372956afd2b25181496b5834de45c85fd504da7a4d613b437b2caab75e"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Idle/002.png",
+          "sha256": "6826b72e32c574b30c0d291dccde2d94cea54170697f3b6c0b1e8a4341b4dac9"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Idle/003.png",
+          "sha256": "d4d173dd469a0fcdc20141c37dae15618e58a2fb86f0a2a3c93b1a0337cb153a"
+        }
+      ]
+    },
+    {
+      "file": "Characters/Baldwin/Walk.png",
+      "size": [
+        1024,
+        128
+      ],
+      "frames": 8,
+      "frame_bboxes": [
+        [
+          22,
+          62,
+          73,
+          128
+        ],
+        [
+          22,
+          62,
+          73,
+          128
+        ],
+        [
+          17,
+          64,
+          73,
+          128
+        ],
+        [
+          11,
+          63,
+          73,
+          128
+        ],
+        [
+          22,
+          62,
+          73,
+          128
+        ],
+        [
+          22,
+          62,
+          73,
+          128
+        ],
+        [
+          16,
+          64,
+          73,
+          128
+        ],
+        [
+          15,
+          64,
+          73,
+          128
+        ]
+      ],
+      "sha256": "6504138878f682a36cad572dbe457a41e86287afbff4b506e12beaed1fc30349",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Walk/000.png",
+          "sha256": "8c3588a5359da2add513f467402ed8e3ca5db6bd6b11fc05370bd987cb7b4499"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Walk/001.png",
+          "sha256": "91007f5fb983f050eccde6aad361bcdfc0745e45cf2ed7ed1d47a8b3e0aeb314"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Walk/002.png",
+          "sha256": "5850180ead7e7db6aeff70b3da1b271bee5b40d8512bc6fc9380adf6016a58d2"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Walk/003.png",
+          "sha256": "77c14545bcc6e14dd6e43e043b1f88af5d3dcbf44b9370c0ec53a79b8b7f417a"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Walk/004.png",
+          "sha256": "af291bc9b980f5e3dbe02fe0878776534fe04241dfebad2e24f80974087383b7"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Walk/005.png",
+          "sha256": "52143cf5eba9fa41c21be8a7cb7b5b635362d7da7cbf0f4d7cfd7840fba68fa5"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Walk/006.png",
+          "sha256": "3c683b264dd731503fb5834cb89af64af7f702aca221fd0d445d1f998e45352e"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Walk/007.png",
+          "sha256": "2e160dfea663de5f37e6fb7959374923353b0c6b329b061a2a559c2571977f8b"
+        }
+      ]
+    },
+    {
+      "file": "Characters/Baldwin/Jump.png",
+      "size": [
+        768,
+        128
+      ],
+      "frames": 6,
+      "frame_bboxes": [
+        [
+          20,
+          63,
+          76,
+          128
+        ],
+        [
+          20,
+          74,
+          76,
+          128
+        ],
+        [
+          21,
+          73,
+          76,
+          128
+        ],
+        [
+          19,
+          65,
+          76,
+          128
+        ],
+        [
+          19,
+          71,
+          76,
+          128
+        ],
+        [
+          20,
+          63,
+          76,
+          127
+        ]
+      ],
+      "sha256": "c5f9cd909b7cb7caf2d86f3b4be7cbba52f9226e47df2d37717f20208330e42e",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Jump/000.png",
+          "sha256": "7932900a7b2356b1ff91856b8a64911a51e32fca9c2160188c33f67219fbbf86"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Jump/001.png",
+          "sha256": "adbce98f1fa76237c4accba6d366cae0476a6ffa7f5f8cfceb47416bf0874280"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Jump/002.png",
+          "sha256": "d3ac779e61b0cd0e704a2f359cfbb6bcd635010c162f463dee818e7416739324"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Jump/003.png",
+          "sha256": "2919019e9e65a462e0bd2bb1c90bea90d548ae254038b85b1fabdc9365e4d589"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Jump/004.png",
+          "sha256": "8405a295e076f7a333c6a0b780015fd50c334d480d5c9e720cd118e4949108a1"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Jump/005.png",
+          "sha256": "ae8f0f29e03d867fed17ea33d9c276266a600e938c54538311b85288788e5960"
+        }
+      ]
+    },
+    {
+      "file": "Characters/Baldwin/Attack.png",
+      "size": [
+        640,
+        128
+      ],
+      "frames": 5,
+      "frame_bboxes": [
+        [
+          12,
+          48,
+          51,
+          128
+        ],
+        [
+          13,
+          44,
+          52,
+          128
+        ],
+        [
+          12,
+          42,
+          53,
+          128
+        ],
+        [
+          9,
+          40,
+          49,
+          128
+        ],
+        [
+          8,
+          71,
+          92,
+          128
+        ]
+      ],
+      "sha256": "488ecd9cd175c7f91dfc358be98fa200160229d2b7bae4df003e21ebf2e164db",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Attack/000.png",
+          "sha256": "6c83403503d3e92310a71f7770f723b9a40aa2120a17859fcdfeef8869ebd0de"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Attack/001.png",
+          "sha256": "08924b55ca9c5702ee01286017f49bdd0e7a607bbaf0948fdcb533cc1d9b5189"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Attack/002.png",
+          "sha256": "96850530ca33de4f12ce9891925b07fc5b6d6740eefb616ba7a75a6341e4b9ac"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Attack/003.png",
+          "sha256": "ea4d9add717bade117f5696362f3f5db87e1f7ef54027d1e05618d218a17fb31"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Attack/004.png",
+          "sha256": "e53d5bb1108f340fa43789c9b3077abf1e0b5278b9365e0447f996682c8d059e"
+        }
+      ]
+    },
+    {
+      "file": "Characters/Baldwin/Dead.png",
+      "size": [
+        768,
+        128
+      ],
+      "frames": 6,
+      "frame_bboxes": [
+        [
+          23,
+          62,
+          64,
+          128
+        ],
+        [
+          30,
+          64,
+          71,
+          128
+        ],
+        [
+          35,
+          79,
+          87,
+          128
+        ],
+        [
+          23,
+          107,
+          103,
+          127
+        ],
+        [
+          26,
+          114,
+          103,
+          128
+        ],
+        [
+          30,
+          114,
+          103,
+          128
+        ]
+      ],
+      "sha256": "545e03371052e633074fd28567bf1a22e8bbd16c0d5188b7064352d57e469cad",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Dead/000.png",
+          "sha256": "811852e443b5c4cff275791c9c9901b6d731ee9d3e4e846c488aa15dc2fdfcd4"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Dead/001.png",
+          "sha256": "12ce26509c1db793e01b20e3dab05d9016b08b93e972c21a1b15832da379c57e"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Dead/002.png",
+          "sha256": "c425651dc39eab7d38579d06f79914fb7b652ee638bc3e6a72a89a43e4b6c9bb"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Dead/003.png",
+          "sha256": "81018e3c2d121cba982be0262f8ba8e3671ec1f1f8a1774255b06958264f90b6"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Dead/004.png",
+          "sha256": "2661f5d69f6973541e2517215d3fe36b2ab0f07e58139ea5ba0fa864dc6567ee"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Dead/005.png",
+          "sha256": "b9522c6fe3b6e523fb93d3e6edef588037caf771e64cc2d2a8be7318a0f57e6f"
+        }
+      ]
+    },
+    {
+      "file": "Characters/Baldwin/Hurt.png",
+      "size": [
+        256,
+        128
+      ],
+      "frames": 2,
+      "frame_bboxes": [
+        [
+          23,
+          69,
+          65,
+          127
+        ],
+        [
+          23,
+          77,
+          65,
+          127
+        ]
+      ],
+      "sha256": "fee4fc75fe12478ec05ebe61cecf8f07041e7366a27cabc379eb874ff44655c8",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Hurt/000.png",
+          "sha256": "6be490ec23894254656485766eed79ad57b36984e757120d92677fd8fd472b91"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/baldwin/Hurt/001.png",
+          "sha256": "3c7a25fab59546cfe7106595ccf779b5522de391dee1ee047bb61bfbfb2a9016"
+        }
+      ]
+    },
+    {
+      "file": "Enemies/custodio.png",
+      "size": [
+        384,
+        48
+      ],
+      "frames": 4,
+      "frame_bboxes": [
+        [
+          41,
+          4,
+          76,
+          48
+        ],
+        [
+          40,
+          3,
+          54,
+          48
+        ],
+        [
+          41,
+          4,
+          88,
+          48
+        ],
+        [
+          40,
+          5,
+          70,
+          48
+        ]
+      ],
+      "sha256": "1f3948bc4719de68a4df34227d0b41994168422ece89096441411eb8889a6b7e",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/custodio/poses/000.png",
+          "sha256": "3076a5d59284cafc258a894a92a91ad5a43a0f1f21c668c73ef9e73e4a1b612c"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/custodio/poses/001.png",
+          "sha256": "75b13a02a5fcf9febdac4978990b6c884e345beace792dfaaf9e1fd878cd7b67"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/custodio/poses/002.png",
+          "sha256": "5c720462d08c78c8d270ae20ceca2f07b20b4a97707b7a24f62df6642198b75f"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/custodio/poses/003.png",
+          "sha256": "2224f8344042dc2987d214074882803b03bc12e67000a82d4d9c28a7b6449523"
+        }
+      ]
+    },
+    {
+      "file": "Enemies/custodio_sellado.png",
+      "size": [
+        384,
+        48
+      ],
+      "frames": 4,
+      "frame_bboxes": [
+        [
+          41,
+          4,
+          76,
+          48
+        ],
+        [
+          40,
+          3,
+          55,
+          48
+        ],
+        [
+          41,
+          4,
+          88,
+          48
+        ],
+        [
+          40,
+          5,
+          70,
+          48
+        ]
+      ],
+      "sha256": "2f774600e17ac1be36f1b59b7c1288b252e0b973682457b4dddc49a79b8a5cbc",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/custodio_sellado/poses/000.png",
+          "sha256": "99835b88e0a233e5cbfc1513b427e0e587f0cbc5380b43c491663058fc9faf36"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/custodio_sellado/poses/001.png",
+          "sha256": "d17a60d801a4c49ae10cae0e1a636bc5b3ec9cd3707f5f50e10b2b901501de75"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/custodio_sellado/poses/002.png",
+          "sha256": "c0cd43ca2f0ad309f8d788565685a4f8be91a373053c05d8ecaaa119487e6dbc"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/custodio_sellado/poses/003.png",
+          "sha256": "d16e6ef379a0e49d178bd171865279a5810ae3828744fdd7b691116d340ec096"
+        }
+      ]
+    },
+    {
+      "file": "Enemies/acolito.png",
+      "size": [
+        256,
+        48
+      ],
+      "frames": 4,
+      "frame_bboxes": [
+        [
+          27,
+          7,
+          39,
+          48
+        ],
+        [
+          27,
+          5,
+          39,
+          48
+        ],
+        [
+          27,
+          8,
+          49,
+          48
+        ],
+        [
+          26,
+          8,
+          39,
+          48
+        ]
+      ],
+      "sha256": "64c4cb182b699f2c8e66c2a2dc8427b9d7a1af4817cae9fa0213ba85c2298545",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/acolito/poses/000.png",
+          "sha256": "46fae106033175485dd5f68ba777cc3cee84bc7b825bc0feec2c171bc018906c"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/acolito/poses/001.png",
+          "sha256": "370ce8fd32696aab4358bbff7c013f7ea50e2cd2b643b43647a472f9f37d664f"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/acolito/poses/002.png",
+          "sha256": "06b627d024b11ae182146eeac45c8f23f5252d8a7628b133b1e36a9837120af1"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/acolito/poses/003.png",
+          "sha256": "a722e3bbb4d9c3afabdabffe339650868b6b8cf8f77d7eeaead74054b0b1a72f"
+        }
+      ]
+    },
+    {
+      "file": "Bosses/abad.png",
+      "size": [
+        2016,
+        128
+      ],
+      "frames": 9,
+      "frame_bboxes": [
+        [
+          97,
+          7,
+          149,
+          121
+        ],
+        [
+          49,
+          3,
+          128,
+          121
+        ],
+        [
+          94,
+          40,
+          209,
+          120
+        ],
+        [
+          96,
+          34,
+          182,
+          120
+        ],
+        [
+          92,
+          11,
+          128,
+          121
+        ],
+        [
+          91,
+          13,
+          136,
+          121
+        ],
+        [
+          92,
+          46,
+          182,
+          120
+        ],
+        [
+          80,
+          14,
+          140,
+          121
+        ],
+        [
+          91,
+          63,
+          179,
+          120
+        ]
+      ],
+      "sha256": "cedf7094d242f2e59cf07811308818fd5c2215b8fdff17340d99b73ff0c23c45",
+      "inputs": [
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/000.png",
+          "sha256": "c271b99c1c47860c495004e66a466151d8ff6bba031e502e7917b5e9de9690bc"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/001.png",
+          "sha256": "0133dc469d6298de10bddebbfc2b0f4a6727756466135b2330fad27a14b1a814"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/002.png",
+          "sha256": "c750c1c81d13a2e9207eabc582c3aba6fc7a1bdb26d141268fd6e31ec119d9d0"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/003.png",
+          "sha256": "d83a6f29c00fb69529ed65a8904b927fdc94b953440ece2c1add27ebb135fc5c"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/004.png",
+          "sha256": "49648d94a02deca192fc0909d47e83308815ae32e65331b31d50022a5dc46f92"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/005.png",
+          "sha256": "4164207b8a9c135bb2ba4f3b68893123b009ea7bc86c1016bfb43446d79c6dfd"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/006.png",
+          "sha256": "8ea9aa7a7b23e92290c92a28683f78a0f220c5eccba4043eb94536fa2e42500e"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/007.png",
+          "sha256": "6bca94501e49cc61b18b5f176236a4a4f0084de4d01b166e2cb2cff3a462ede5"
+        },
+        {
+          "file": "/Users/felipecanas/Documents/ChatGPT/Baldwin's Curse/game/Art/Meshy/prerendered/frames/abad/poses/008.png",
+          "sha256": "7a92351f219360f6c46101a796507fb90f6ef570fbb552996d99ad3a7094800e"
+        }
+      ]
+    }
+  ]
+}

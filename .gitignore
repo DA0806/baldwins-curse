@@ -17,3 +17,18 @@ Thumbs.db
 
 # Modelos 3D de Meshy (206 MB): fuera del repositorio; los renders sí se versionan
 Art/Meshy/*.glb
+
+# Reproducible character sources are kept; transient downloads/frames stay local.
+Art/Meshy/prerendered/models/
+Art/Meshy/prerendered/frames/
+Art/Meshy/prerendered/rigs/**/meta.json
+Art/Meshy/prerendered/sprites/
+Art/Meshy/prerendered/before/
+Art/Meshy/prerendered/*-existing-preview.png
+Art/Meshy/prerendered/render_*diagnostic*.json
+Art/Meshy/prerendered/render_*_poses_*.json
+Art/Meshy/prerendered/render_*_Hurt.json
+Art/Meshy/prerendered/render_*_Dead.json
+
+__pycache__/
+*.py[cod]

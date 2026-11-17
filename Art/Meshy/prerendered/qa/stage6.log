@@ -1,0 +1,73 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+
+# Primera ejecución y partida nueva
+  ok   sin archivo: el título lo dice
+  ok   Continuar desactivado y foco en Nueva partida
+  ok   Nueva partida (sin guardado previo) va directa al plano de entrada
+  ok   la partida nueva queda guardada en el inicio
+  ok   encender el brasero guarda en disco
+  ok   el archivo guarda armas y máscaras por ID
+  ok   sin temporal colgando; la versión anterior queda como copia
+
+# Pausa
+  ok   se puede pausar en una sala
+  ok   Esc pausa y el foco empieza en Reanudar
+  ok   en pausa no se mueve ni ataca
+  ok   Reanudar con Espacio cierra la pausa
+  ok   Espacio no se convierte en salto y la tecla soltada en pausa no sigue moviendo
+  ok   el ataque pulsado en pausa no se ejecuta después
+  ok   flecha abajo recorre el menú de pausa
+  ok   Volver al último brasero recarga el punto sin pausa
+  ok   con la pausa abierta el reintento por muerte no avanza
+  ok   al reanudar, el reintento se completa
+  ok   no se puede pausar a mitad de un cambio de sala
+
+# Volver al título, continuar y reabrir
+  ok   Volver al título es la última opción de la pausa
+  ok   vuelve al título sin dejar el juego en pausa
+  ok   el título resume la partida: Último brasero: Atrio del Voto · 0:02
+  ok   Continuar disponible y con el foco
+  ok   Continuar lleva al brasero guardado
+  ok   con el inventario guardado
+  ok   tras «reabrir» se recupera el punto y los reintentos desde disco
+  ok   cargar dos veces seguidas no duplica objetos
+
+# Archivos dañados, incompletos y de otra versión
+  ok   archivo incompleto (cortado a mitad): «La partida guardada está dañada y no se puede cargar.» y el menú sigue operativo
+  ok   archivo con basura: «La partida guardada está dañada y no se puede cargar.» y el menú sigue operativo
+  ok   versión desconocida: «La partida guardada es de otra versión (99) y no se puede cargar.» y el menú sigue operativo
+  ok   ID de sala que ya no existe: «La partida guardada apunta a una sala que ya no existe.» y el menú sigue operativo
+  ok   objeto desconocido: se avisa y se puede continuar
+  ok   se carga sin el objeto desconocido
+  ok   escritura interrumpida: se recupera la copia
+  ok   principal dañado y copia buena: se puede continuar
+
+# Partida completada y sustitución de la ranura
+  ok   tras el epílogo: «Partida completada · 0:04 · 2 reintentos»
+  ok   Nueva partida con guardado pide confirmación (foco en No)
+  ok   Esc cancela, vuelve el foco y la partida sigue intacta
+  ok   confirmar sustituye la ranura por la partida nueva
+
+# Ajustes persistentes
+  ok   el volumen de música cambia el bus
+  ok   a 0 % el bus de efectos se silencia
+  ok   los volúmenes sobreviven al reinicio
+  ok   efectos reducidos y pantalla completa sobreviven al reinicio
+  ok   con efectos reducidos el destello es más suave
+  ok   las preferencias van en un archivo aparte del progreso
+  ok   un archivo de ajustes dañado vuelve a los valores por defecto
+
+# Menús con teclado
+  ok   en el título no hay pausa
+  ok   flechas recorren el título
+  ok   Ajustes abre con el foco en el primer volumen
+  ok   flecha izquierda baja el volumen y se guarda
+  ok   Esc cierra Ajustes y devuelve el foco
+  ok   Controles muestra las teclas del InputMap en español
+  ok   y vuelve al menú
+  ok   Créditos nombra al autor original
+  ok   Esc en el menú principal no lo cierra
+
+== 54 comprobaciones, 0 fallas ==
