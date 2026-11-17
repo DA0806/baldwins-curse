@@ -1,0 +1,27 @@
+{
+  "id": "01a1e9c6-b8d3-7710-a31e-918a3cea5a60",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 451388473,
+  "prompt": "hanging copper cloth banner with ivory double chevron arrow emblem on an iron rod, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923477226,
+  "progress": 100,
+  "started_at": 1794923481193,
+  "finished_at": 1794923522904,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8d3-7710-a31e-918a3cea5a60/output/model.glb?Expires=4948473600&Signature=aTa9QiTU5DnYQn4oJJoAC-KWJeqOhhVSDr1XoXRAg9QyuZ2BBrj4TEmyVgnjXgjNdsyqmaMkPriQ4w0i~hLG9RsggBqeIekhUDHLqbU0Rd~ZhGWkKwxIMtVXfy7yYV3cd8Rt9V7QQX4D0EUWmh~yQ3K~eygZFaeX96PyhS6pwlTG7bZ1~xdPaO6EjAepEFm~6UthmHiPKKfeZ4y8sCWCm~22zUehZhv4p6tt9KFd2E7bLRBld8L1YrqVbt7khpzgvpLoSwHMQWCQNn~uXw1Zyo3ZB4pmIDIFR8AHdiu~Dk4r7~JVv~Xlst8tGZYb~oPSYuBvncZeCuxHBDR9V7U5gQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8d3-7710-a31e-918a3cea5a60/output/preview.png?Expires=4948473600&Signature=GZuEe3qUJ13jB8CwXuMS3djGAHeqxSR3NULGFIR3xUkudmGtG58RGg69AG6~JA64NnT57zm~gZzhaQ2ct~nVeyYg2ij2ZEQ32n2zzVg6PMi4F3ENPt~ZV7yuk3NWoiEHLdvRj4gZ0dDrJARLvHuzCZvHZiLKb-EQHzetV9kY-gyCxpaZfuN5aZxAY8dId6F0QXyFjyhOOPkwkG~~R6zn1jL6RNYZIDKCg7B~nPNbQWVTGo4t0~6uDMY~sRQt3vEA3UUP0zAMnS~dXcp5vqmdRmE~xp0Y80wr1ls~eqDDFtqvhraKNi6XoRzzlVqF60BjQdb4K4hJsUrBVODy7KPdsQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8d3-7710-a31e-918a3cea5a60/output/texture_0.png?Expires=4948473600&Signature=mKwwsNK9R68qdTY75pYfa6QlJVHmAigO8wRm21aaUtZNPY0mWRPNotA5ZZnMrAh8AYE0cisYDhKmqQTXwYv6en2r20QUBWk7lgAfNZvXffDmbZ4FxXk4EndEYjc7Nx1MTzP8fpGyoqvH7DzOy9dXBNOqOY0deoMqpW3rvbcOYBDdtAET6-p9T2urtLOW~JcUn4A-cvUS~Pw48RS5H1XiB77xjVQH5RadiYYU24B22fJ3-5F1Tayi8D0ghS41NvfWE42D~3ZrfJyv9C0iG5823aTSs~KeO1Sh7Oo7iAwFw7Sgq9dHhDWXaYYRmSZ7uc5LSqW9rN~7hv8a8EIDoqD8zw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-3856-778e-91ae-dceafadf0749",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2660174302,
+  "prompt": "hanging copper cloth banner with ivory double chevron arrow emblem on an iron rod, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923316385,
+  "progress": 100,
+  "started_at": 1794923316395,
+  "finished_at": 1794923342418,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-3856-778e-91ae-dceafadf0749/output/model.glb?Expires=4948473600&Signature=aD-OkDwUl2eAGQFWxIH~VQ6t8p4d9ikqPO7PqOd0npRYDXWtZiGy~MsOXxjmAsmC25sI0Pu1xR9w~6R3hmd3KqU93ZYSXPT5sVSUu5TFxSzktPMvd-VH2J4OQPxNe6JMN4lM0OZSpUQ8Pg5muFpJZ58IpU08DRjc8FoNSwvq5LFREtNBg30-Zr-ONWcV5rNSo-k1J02q305FUPWdkCHCl9E4A3PX-iPKzNuZwrV-emrb1ioTJK8PArNfyFFtHkndPdx5kTTDgOg22~YHLTihiOxVeds7d~hODXL7idljJFoIfEpP-6vE8RaBdYEPnxXFUF5Dzhu7vrdPcDOwFw6KFA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-3856-778e-91ae-dceafadf0749/output/preview.png?Expires=4948473600&Signature=QMUFvL5NA3Tnr1wl71xpKhscbjm1mlKMDyZzm0mbgYJmXfwRtqtS07bx~gfbbbvHauKGY3KQwoVc0Lj-14xX3GceJDWjsfaHg~ZbG420fvR6cETrxOXr25ESZKkSi6r4YU~onsANS2sbNck6A943uDvkdXvfpbf6OlbAWDbycfSnVqgXshq9SqcLucfKiRXY2miss3mAqyHN0gSvN1p8bsoHqJ4afwTFUxA6AozM6SvXwXHdxngyzU4ikoP5WaV-DdJTI0B8cDiCjBjlwDD6YyGOLEhIQRPzP9Pi981coHUh35K19U4FV9YTzJuEP8K5DVtTqJwsdQF-9mB4tvAAQA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

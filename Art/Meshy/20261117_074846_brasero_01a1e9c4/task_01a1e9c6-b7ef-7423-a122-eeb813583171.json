@@ -1,0 +1,27 @@
+{
+  "id": "01a1e9c6-b7ef-7423-a122-eeb813583171",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 56807949,
+  "prompt": "iron brazier on a slender pedestal with a copper bowl full of burning embers, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923477006,
+  "progress": 100,
+  "started_at": 1794923478025,
+  "finished_at": 1794923531200,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7ef-7423-a122-eeb813583171/output/model.glb?Expires=4948473600&Signature=bN1yRRdYtcFwsN9Gwvb9SMGG390RolYRIc1NaPG1rPuIRhiB-EvsIKxbqfT69SjrZLkYf7Q8GqTp2H1vBxmJ3kNXcx9LkDUZX4akDYEU23sc9sUWZrSbXcv1mk0pQkV-5NK6JBHKz51Xw2vON3eFaTIpncL0paj21QxPgGIXYnuPQsZ0ATztgi8ps0OSEJLpyY4jzhXYfY9FrSxu37MFR9fnwC4IquIwit5Sf38fbpzicPcCHXyLmHQmZ8bxImgxM4~n7WwHQbfpDXCvsbNudIU4WUuy29FCAU2Y-WcGXbM8m0F-9wGrXmwik~P9lLmVpHENwpzLJZCgqkM44n8fag__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7ef-7423-a122-eeb813583171/output/preview.png?Expires=4948473600&Signature=HxiI1E1tx0ahZft2yG91ZBvQcuQ9sB1zS4PjC9etdzOLm~YmmxDPSiY1BrATbtZl~AULVRWPRzj-R5E0ZA1LhY5H8t7VHA-kbf0eTEM3Ze6vIRk23Yuhr9bSRN1RekHxfRqEApdULgrX0Req5KgfxA8uE3QUeVHvS1DeI~t2j6nTqFUOV7S~kJEUXPGLf83Lo7DxF1sldVORoUXDsO26LSxh6itDiOgU5ljSG8nnGffADe7Al2M8ucOahz2XzPBP~kjpmU~HHwGTJC8txh1~3HyIne4lQ8PHfTlGRLLXsEcYAFN0uS~1rKDmL98BpsdrmmiqQd-u~cm5Eci2NloeNw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b7ef-7423-a122-eeb813583171/output/texture_0.png?Expires=4948473600&Signature=OYWBadqV2Imm9znUTceoHfdSubT9lbeoes6uD-EUGOCSfrk5tppYk3iTMtjvxjCTQN17SMWQ45pIVqwj25pq-POFulyMr348xUTFZJcE7qvJ828hSYiNRzie~4g3Xawe6IyzHOg7mZOpaxAvGZa3KLUi-0uWBzLmGn-4cCJ7w3~PoRrWS8uP-kHilCfRRTe06pZxKNyu4tjGVVAeOWNjBTFzMCiBRyGOTMIRwvFTK0ENP6BFxz9WkjZxx1h4W9eaGZqJVHcdW8Ne8jsx4rEz4RQpMfNIZdK2nwW0dRLMV2USsZlmkyZx4L5cTIbsnXqQh8P4pItg4Ym-N9hik5Z81Q__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

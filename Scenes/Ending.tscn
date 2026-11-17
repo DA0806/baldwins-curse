@@ -1,0 +1,73 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Ending.gd" id="1_ending"]
+
+[node name="Ending" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ending")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.082, 0.098, 0.141, 1)
+
+[node name="Picture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 24.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.941, 0.655, 0.345, 1)
+theme_override_font_sizes/font_size = 22
+text = "El último sello"
+horizontal_alignment = 1
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 62.0
+offset_right = -80.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 11
+text = "El sello se quebró. Las ascuas se apagaron una a una
+y los custodios por fin descansaron.
+Baldwin se quitó el yelmo y miró el amanecer."
+horizontal_alignment = 1
+
+[node name="Stats" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = -44.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_bottom = -24.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1

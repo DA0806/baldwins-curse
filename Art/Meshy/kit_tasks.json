@@ -1,0 +1,62 @@
+{
+ "lapida": {
+  "preview": "01a1e9c4-205b-704c-afae-a24426531e54",
+  "refine": "01a1e9c6-b7e9-7111-bbdc-c7900e6dc467",
+  "glb": true,
+  "credits": 10
+ },
+ "custodio": {
+  "preview": "01a1e9c4-2058-7215-97fe-1f466626558c",
+  "refine": "01a1e9c6-b7f6-7146-aac5-fe99466754dc",
+  "glb": true,
+  "credits": 10
+ },
+ "urna": {
+  "preview": "01a1e9c4-228d-7261-b6c5-f2a819747295",
+  "refine": "01a1e9c6-b7e8-74f1-8af2-e9fa83ab0421",
+  "glb": true,
+  "credits": 10
+ },
+ "pedestal": {
+  "preview": "01a1e9c4-20e0-7247-a849-0a7ae7b91138",
+  "refine": "01a1e9c6-b7f8-718b-9310-444cfde641b6",
+  "glb": true,
+  "credits": 10
+ },
+ "candelabro": {
+  "preview": "01a1e9c4-2066-73ee-8e35-ea2bf848a48f",
+  "refine": "01a1e9c6-b8cc-75c2-aaa4-6a3f01794141",
+  "glb": true,
+  "credits": 10
+ },
+ "mascara_voto": {
+  "preview": "01a1e9c4-25d5-76be-8f36-ea6edaef6bc0",
+  "refine": "01a1e9c6-b7f8-715d-9e4f-c8b3a11d0982",
+  "glb": true,
+  "credits": 10
+ },
+ "arco_salida": {
+  "preview": "01a1e9c4-2bbd-717e-a9b4-1477734b2a79",
+  "refine": "01a1e9c6-b7ea-7774-8171-f119194ed30e",
+  "glb": true,
+  "credits": 10
+ },
+ "estandarte": {
+  "preview": "01a1e9c4-3856-778e-91ae-dceafadf0749",
+  "refine": "01a1e9c6-b8d3-7710-a31e-918a3cea5a60",
+  "glb": true,
+  "credits": 10
+ },
+ "mascara_ascua": {
+  "preview": "01a1e9c4-4c39-70b2-b825-57ef7108000d",
+  "refine": "01a1e9c6-b8ad-70a7-97dc-d20f7cc71f9a",
+  "glb": true,
+  "credits": 10
+ },
+ "brasero": {
+  "preview": "01a1e9c4-5fdd-738d-a475-486273302ae7",
+  "refine": "01a1e9c6-b7ef-7423-a122-eeb813583171",
+  "glb": true,
+  "credits": 10
+ }
+}

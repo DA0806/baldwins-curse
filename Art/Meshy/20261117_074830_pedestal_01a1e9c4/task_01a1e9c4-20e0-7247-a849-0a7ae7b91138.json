@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-20e0-7247-a849-0a7ae7b91138",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2577258061,
+  "prompt": "short ivory-topped stone pedestal plinth, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923310190,
+  "progress": 100,
+  "started_at": 1794923310201,
+  "finished_at": 1794923349206,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-20e0-7247-a849-0a7ae7b91138/output/model.glb?Expires=4948473600&Signature=ZsAnE-UcnpXZFCFgKmOdeNxPFslaek8Y~1iMB41R5WrQAJh8JilPihofb5zlt-WEifgAVE4ZNd170wa2K6aDDD71TCVb6WYCkwhA9pBrdMSGMLTjzxMGIyuG7Yo9lsPnoGWR38NEm0J09Z2C1gGdX2y5bRo1mn9Y~0v5~3OEwrznYIUDSGm4CJWOOebz9HDiZQoWPgnpDsVrseP7gGNZ0j8OjqJ1FPH9QjRLrhUuO0mGJ0ZG2rPlwgcoSpu1zSaZdAWQAUE5PSfaD8mZi2gvMGKxctUULLcRBhLisoUSJ3GJC2dF4Q6gw4EX7vBA7al1FbBRM1elYb3THLg4DlxmNA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-20e0-7247-a849-0a7ae7b91138/output/preview.png?Expires=4948473600&Signature=Jmn9MWa2NW00unjXvGxQRnXx3XoqrbwLtEkGlUojmJjSdwkPETZXaOPUJYirKIIHWZzAS3DXeVKfNwB5iArEkvfQRbSEH3t88YfB~rIav-V9819D6mjs6tq5RkN4etEA4gLmzF7XA2gyY9NOJVssfHgGjvduaAWLuxKPF1iwYrBrPAtb~dSVK2VWA3FmPPgzfQ1PcAb5Aq3iONL~HC0mSR2J70EK8l7LdKUsjCzATRAl~M2qciF-YCHA2scEUye46CX6-p-K18SQitT9gB1d~de24pl5but~rT2OaF8vVjMQu69ozOeBYSS1NklJmiLwlEz-oWtrT2~c5I1kEE96QA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

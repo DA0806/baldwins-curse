@@ -1,0 +1,27 @@
+{
+  "id": "01a1e9c6-b8cc-75c2-aaa4-6a3f01794141",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1380384847,
+  "prompt": "wrought iron three-branch candelabra with lit ivory candles, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923477219,
+  "progress": 100,
+  "started_at": 1794923479753,
+  "finished_at": 1794923514258,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8cc-75c2-aaa4-6a3f01794141/output/model.glb?Expires=4948473600&Signature=EsEe3ZrxLlQ3NO1tSG8TLEndk0nLOcU9jBEnSH4ZAtl5nSIqfsuVBroSYKt~lQ9OKwQjNtKcdBtBgTyeQASgEy2RgIF338OnqlpU3IGvRTadi3syRGskU1VSD4EvPOr15YS0PHhn~KKxvYdJim9XgO6ukk9fPdk6tVc3QOjMlweNmgK6Ca80hxixbks~TPuDjmllNWXTL~5s1S5Y8cPHMccROPweEbAT8AyaF1fJOeVSHhxtmQFyIpz5aZiLPWi1Z~RIygXSZSEquX~hCQJ00rd22olcEz0LVy3G-9lFrr8xVfTkcrwYjK9NbP~ei8jfaVLTvb-40vKk~UbuTr7ltA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8cc-75c2-aaa4-6a3f01794141/output/preview.png?Expires=4948473600&Signature=O5Idm6MJ0oFL2wVBu4T7mUhTLiJebLynZoyQHOfmNwm-nogU1BIw2ZulIsXxEg90l5g9T55dy56dIx2Oe0JaJmTfKMPfKon54d3TQBsQuL77pxWWw9U4qKta-oR5khRpPD0pbiz2FRM9JXgP7zZJ6xKQsjCijl4rO1Dz-W1ZqPilODkpx-4Vh-EdVcWDpDGDVeEa-MG~8dx59Y0Nku8JwGJpFClpYHK0YD4ZlcqzsCyIbGMGMuOsZYnmPGuUlqeKQJckzYsIQ1zmDxcQJc7FcvvzTuJ3Jpa~NES1dQoEKqUt9qZMU6PCn4hcnIAhgS0V4P-RWVPDoVULbZc1NpFmeQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c6-b8cc-75c2-aaa4-6a3f01794141/output/texture_0.png?Expires=4948473600&Signature=CPesLcJNGCvxw0DEvg5UtRTksSsMMcEgkyVPqUe9zpFsDj~u3h4HACRDfhoQr8y4ZppkmoD02LZGRjffBuqR3OR1E~HNvgHsjE29icC6uHFlRJQhUII7~2M~vqENEhoqF1MRQj0hmQey2JaLOwfoy9vSwJ-GMFy4ttUIayu4cRLyu2wXvWkBfR9bzAxER2CFFCz7DARr2QvVrIAhHvprFdb5CYqX-d9OA52plz0~pKYkKs3rNXycTEfm2-oV48X7yM6KYsxF4V8NufCzMi-heZ9rZj5tDS7Sgyx~zR34m8Vyqbwfi2Zz38eE67e9zeJVfw37FVBtrL~vhG-e4l6NQA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

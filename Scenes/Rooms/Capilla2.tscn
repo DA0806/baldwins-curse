@@ -1,0 +1,127 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="1_r"]
+[ext_resource type="PackedScene" path="res://Scenes/InventoryHUD.tscn" id="2_r"]
+[ext_resource type="Script" path="res://Scripts/Room.gd" id="3_r"]
+[ext_resource type="AudioStream" path="res://Audio/amb_capilla.wav" id="4_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Capilla/bg_far.png" id="5_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Capilla/bg_mid.png" id="6_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/BlockGeometry.gd" id="7_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Capilla/floor_fill.png" id="8_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Capilla/floor_top.png" id="9_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Capilla/statue.png" id="10_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Capilla/lectern.png" id="11_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/arch_exit.png" id="12_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/Inscription.gd" id="13_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/Checkpoint.gd" id="14_r"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/brazier.png" id="15_r"]
+[ext_resource type="Script" path="res://Scripts/Rooms/RoomExit.gd" id="16_r"]
+
+[sub_resource type="RectangleShape2D" id="Shape_kill"]
+size = Vector2(1280, 60)
+
+[node name="Capilla2" type="Node2D"]
+script = ExtResource("3_r")
+room_id = "capilla_2"
+ambience = ExtResource("4_r")
+room_rect = Rect2i(0, 0, 960, 360)
+
+[node name="Far" type="Parallax2D" parent="."]
+z_index = -20
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="Far"]
+texture = ExtResource("5_r")
+centered = false
+
+[node name="Mid" type="Parallax2D" parent="."]
+z_index = -15
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="Mid"]
+texture = ExtResource("6_r")
+centered = false
+
+[node name="Geometry" type="StaticBody2D" parent="."]
+script = ExtResource("7_r")
+blocks = Array[Rect2]([Rect2(-32, 256, 1024, 104), Rect2(-32, 0, 32, 256), Rect2(960, 0, 32, 256)])
+color = Color(0.33, 0.35, 0.4, 1)
+fill_texture = ExtResource("8_r")
+top_texture = ExtResource("9_r")
+
+[node name="Props" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Statue0" type="Sprite2D" parent="Props"]
+position = Vector2(120, 224)
+texture = ExtResource("10_r")
+
+[node name="Lectern1" type="Sprite2D" parent="Props"]
+position = Vector2(380, 240)
+texture = ExtResource("11_r")
+
+[node name="Statue2" type="Sprite2D" parent="Props"]
+position = Vector2(820, 224)
+texture = ExtResource("10_r")
+
+[node name="ExitArch" type="Sprite2D" parent="Props"]
+position = Vector2(936, 208)
+texture = ExtResource("12_r")
+
+[node name="Hints" type="Node2D" parent="."]
+
+[node name="Hint0" type="Label" parent="Hints"]
+offset_left = 560.0
+offset_top = 104.0
+theme_override_font_sizes/font_size = 10
+text = "El sello del Abad brilla cuando es vulnerable"
+
+[node name="Hint1" type="Label" parent="Hints"]
+offset_left = 560.0
+offset_top = 120.0
+theme_override_font_sizes/font_size = 10
+text = "Salta su tajo bajo; busca el hueco entre las marcas de brasa"
+
+[node name="Inscription0" type="Area2D" parent="."]
+position = Vector2(480, 224)
+script = ExtResource("13_r")
+text = "Baldwin: el último sello lleva tu nombre. Rómpelo y descansarán. Y tú con ellos."
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(48, 224)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="from_capilla_1" type="Marker2D" parent="Spawns"]
+position = Vector2(48, 224)
+
+[node name="checkpoint_capilla_2" type="Area2D" parent="Spawns"]
+position = Vector2(200, 224)
+script = ExtResource("14_r")
+
+[node name="Art" type="Sprite2D" parent="Spawns/checkpoint_capilla_2"]
+position = Vector2(0, 16)
+texture = ExtResource("15_r")
+hframes = 4
+
+[node name="KillZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(480, 450)
+shape = SubResource("Shape_kill")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(936, 208)
+script = ExtResource("16_r")
+target_room = "capilla_3"
+target_spawn = "from_capilla_2"
+draw_frame = false
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_r")]
+position = Vector2(48, 224)
+
+[node name="InventoryHUD" parent="." instance=ExtResource("2_r")]

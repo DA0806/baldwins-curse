@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-2066-73ee-8e35-ea2bf848a48f",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3386580017,
+  "prompt": "wrought iron three-branch candelabra with lit ivory candles, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923310203,
+  "progress": 100,
+  "started_at": 1794923310212,
+  "finished_at": 1794923331871,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-2066-73ee-8e35-ea2bf848a48f/output/model.glb?Expires=4948473600&Signature=LdMg7Wf87RTT9ZN7rL2dsy9YRzwhjPbJEgM~JDBhBJkUX4b6MytLOBLhXYiceTYKqQJ2CsrSMtF06t4eUgiWr-usPALEJ6Wkk0S6TltzqIF5qxE4IFknslxlyqQb3Xi5dgv3-5lTwcKbzMuNo9H-BFO1YfLqNULKd8e8OdlTq7ZV4oQZgYgMRwiTxUiyPHsGuim~RffLzDhKbTGareyGjrXNbABnhtZYyN4HjIecz8FTTIIeTCZZ-Gv8UcEzI5OhbutjLs55bL9ITpkJ8qxWsZhZ3dx56bUi-OfV6m7Nfpnk2NeT1JPgMkGIyF7xefieLf99LfuMjG0KMO5p59-Omw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-2066-73ee-8e35-ea2bf848a48f/output/preview.png?Expires=4948473600&Signature=AGGPxB2~jTTLYXu8MP57vv8MuWfflR8lLaQynOof8UMzPWGgk2XlOadDu56h8vXznh1NZaFvfh8ZElzxrrkDiwPYlgK6XyC-OfwIPJPTDQ8clr88yjY2u6zhDz45uD4OmpQG4cnhXEFnCgbAEk8xHan5ou3hJHVU21FIe2Yp~RGeIfb7hDm1OwXrH7P4YDMSLYnorMEc35~jOfYDzPFtYOcsyfi93EUSNwTratPeh~jjMiLClDuGN4CxkKxYOp4I6xJ~Ynp9oXQtxpAKZdGkh5kREPMojoswaBX3-Klr-yw54ZNPyiOWpUNz2~uSExvv2Q6KXQB0Ad~TgIx-IZBHsQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

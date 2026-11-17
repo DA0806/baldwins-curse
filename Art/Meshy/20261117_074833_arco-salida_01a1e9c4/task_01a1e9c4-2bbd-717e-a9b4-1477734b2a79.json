@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-2bbd-717e-a9b4-1477734b2a79",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 752822235,
+  "prompt": "gothic pointed stone archway doorway with ivory keystone, glowing ember light inside, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923312745,
+  "progress": 100,
+  "started_at": 1794923312760,
+  "finished_at": 1794923356129,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-2bbd-717e-a9b4-1477734b2a79/output/model.glb?Expires=4948473600&Signature=PurrRFmv9KyJCBYnUj7F-rZm8jjlQJFi3iC9PQuoVOepm-579HFyGdKFNqTXRSpWWKHhoWcGHZLvcYqGXBBboyH1DYb6R1hyvLyzjXDqcsp3s8lDwgLXpghWE9kyJelbWTo75LP9JNSBRiTO8ne6EgUZymxZg9zFQCqwxw3JOKVyyqi0enPQV42ncYelWLGXkAgh7XxGGTL-nRUku-Z5RJ1Z2jDDDM8GiECmPgxHtVitaShFN7lqvtmjObjNhfSEXNByXmP6Ydr1dpofUIIXx5JHorMSFht-WeORnyV3F63x5AhOo54Ej9Qy5ENiq9g2FvRXW5N4t~ttZ2kUpUfXcg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-2bbd-717e-a9b4-1477734b2a79/output/preview.png?Expires=4948473600&Signature=odF~JIciOwoVmprs2pRatykM-Ig3Tjl3J2uTK1C8U3X1VP2lYP81TGgW0E6GChntkuuExm4yv3tZ-fSa~0oyjr9HJGX5UqIjKl6Okouw3iqZPg25r7mCgeo6tQkljfVdy6ETef4CQ0HK2iG5bHVgG8YfOtrvLELoxBGHPRKDK20PnhU-9m~qaaOxeB1zHLMQlOorgSz5vSKpCf5bxU3M-V3x8b0eqs1qLsmhrA3l9qsF4R-1SA0MOlOWT1Etd-JBTJwEYjzR-tB9Y-vEs8~DThZlhoxNjZsgqQoiu~zFjCD--64TEwDdVvth-Z982qrSkMLLucGx2lYQoTZf~16Wdw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-205b-704c-afae-a24426531e54",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 838029842,
+  "prompt": "low stone grave slab with a carved ivory cross, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923309376,
+  "progress": 100,
+  "started_at": 1794923309389,
+  "finished_at": 1794923343880,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-205b-704c-afae-a24426531e54/output/model.glb?Expires=4948473600&Signature=Dqz17vbb027v6wm8pYdBVfxoj2yeu4zAw4kYV0UIVvTxnHgtXm~q8A7zhxZhJkkNWi0XciHZj~t5WlWlt~AAm43KWOEAJ3ibmSx2ralws8iYfhwpf0Ht7OoslMDPtl2X1CNfLW2bO5XfHuJuEe40b9RrsFSWhiPS-hA47Lhg6gnr85LTo6OeV3DObVCil-3rT6CTvF~LfyRGgjXgGU0Szpcyh8s7p6EXeOs2Sd20lYqvXC1ML-qrJxz1fggr9ZtUqBFK3B7vVu-Vyp8A4m5C2sTWZRFx4tDYLLm-MgVRe7fmanjOuP52BJItHc~ldh4KPylsuHo-d4KhGp8ZGALx5A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-205b-704c-afae-a24426531e54/output/preview.png?Expires=4948473600&Signature=T2jHD8C0bw~nwAn0pCOWh7enu0XBsu4GPjwhxd2SV3mvorGk40iNYqIAtf2O9hITXN6pvlOAcVvMlKGlX58xdHyGziMF2T6lcWxVgg6BIHwxPSa58NKiHlRbxr1RE4mJzOb9Gvv~Psj3M36Wh~iMsyoaojF-FZAnF-oHe53AorQH--Nq2HhZK~qc3bF8jnSuXTxjWtEeLIfQK1lAcSnA9gpOq~Y5TI4zWQON~XUfQskvr9LqgoqD3HxTd~yD2hP23BHap0-56rRL-2bJLFYcpVxsuPRgADRhG7EHffulyOUQiH767iCanEZoxdnwe-S~7KXQow~rnQZ5zDio8L4T-Q__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

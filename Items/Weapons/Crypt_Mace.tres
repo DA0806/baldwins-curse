@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Texture2D" path="res://Sprites/Items/Weapons/Crypt_Mace.png" id="1_icon"]
+[ext_resource type="Script" path="res://Scripts/Classes/WeaponData.gd" id="2_script"]
+
+[resource]
+script = ExtResource("2_script")
+id = "crypt_mace"
+name = "Maza de la Cripta"
+icon = ExtResource("1_icon")
+base_damage = 35.0
+attack_cooldown = 0.8
+reach = 44.0
+startup = 0.28
+active_time = 0.1
+recovery = 0.32

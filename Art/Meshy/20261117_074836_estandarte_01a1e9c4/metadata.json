@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "project_name": "estandarte",
+  "folder": "20261117_074836_estandarte_01a1e9c4",
+  "root_task_id": "01a1e9c4-3856-778e-91ae-dceafadf0749",
+  "created_at": "2026-11-17T13:48:36.902Z",
+  "updated_at": "2026-11-17T13:52:23.064Z",
+  "tasks": [
+    {
+      "task_id": "01a1e9c4-3856-778e-91ae-dceafadf0749",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1e9c4-3856-778e-91ae-dceafadf0749.json",
+      "operation_id": null,
+      "created_at": "2026-11-17T13:49:03.355Z",
+      "updated_at": "2026-11-17T13:49:03.355Z"
+    },
+    {
+      "task_id": "01a1e9c6-b8d3-7710-a31e-918a3cea5a60",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "refine",
+      "parent_task_id": "01a1e9c4-3856-778e-91ae-dceafadf0749",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1e9c6-b8d3-7710-a31e-918a3cea5a60.json",
+      "operation_id": "c5c2d1f2-9d35-4e60-8af0-a1e4cc2b0815",
+      "created_at": "2026-11-17T13:51:17.306Z",
+      "updated_at": "2026-11-17T13:52:19.836Z"
+    },
+    {
+      "task_id": "01a1e9c6-b8d3-7710-a31e-918a3cea5a60",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "deliver",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-17T13:52:22.081Z",
+      "updated_at": "2026-11-17T13:52:22.081Z"
+    },
+    {
+      "task_id": "01a1e9c6-b8d3-7710-a31e-918a3cea5a60",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-17T13:52:23.064Z",
+      "updated_at": "2026-11-17T13:52:23.064Z"
+    }
+  ]
+}

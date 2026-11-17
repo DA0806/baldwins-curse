@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-25d5-76be-8f36-ea6edaef6bc0",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1124568557,
+  "prompt": "ivory oval face mask with closed slit eyes and steel rim, solemn, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923312252,
+  "progress": 100,
+  "started_at": 1794923312262,
+  "finished_at": 1794923350877,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-25d5-76be-8f36-ea6edaef6bc0/output/model.glb?Expires=4948473600&Signature=NrEzG5Eo4EtacMSg164aNb95tTdRycft~WoUWsSqT9zfV0iqT6DRASXKK~8~G3ntsx50GBtaiUfOraBv84BUp8CmYQLnWNmRsFVsMoPbuwUIBO2YGtr1MZmTRwdLtUwexVK2pfDUtn8UgnMcwagXGFsWNQEqURFaTpV6nn9yWSL6XjUAmfx-AnHJY3Sgq6qfqqdp8cN1c0FCl0nsEV8nDNLQ0l7ezo3JA8GtQPF253d4neU9IKluxnh92me5klRdmxc3A831E6qKv4VQfxQxrp95Kcu9twxMSZEvuHuMTj8RY0KF5vsz6o9PmBqCfFH2TmEQ0w9NQtzFq-UTikCEgw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-25d5-76be-8f36-ea6edaef6bc0/output/preview.png?Expires=4948473600&Signature=ON1V9RbEkjy2b75X-zuss-EaFOnUpKeV86jbDLA7grpeFW2u5dUvemLbMvW8gGzQbr1RMl9PWOQcowJzionsOVkZEBlUYh51mwnMwFzHTI8KUpAB2VjftWNvVCroZdSsff-hXv-mkJ6jOadfOpnL9Oekkz0GBWWExQXChRpi95S7gn6mOVxE9j5Q2Gtuw~6~jf8sd2~Hv4Au82CgjKPyq2pzieqc8aphm2gjqDVbviXngtCbxl4H00~gA-YUGqSxUqV-abq~dfkFQrgQJ0qXTA-SGhL5s1npuckxlMCZfVb3CUJuKtu8pI2~h2gy59LHmJA0FClNVhB8FMD162h13A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

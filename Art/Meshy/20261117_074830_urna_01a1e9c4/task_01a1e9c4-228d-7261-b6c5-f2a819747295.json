@@ -1,0 +1,23 @@
+{
+  "id": "01a1e9c4-228d-7261-b6c5-f2a819747295",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3256958607,
+  "prompt": "small copper funerary urn with lid, stylized low-poly game asset, dark gothic funeral abbey, muted slate stone and steel with copper and ember accents, clean silhouette, single object, no base, no background",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794923309901,
+  "progress": 100,
+  "started_at": 1794923309912,
+  "finished_at": 1794923348575,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-228d-7261-b6c5-f2a819747295/output/model.glb?Expires=4948473600&Signature=NvzbPAIEnigsG~Pr4q3j3Ap2oWufRiHQ9-5nU~uQI2SGoCLWlc3kNKcMrs6kkDEFrVSoX28P5~Cb7okO6di5sflokcS~KE~tyckvXj8OH5tDzaoAwrDsN2tHgVujyFS2YH~DHmegudl25ck81Vhcs2AbS6F1qTE8AXVnv2qh8fYxiP3m~u49UItwQgnutUL4qS-vhC5wq9BZKN2aSijKuUKaHfn9e5oMDurc5p5baqEPRv53hHqr2k6uxf2MRO42TFF7Gs1pWKog1gcWfgNV2B4mYmjCW9DPLvmu8OHzmgzjBTMKmyQpAt7InqiEnh8DXfrY~p29aEPRcObRR7BRNQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/38ea0a92-fd35-453a-9d71-cfcf64d68abf/tasks/01a1e9c4-228d-7261-b6c5-f2a819747295/output/preview.png?Expires=4948473600&Signature=AKHAJvFuDBRxBlfgS8e9~~ymQfyAjZmqp1sqHvUIhF8CAOPunNyLUENHMt34Gu8TjV14aCd57qwH1brxPFMKKx9xJn7-U6hQjjuCkaNfBGFnoZQqi4BejRlChf9K2bxL2jSRP5lRmEqiB0pHCE9vV6Us1hZoNoS8VPdXL3UFkSAGypinizQJeYykjw2001i55gVv6hr3kNUV~IHJ1qLpWhmE31T8tfg~jvj2iR~9b8R5DeyYhyxZRn1jXtLiirTd8JRMGDWlYzSWRyU9oU0D-ofRK2murD4K9U34f4RHOld-kzaeBM0RRzEOuDWd75hkR2LUpS8UBbHFvc9LyRQvEQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

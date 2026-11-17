@@ -1,0 +1,204 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Room.gd" id="1_room"]
+[ext_resource type="Script" path="res://Scripts/Rooms/BlockGeometry.gd" id="2_geo"]
+[ext_resource type="Script" path="res://Scripts/Rooms/HintLabel.gd" id="3_hint"]
+[ext_resource type="Script" path="res://Scripts/Rooms/RoomExit.gd" id="4_exit"]
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="5_player"]
+[ext_resource type="PackedScene" path="res://Scenes/InventoryHUD.tscn" id="6_hud"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/ItemPickup.tscn" id="7_pickup"]
+[ext_resource type="Resource" path="res://Items/Masks/Mask_Vow.tres" id="8_vow"]
+[ext_resource type="Script" path="res://Scripts/Rooms/Checkpoint.gd" id="9_checkpoint"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/GroundEnemy.tscn" id="10_enemy"]
+[ext_resource type="AudioStream" path="res://Audio/amb_atrio.wav" id="11_amb"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/floor_top.png" id="12_top"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/floor_fill.png" id="13_fill"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/bg_far.png" id="14_far"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/bg_mid.png" id="15_mid"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/candelabra.png" id="16_candle"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/urn.png" id="17_urn"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/tomb.png" id="18_tomb"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/banner.png" id="19_banner"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/pedestal.png" id="20_pedestal"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/spikes.png" id="21_spikes"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/pit_glow.png" id="22_glow"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/arch_exit.png" id="23_arch"]
+[ext_resource type="Texture2D" path="res://Sprites/Environment/Atrio/brazier.png" id="24_brazier"]
+[ext_resource type="Texture2D" path="res://Sprites/Enemies/custodio.png" id="25_custodio"]
+
+[sub_resource type="RectangleShape2D" id="Shape_kill"]
+size = Vector2(1600, 60)
+
+[node name="Atrio2" type="Node2D"]
+script = ExtResource("1_room")
+room_id = "atrio_2"
+ambience = ExtResource("11_amb")
+room_rect = Rect2i(0, 0, 1280, 360)
+
+[node name="Far" type="Parallax2D" parent="."]
+z_index = -20
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="Far"]
+texture = ExtResource("14_far")
+centered = false
+
+[node name="Mid" type="Parallax2D" parent="."]
+z_index = -15
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="Mid"]
+texture = ExtResource("15_mid")
+centered = false
+
+[node name="Pit" type="Node2D" parent="."]
+z_index = -5
+
+[node name="Glow" type="Sprite2D" parent="Pit"]
+position = Vector2(400, 256)
+texture = ExtResource("22_glow")
+centered = false
+
+[node name="Spikes" type="Sprite2D" parent="Pit"]
+texture_repeat = 2
+position = Vector2(400, 336)
+texture = ExtResource("21_spikes")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 16)
+
+[node name="Geometry" type="StaticBody2D" parent="."]
+script = ExtResource("2_geo")
+blocks = Array[Rect2]([Rect2(-32, 256, 432, 104), Rect2(496, 256, 816, 104), Rect2(-32, 0, 32, 256), Rect2(1280, 0, 32, 256)])
+fill_texture = ExtResource("13_fill")
+top_texture = ExtResource("12_top")
+
+[node name="Props" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Candle1" type="Sprite2D" parent="Props"]
+position = Vector2(40, 240)
+texture = ExtResource("16_candle")
+
+[node name="Candle2" type="Sprite2D" parent="Props"]
+position = Vector2(268, 240)
+texture = ExtResource("16_candle")
+
+[node name="Candle3" type="Sprite2D" parent="Props"]
+position = Vector2(560, 240)
+texture = ExtResource("16_candle")
+
+[node name="Candle4" type="Sprite2D" parent="Props"]
+position = Vector2(904, 240)
+texture = ExtResource("16_candle")
+
+[node name="Urn1" type="Sprite2D" parent="Props"]
+position = Vector2(300, 248)
+texture = ExtResource("17_urn")
+
+[node name="Urn2" type="Sprite2D" parent="Props"]
+position = Vector2(780, 248)
+texture = ExtResource("17_urn")
+
+[node name="Tomb1" type="Sprite2D" parent="Props"]
+position = Vector2(352, 248)
+texture = ExtResource("18_tomb")
+
+[node name="Tomb2" type="Sprite2D" parent="Props"]
+position = Vector2(830, 248)
+texture = ExtResource("18_tomb")
+
+[node name="Pedestal" type="Sprite2D" parent="Props"]
+position = Vector2(700, 248)
+texture = ExtResource("20_pedestal")
+
+[node name="Banner1" type="Sprite2D" parent="Props"]
+position = Vector2(1176, 136)
+texture = ExtResource("19_banner")
+
+[node name="Banner2" type="Sprite2D" parent="Props"]
+position = Vector2(1208, 136)
+texture = ExtResource("19_banner")
+
+[node name="ExitArch" type="Sprite2D" parent="Props"]
+position = Vector2(1256, 208)
+texture = ExtResource("23_arch")
+
+[node name="Hints" type="Node2D" parent="."]
+
+[node name="Checkpoint" type="Label" parent="Hints"]
+offset_left = 90.0
+offset_top = 150.0
+theme_override_font_sizes/font_size = 10
+text = "Toca el brasero: punto de control"
+
+[node name="Pit" type="Label" parent="Hints"]
+offset_left = 330.0
+offset_top = 150.0
+theme_override_font_sizes/font_size = 10
+text = "¿Caíste al foso? Vuelves al último brasero."
+
+[node name="Mask" type="Label" parent="Hints"]
+offset_left = 600.0
+offset_top = 132.0
+theme_override_font_sizes/font_size = 10
+text = "Máscara del Voto: recibes un 20 % menos de daño"
+
+[node name="Pick" type="Label" parent="Hints"]
+offset_left = 600.0
+offset_top = 148.0
+theme_override_font_sizes/font_size = 10
+text = "{interact} recoger"
+script = ExtResource("3_hint")
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(48, 224)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="from_atrio_1" type="Marker2D" parent="Spawns"]
+position = Vector2(48, 224)
+
+[node name="checkpoint_atrio_2" type="Area2D" parent="Spawns"]
+position = Vector2(150, 224)
+script = ExtResource("9_checkpoint")
+
+[node name="Art" type="Sprite2D" parent="Spawns/checkpoint_atrio_2"]
+position = Vector2(0, 16)
+texture = ExtResource("24_brazier")
+hframes = 4
+
+[node name="KillZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(640, 450)
+shape = SubResource("Shape_kill")
+
+[node name="MaskVow" parent="." instance=ExtResource("7_pickup")]
+position = Vector2(700, 212)
+item_data = ExtResource("8_vow")
+unique_id = "atrio_2/mask_vow"
+
+[node name="GroundEnemy" parent="." instance=ExtResource("10_enemy")]
+position = Vector2(1020, 232)
+
+[node name="Art" type="Sprite2D" parent="GroundEnemy"]
+z_index = 1
+texture = ExtResource("25_custodio")
+hframes = 4
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1256, 208)
+script = ExtResource("4_exit")
+target_room = "atrio_3"
+target_spawn = "from_atrio_2"
+draw_frame = false
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_player")]
+position = Vector2(48, 224)
+
+[node name="InventoryHUD" parent="." instance=ExtResource("6_hud")]
