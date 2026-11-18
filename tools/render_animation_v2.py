@@ -120,7 +120,8 @@ def render_frame(actor,clip,index,count):
         elif clip.startswith('Attack'):
             heavy='Mace' in clip
             if clip.endswith('Startup'):
-                hand=base.screen(.03-.15*t,1.12+.32*t)
+                hand=base.screen(.26-.04*t,1.16+.28*t,.32) if heavy else base.screen(.03-.15*t,1.12+.32*t)
+                if heavy:other=base.screen(.18,1.10,.22)
                 angle=1.35+.7*t
                 base.bend(rig,'Spine01',(-18 if heavy else -10)*t)
                 if heavy:base.lower_hips(rig,.10*t)
@@ -190,6 +191,11 @@ def render_frame(actor,clip,index,count):
     ground(rig)
     if clip!='Dead':
         base.hand_target(rig,'Right',hand);base.hand_target(rig,'Left',other)
+        if actor=='baldwin' and clip=='AttackMaceStartup':
+            bpy.ops.object.empty_add(location=base.screen(.65,1.05,.55))
+            pole=bpy.context.object
+            pole.name='Visible mace elbow pole'
+            rig.pose.bones['RightForeArm'].constraints[-1].pole_target=pole
         bpy.context.view_layer.update();ground(rig)
     wrist=rig.matrix_world @ rig.pose.bones['RightHand'].head
     if actor=='custodio_sellado' or actor=='abad':

@@ -50,3 +50,7 @@ Los generadores y empaquetadores de la pasada anterior son históricos: reinstal
 Pruebas: etapa1 80/80, etapa2 62/62, etapa3 64/64, etapa4 19/19, etapa5 45/45, etapa6 54/54; presentación de jugador21/21 y enemigos24/24. Total369, cero fallas. Logs en `Art/Meshy/animation_v2/qa/`. Se revisaron poses, agarres, reflexión, apoyo, máscaras/armas en mundo y capturas de campaña. Las capturas preparadas y pruebas automáticas no sustituyen una partida humana completa.
 
 Muestras: [espada](Sword.gif), [maza](Mace.gif), [dash](Dash.gif), [carrera](Run.gif), [reposo](Idle.gif). LosGIF son demostraciones aproximadas; su temporización está limitada por el formato y no controla el combate.
+
+## Corrección del agarre de la maza
+
+La preparación de la maza sitúa el agarre por delante del torso, en el plano cercano a la cámara, y guía el codo para que el antebrazo no quede oculto por la capa. La mano libre acompaña la preparación delante del pecho. Se volvieron a renderizar los ocho cuadros y a exportar sus anclajes, manteniendo las ventanas y alcance del ataque. Vista: [agarre corregido](MaceGrip.gif).
