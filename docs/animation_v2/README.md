@@ -54,3 +54,9 @@ Muestras: [espada](Sword.gif), [maza](Mace.gif), [dash](Dash.gif), [carrera](Run
 ## Corrección del agarre de la maza
 
 La preparación de la maza sitúa el agarre por delante del torso, en el plano cercano a la cámara, y guía el codo para que el antebrazo no quede oculto por la capa. La mano libre acompaña la preparación delante del pecho. Se volvieron a renderizar los ocho cuadros y a exportar sus anclajes, manteniendo las ventanas y alcance del ataque. Vista: [agarre corregido](MaceGrip.gif).
+
+## Corrección completa de brazos
+
+La corrección inicial de preparación no cubría golpe y recuperación. Se sustituyó la base con giro de torso por una orientación legible durante las tres fases de espada y maza. `tools/baldwin_arm_poses.py` define las trayectorias completas de ambas manos y del codo cercano a cámara; sus uniones entre fases y el regreso a guardia son continuos. Se volvió a renderizar cada fase y a revisar las secuencias completas, no sólo la primera pose. La mano de agarre gira con el mango y el anclaje del equipo se exporta desde el centro de la palma, evitando dedos que cuelgan bajo el arma. El mismo plano de manos/codos y el agarre se conservan en reposo, locomoción, salto, reacción y dash. Los tiempos de daño y la independencia del arma no cambian.
+
+[Todos los cuadros de la maza](MaceAllFrames.png) · [Ciclo completo corregido](MaceFullGrip.gif).

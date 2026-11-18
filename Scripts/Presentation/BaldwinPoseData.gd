@@ -9,8 +9,8 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          6.7294,
-          -5.1465
+          8.1588,
+          -4.4389
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -19,7 +19,37 @@ const DATA = {
       },
       {
         "hand": [
-          6.8614,
+          8.289,
+          -4.5925
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.8576,
+          -1.8138
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.7292,
+          -1.8677
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          6.9016,
           -5.3104
         ],
         "angle": 0.55,
@@ -29,8 +59,8 @@ const DATA = {
       },
       {
         "hand": [
-          9.0669,
-          -2.9943
+          5.0837,
+          -7.0914
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -39,8 +69,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.8737,
-          -3.165
+          5.5681,
+          -6.1023
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -49,38 +79,8 @@ const DATA = {
       },
       {
         "hand": [
-          5.8605,
-          -5.6634
-        ],
-        "angle": 0.55,
-        "weapon": "sword",
-        "weapon_scale": 1.0,
-        "weapon_visible": true
-      },
-      {
-        "hand": [
-          5.2846,
-          -6.0599
-        ],
-        "angle": 0.55,
-        "weapon": "sword",
-        "weapon_scale": 1.0,
-        "weapon_visible": true
-      },
-      {
-        "hand": [
-          5.0715,
-          -5.8928
-        ],
-        "angle": 0.55,
-        "weapon": "sword",
-        "weapon_scale": 1.0,
-        "weapon_visible": true
-      },
-      {
-        "hand": [
-          6.3906,
-          -5.1888
+          7.8457,
+          -4.4557
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -96,8 +96,8 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          6.6042,
-          -5.7944
+          8.2991,
+          -4.7757
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -106,8 +106,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.6584,
-          -5.9399
+          8.4298,
+          -4.8092
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -116,8 +116,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.0235,
-          -5.4272
+          8.8372,
+          -4.2321
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -126,8 +126,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.5545,
-          -4.5934
+          9.3835,
+          -3.378
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -136,8 +136,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.8196,
-          -4.1353
+          9.6264,
+          -2.957
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -146,8 +146,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.5613,
-          -4.4877
+          9.296,
+          -3.4111
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -156,8 +156,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.3803,
-          -4.653
+          9.0928,
+          -3.6079
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -166,8 +166,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.8957,
-          -5.2215
+          8.5721,
+          -4.2246
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -176,8 +176,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.4208,
-          -5.7899
+          8.0258,
+          -4.8853
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -186,8 +186,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.1948,
-          -6.0048
+          7.7438,
+          -5.1681
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -196,8 +196,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.3021,
-          -5.7214
+          7.7993,
+          -4.939
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -206,8 +206,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.5951,
-          -5.1724
+          8.0676,
+          -4.4009
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -216,8 +216,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.0418,
-          -4.4507
+          8.4498,
+          -3.7199
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -226,8 +226,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.0154,
-          -4.4576
+          8.3742,
+          -3.7746
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -236,8 +236,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.0021,
-          -4.6201
+          8.4174,
+          -3.9001
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -246,8 +246,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.8344,
-          -5.151
+          8.4205,
+          -4.264
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -264,8 +264,8 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          6.1155,
-          -8.2827
+          7.7468,
+          -9.3395
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -274,8 +274,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.0454,
-          -5.5715
+          9.9352,
+          -6.2611
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -284,8 +284,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.6035,
-          -5.9643
+          9.4105,
+          -6.728
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -294,8 +294,8 @@ const DATA = {
       },
       {
         "hand": [
-          5.5158,
-          -9.2935
+          7.0948,
+          -10.443
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -304,8 +304,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.0454,
-          -5.5715
+          9.9354,
+          -6.2611
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -314,8 +314,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.3775,
-          -7.9887
+          7.9921,
+          -9.081
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -324,8 +324,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.0441,
-          -5.571
+          9.9369,
+          -6.2605
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -334,8 +334,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.0456,
-          -5.5714
+          9.9361,
+          -6.2604
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -344,8 +344,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.3122,
-          -6.639
+          9.5387,
+          -6.8392
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -354,8 +354,8 @@ const DATA = {
       },
       {
         "hand": [
-          6.2535,
-          -8.1081
+          7.9454,
+          -9.0816
         ],
         "angle": -0.35,
         "weapon": "sword",
@@ -371,8 +371,8 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          4.1216,
-          -4.4607
+          5.9497,
+          -4.0444
         ],
         "angle": 0.3,
         "weapon": "sword",
@@ -381,8 +381,8 @@ const DATA = {
       },
       {
         "hand": [
-          3.4964,
-          -2.2551
+          5.3315,
+          -1.8195
         ],
         "angle": 0.3,
         "weapon": "sword",
@@ -391,8 +391,8 @@ const DATA = {
       },
       {
         "hand": [
-          3.1699,
-          -0.7536
+          5.0081,
+          -0.3095
         ],
         "angle": 0.3,
         "weapon": "sword",
@@ -401,8 +401,8 @@ const DATA = {
       },
       {
         "hand": [
-          3.1699,
-          -0.7536
+          5.0081,
+          -0.3095
         ],
         "angle": 0.3,
         "weapon": "sword",
@@ -411,8 +411,8 @@ const DATA = {
       },
       {
         "hand": [
-          3.4964,
-          -2.2551
+          5.3315,
+          -1.8195
         ],
         "angle": 0.3,
         "weapon": "sword",
@@ -421,8 +421,8 @@ const DATA = {
       },
       {
         "hand": [
-          4.1216,
-          -4.4607
+          5.9497,
+          -4.0444
         ],
         "angle": 0.3,
         "weapon": "sword",
@@ -565,8 +565,8 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          -5.4857,
-          -3.7429
+          -3.7709,
+          -2.6915
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -575,8 +575,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -1.8017
+          -4.9113,
+          -3.7294
         ],
         "angle": -1.28121,
         "weapon": "sword",
@@ -585,8 +585,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -1.0538
+          -6.2984,
+          -2.8937
         ],
         "angle": -1.98673,
         "weapon": "sword",
@@ -595,8 +595,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -0.5636
+          -7.0341,
+          -1.8472
         ],
         "angle": -2.44922,
         "weapon": "sword",
@@ -605,8 +605,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -0.2549
+          -7.3377,
+          -1.0398
         ],
         "angle": -2.74042,
         "weapon": "sword",
@@ -615,8 +615,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -0.1044
+          -7.4303,
+          -0.6191
         ],
         "angle": -2.8824,
         "weapon": "sword",
@@ -625,8 +625,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4858,
-          -0.1042
+          -7.4301,
+          -0.6193
         ],
         "angle": -2.8824,
         "weapon": "sword",
@@ -635,8 +635,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4858,
-          -0.2547
+          -7.3375,
+          -1.04
         ],
         "angle": -2.74042,
         "weapon": "sword",
@@ -645,8 +645,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -0.5635
+          -7.0341,
+          -1.8471
         ],
         "angle": -2.44922,
         "weapon": "sword",
@@ -655,8 +655,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -1.0538
+          -6.2984,
+          -2.8936
         ],
         "angle": -1.98673,
         "weapon": "sword",
@@ -665,8 +665,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -1.8017
+          -4.9114,
+          -3.7289
         ],
         "angle": -1.28121,
         "weapon": "sword",
@@ -675,8 +675,8 @@ const DATA = {
       },
       {
         "hand": [
-          -5.4857,
-          -3.7424
+          -3.7709,
+          -2.6909
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -692,60 +692,60 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          1.0954,
-          -9.9598
+          8.1588,
+          -4.4389
         ],
-        "angle": -1.35,
+        "angle": 0.55,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          -0.0009,
-          -12.3
+          9.3321,
+          -6.032
         ],
-        "angle": -1.49,
+        "angle": 0.17332,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          -1.0981,
-          -14.6403
+          10.3569,
+          -10.9597
         ],
-        "angle": -1.63,
+        "angle": -0.60219,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          -2.1944,
-          -16.9815
+          9.0962,
+          -15.931
         ],
-        "angle": -1.77,
+        "angle": -1.24475,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          -3.2914,
-          -19.3223
+          9.9191,
+          -14.2591
         ],
-        "angle": -1.91,
+        "angle": -1.03111,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          -4.3887,
-          -21.6624
+          10.9226,
+          -7.6542
         ],
-        "angle": -2.05,
+        "angle": -0.12,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
@@ -759,40 +759,40 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          9.8742,
-          -4.4743
+          10.9226,
+          -7.6542
         ],
-        "angle": -0.1,
+        "angle": -0.12,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          10.8495,
-          -3.2552
+          10.6861,
+          -7.0508
         ],
-        "angle": -0.03333,
+        "angle": -0.05778,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          11.8253,
-          -2.0354
+          10.2661,
+          -6.0884
         ],
-        "angle": 0.03333,
+        "angle": 0.05778,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          12.7997,
-          -0.8177
+          10.0521,
+          -5.6414
         ],
-        "angle": 0.1,
+        "angle": 0.12,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
@@ -806,58 +806,58 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          11.1359,
-          -1.8716
+          10.0521,
+          -5.6414
         ],
-        "angle": 0.35,
+        "angle": 0.12,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.2286,
-          -3.5948
+          9.2677,
+          -4.7266
         ],
-        "angle": 0.39,
+        "angle": 0.35044,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.0277,
-          -2.5269
+          8.6879,
+          -4.2263
         ],
-        "angle": 0.43,
+        "angle": 0.50084,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.8337,
-          -1.301
+          8.5108,
+          -4.2904
         ],
-        "angle": 0.47,
+        "angle": 0.5165,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.8736,
-          -1.4757
+          8.2734,
+          -4.3863
         ],
-        "angle": 0.51,
+        "angle": 0.53871,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.1422,
-          -2.2802
+          8.1588,
+          -4.4389
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -873,80 +873,80 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          9.5086,
-          -11.4228
+          8.1588,
+          -4.4389
         ],
-        "angle": -1.35,
+        "angle": 0.55,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.2996,
-          -12.8857
+          9.1888,
+          -5.4803
         ],
-        "angle": -1.45,
+        "angle": 0.31251,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.0906,
-          -14.3485
+          10.8255,
+          -9.5636
         ],
-        "angle": -1.55,
+        "angle": -0.25035,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          7.5665,
-          -15.0744
+          9.8839,
+          -16.2864
         ],
-        "angle": -1.65,
+        "angle": -0.91419,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          5.921,
-          -15.282
+          8.7096,
+          -21.2728
         ],
-        "angle": -1.75,
+        "angle": -1.45461,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          4.5962,
-          -15.246
+          8.2809,
+          -22.8607
         ],
-        "angle": -1.85,
+        "angle": -1.64177,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          3.4822,
-          -15.0708
+          10.5107,
+          -16.3333
         ],
-        "angle": -1.95,
+        "angle": -0.98039,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          2.8527,
-          -15.236
+          12.0926,
+          -10.0119
         ],
-        "angle": -2.05,
+        "angle": -0.4,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
@@ -960,40 +960,40 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          9.874,
-          -4.4743
+          12.0926,
+          -10.0119
         ],
-        "angle": -0.1,
+        "angle": -0.4,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          10.8495,
-          -3.2552
+          12.549,
+          -7.8325
         ],
-        "angle": -0.03333,
+        "angle": -0.24444,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          11.8251,
-          -2.0363
+          11.8075,
+          -5.0088
         ],
-        "angle": 0.03333,
+        "angle": 0.04444,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          12.7997,
-          -0.8175
+          11.3648,
+          -3.7431
         ],
-        "angle": 0.1,
+        "angle": 0.2,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
@@ -1007,78 +1007,78 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          12.7999,
-          1.7427
+          11.3648,
+          -3.7431
         ],
-        "angle": 0.35,
+        "angle": 0.2,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          11.1127,
-          -0.6322
+          10.7151,
+          -3.3815
         ],
-        "angle": 0.37857,
+        "angle": 0.30914,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          10.2866,
-          -1.2276
+          9.727,
+          -2.9385
         ],
-        "angle": 0.40714,
+        "angle": 0.47336,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          10.0593,
-          -1.1523
+          9.5084,
+          -2.9404
         ],
-        "angle": 0.43571,
+        "angle": 0.50202,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          10.3606,
-          -0.8275
+          9.1886,
+          -3.2872
         ],
-        "angle": 0.46429,
+        "angle": 0.51345,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          10.1874,
-          -1.1308
+          8.7606,
+          -3.7448
         ],
-        "angle": 0.49286,
+        "angle": 0.52951,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.665,
-          -1.7054
+          8.3756,
+          -4.1671
         ],
-        "angle": 0.52143,
+        "angle": 0.54382,
         "weapon": "sword",
         "weapon_scale": 1.0,
         "weapon_visible": true
       },
       {
         "hand": [
-          9.1422,
-          -2.2802
+          8.1588,
+          -4.4389
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1094,8 +1094,8 @@ const DATA = {
     "poses": [
       {
         "hand": [
-          8.7164,
-          -2.9702
+          10.8576,
+          -1.2287
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1104,8 +1104,8 @@ const DATA = {
       },
       {
         "hand": [
-          9.1428,
-          -2.28
+          10.8576,
+          -1.2287
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1114,8 +1114,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.8782,
-          -2.6998
+          10.8574,
+          -1.229
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1124,8 +1124,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.4472,
-          -3.4859
+          10.6352,
+          -1.6147
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1134,8 +1134,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.2124,
-          -3.9282
+          10.3328,
+          -2.1596
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1144,8 +1144,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.1903,
-          -3.9185
+          10.3091,
+          -2.1737
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1154,8 +1154,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.294,
-          -3.6226
+          10.4996,
+          -1.7959
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1164,8 +1164,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.0921,
-          -3.8024
+          10.2066,
+          -2.1735
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1174,8 +1174,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.9146,
-          -3.8687
+          9.7692,
+          -2.6383
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1184,8 +1184,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.8154,
-          -2.6027
+          10.4874,
+          -1.594
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1194,8 +1194,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.782,
-          -3.8374
+          9.4528,
+          -2.8383
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1204,8 +1204,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.1414,
-          -4.8629
+          8.869,
+          -3.7977
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1214,8 +1214,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.3849,
-          -4.5874
+          9.2479,
+          -3.3442
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1224,8 +1224,8 @@ const DATA = {
       },
       {
         "hand": [
-          7.3977,
-          -4.9109
+          9.4318,
+          -3.3812
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1234,8 +1234,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.0497,
-          -3.9954
+          10.2619,
+          -2.1651
         ],
         "angle": 0.55,
         "weapon": "sword",
@@ -1244,8 +1244,8 @@ const DATA = {
       },
       {
         "hand": [
-          8.4788,
-          -3.3456
+          10.7539,
+          -1.3954
         ],
         "angle": 0.55,
         "weapon": "sword",

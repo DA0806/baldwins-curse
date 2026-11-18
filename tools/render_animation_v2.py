@@ -9,6 +9,8 @@ from pathlib import Path
 
 import bpy
 from mathutils import Matrix, Vector
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from baldwin_arm_poses import arm_pose
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / 'Art/Meshy/animation_v2'
@@ -61,9 +63,23 @@ def ground(rig):
     floor=min((o.matrix_world @ v.co).z for o in meshes for v in o.evaluated_get(dg).data.vertices)
     correction=Vector((0,0,-floor))
     rig.location+=correction
-    targets={c.target for b in rig.pose.bones for c in b.constraints if c.type=='IK' and c.target}
+    targets={obj for b in rig.pose.bones for c in b.constraints if c.type=='IK' for obj in (c.target,c.pole_target) if obj}
     for target in targets:target.location+=correction
     bpy.context.view_layer.update()
+
+
+# Turn the gripping hand with the shaft and export the middle of the palm.
+def orient_gripping_hand(rig,angle):
+    bone=rig.pose.bones['RightHand']
+    current=rig.matrix_world @ bone.matrix
+    direction=base.RIGHT*math.cos(angle)+Vector((0,0,1))*math.sin(angle)
+    side=base.TOWARD
+    normal=side.cross(direction).normalized()
+    rotation=Matrix((side,direction,normal)).transposed().to_quaternion()
+    world=Matrix.LocRotScale(current.translation,rotation,current.to_scale())
+    bone.matrix=rig.matrix_world.inverted() @ world
+    bpy.context.view_layer.update()
+    return current.translation+direction*.055
 
 
 # Pose each frame with body mechanics; weapons are never burned into this render.
@@ -85,13 +101,14 @@ def render_frame(actor,clip,index,count):
         if clip=='Jump':action='Regular_Jump'
         elif clip=='Dead':action='dying_backwards'
         elif clip.startswith('Attack'):
-            action='Right_Hand_Sword_Slash'
-            progress=(.04+.23*t) if clip.endswith('Startup') else (.30+.20*t) if clip.endswith('Active') else (.55+.35*t)
+            # Keep the same readable torso orientation through the entire attack.
+            action='Idle'
+            progress=0
         sample_pose(rig,action,progress)
     else:
         rig.animation_data_clear()
-    hand=base.screen(.25,.91)
-    other=base.screen(-.18,.90,-.10)
+    hand=base.screen(.25,.91,.32) if actor=='baldwin' else base.screen(.25,.91)
+    other=base.screen(.10,1.05,.28) if actor=='baldwin' else base.screen(-.18,.90,-.10)
     angle=-.55
     weapon='sword'
     scale=1.0
@@ -99,42 +116,33 @@ def render_frame(actor,clip,index,count):
     if actor=='baldwin':
         if clip=='Idle':
             base.bend(rig,'Spine01',math.sin(t*math.tau)*1.4)
-            hand=base.screen(.25,.91+.016*math.sin(t*math.tau))
+            hand=base.screen(.25,.91+.016*math.sin(t*math.tau),.32)
         elif clip=='Jump':
-            hand=base.screen(.22,1.0);angle=.35
+            hand=base.screen(.22,1.0,.32);angle=.35
         elif clip=='Hurt':
             envelope=math.sin(t*math.pi)
             base.lower_hips(rig,.10*envelope)
             base.bend(rig,'Spine01',-18*envelope)
             base.bend(rig,'Head',-12*envelope*t)
-            hand=base.screen(.15,.90-.15*envelope);angle=-.3
+            hand=base.screen(.15,.90-.15*envelope,.32);angle=-.3
         elif clip=='Dash':
             envelope=math.sin(t*math.pi)**.5
             base.lower_hips(rig,.24*envelope)
             base.bend(rig,'Spine01',48*envelope)
             base.bend(rig,'Head',-20*envelope)
-            hand=base.screen(-.15,.95-.10*envelope);angle=-.55+3.45*envelope
+            hand=base.screen(-.15,.95-.10*envelope,.32);angle=-.55+3.45*envelope
         elif clip=='Dead':
             rig.location+=base.RIGHT*(.65*t)
             visible=index<7
         elif clip.startswith('Attack'):
-            heavy='Mace' in clip
-            if clip.endswith('Startup'):
-                hand=base.screen(.26-.04*t,1.16+.28*t,.32) if heavy else base.screen(.03-.15*t,1.12+.32*t)
-                if heavy:other=base.screen(.18,1.10,.22)
-                angle=1.35+.7*t
-                base.bend(rig,'Spine01',(-18 if heavy else -10)*t)
-                if heavy:base.lower_hips(rig,.10*t)
-            elif clip.endswith('Active'):
-                hand=base.screen(.27+.08*t,.97-.1*t)
-                angle=.10-.2*t
-                base.bend(rig,'Spine01',22 if heavy else 12)
-                if heavy:base.lower_hips(rig,.12)
-            else:
-                hand=base.screen(.35-.10*t,.80+.11*t)
-                angle=-.35-.2*t
-                base.bend(rig,'Spine01',(22 if heavy else 12)*(1-t))
-                if heavy:base.lower_hips(rig,.12*(1-t))
+            family='Mace' if 'Mace' in clip else 'Sword'
+            phase=clip.removeprefix('Attack'+family)
+            pose=arm_pose(family,phase,t)
+            hand=base.screen(*pose['hand'])
+            other=base.screen(*pose['other'])
+            angle=pose['angle']
+            base.bend(rig,'Spine01',pose['lean'])
+            if pose['lower']:base.lower_hips(rig,pose['lower'])
     elif actor.startswith('custodio'):
         scale=.65
         if clip=='Idle':
@@ -191,13 +199,16 @@ def render_frame(actor,clip,index,count):
     ground(rig)
     if clip!='Dead':
         base.hand_target(rig,'Right',hand);base.hand_target(rig,'Left',other)
-        if actor=='baldwin' and clip=='AttackMaceStartup':
-            bpy.ops.object.empty_add(location=base.screen(.65,1.05,.55))
-            pole=bpy.context.object
-            pole.name='Visible mace elbow pole'
-            rig.pose.bones['RightForeArm'].constraints[-1].pole_target=pole
+        if actor=='baldwin':
+            right_pole=pose['pole'] if clip.startswith('Attack') else (-.45,.85,.60) if clip=='Dash' else (.60,1.00,.60)
+            for side,point in [('Right',right_pole),('Left',(-.25,.95,.50))]:
+                bpy.ops.object.empty_add(location=base.screen(*point))
+                pole=bpy.context.object
+                pole.name=side+' visible attack elbow pole'
+                rig.pose.bones[side+'ForeArm'].constraints[-1].pole_target=pole
         bpy.context.view_layer.update();ground(rig)
     wrist=rig.matrix_world @ rig.pose.bones['RightHand'].head
+    if actor=='baldwin' and clip!='Dead':wrist=orient_gripping_hand(rig,angle)
     if actor=='custodio_sellado' or actor=='abad':
         mats={'copper':base.material('copper',(.3,.12,.055),.45),
               'ivory':base.material('ivory',(.8,.73,.58),.2),
