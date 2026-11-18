@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+const PRESENTATION_SCRIPT := preload("res://Scripts/Presentation/BaldwinPresentation.gd")
+const POSE_DATA_PATH := "res://Scripts/Presentation/BaldwinPoseData.gd"
+
 # ==========================================
 # PARÁMETROS CONFIGURABLES (Game Feel)
 # ==========================================
@@ -27,6 +30,7 @@ enum State {
 	WALK,
 	JUMP,
 	ATTACK,
+	HURT,
 	DEAD,
 }
 var current_state: State = State.IDLE
@@ -49,23 +53,34 @@ var jump_buffer_timer: float = 0.0
 ## Empuje al recibir daño: x se aleja del atacante, y es hacia arriba.
 @export var hurt_knockback: Vector2 = Vector2(160.0, -140.0)
 
-# Duración de los cuadros de preparación de la animación Attack (todos menos el último).
-var _attack_windup_length: float = 0.0
+var presentation = PRESENTATION_SCRIPT.new()
 
 # Desplazamiento horizontal del sprite respecto al pivote (pies), tomado de la escena.
 var _sprite_pivot_x: float = 0.0
 
 func _ready() -> void:
 	_sprite_pivot_x = absf(sprite.offset.x)
-	var frames := sprite.sprite_frames
-	_attack_windup_length = (frames.get_frame_count(&"Attack") - 1) / frames.get_animation_speed(&"Attack")
+	var data: Dictionary = {}
+	if ResourceLoader.exists(POSE_DATA_PATH):
+		var source := load(POSE_DATA_PATH) as GDScript
+		data = source.get_script_constant_map().get("DATA", {})
+	var frames: SpriteFrames = PRESENTATION_SCRIPT.load_frames(data)
+	if frames:
+		sprite.sprite_frames = frames
+	else:
+		# Old sheets contain a baked sword and cannot represent independent equipment.
+		sprite.hide()
+	presentation.name = "Presentation"
+	add_child(presentation)
+	presentation.setup(sprite, inventory, data if frames else {})
 	attack.finished.connect(_on_attack_finished)
 	attack.phase_changed.connect(_on_attack_phase_changed)
 	attack.hit_landed.connect(func(_target: Hurtbox, _damage: float): SoundBank.play(self, &"hit"))
 	health.damage_modifier = inventory.modify_incoming_damage
 	health.damaged.connect(_on_damaged)
 	health.died.connect(_on_died)
-	sprite.play("Idle")
+	sprite.animation_finished.connect(_on_animation_finished)
+	presentation.play_actor(&"Idle")
 	# Enlaza (o reenlaza) cualquier HUD presente con este inventario y esta salud.
 	get_tree().call_group(InventoryHUD.GROUP, "setup_inventory", inventory)
 	get_tree().call_group(InventoryHUD.GROUP, "setup_health", health)
@@ -204,10 +219,11 @@ func update_sprite_direction() -> void:
 	# flip_h voltea la textura dentro de su rectángulo; el offset se invierte
 	# para que el pivote (pies) quede en el mismo punto en ambas direcciones.
 	sprite.offset.x = -_sprite_pivot_x if sprite.flip_h else _sprite_pivot_x
+	presentation.sync_pose()
 
 func update_animation_state() -> void:
 	# Si está atacando, se deja correr la animación hasta que termine
-	if current_state == State.ATTACK or current_state == State.DEAD:
+	if current_state in [State.ATTACK, State.HURT, State.DEAD]:
 		return
 	
 	if not is_on_floor():
@@ -216,6 +232,23 @@ func update_animation_state() -> void:
 		change_state(State.WALK)
 	else:
 		change_state(State.IDLE)
+	if current_state == State.WALK:
+		_update_locomotion_visual()
+
+# Change gait without restarting an unchanged clip; cadence follows actual movement.
+func _update_locomotion_visual() -> void:
+	var running := absf(velocity.x) >= 90.0 and sprite.sprite_frames.has_animation(&"Run")
+	var clip: StringName = &"Run" if running else &"Walk"
+	if sprite.animation != clip:
+		presentation.play_actor(clip)
+	var entry: Dictionary = presentation.pose_data.get(String(clip), {})
+	var stride: float = float(entry.get("stride_px", 0.0))
+	if stride > 0.0:
+		var frames := sprite.sprite_frames
+		sprite.speed_scale = absf(velocity.x) * frames.get_frame_count(clip) / (stride * frames.get_animation_speed(clip))
+	else:
+		var reference_speed: float = max_speed if running else 90.0
+		sprite.speed_scale = clampf(absf(velocity.x) / maxf(reference_speed, 0.01), 0.25, 1.5)
 
 func change_state(new_state: State) -> void:
 	# Permitir reiniciar animación si es ataque o si cambia de estado
@@ -225,24 +258,25 @@ func change_state(new_state: State) -> void:
 	current_state = new_state
 	match current_state:
 		State.IDLE:
-			sprite.play("Idle")
+			presentation.play_actor(&"Idle")
 		State.WALK:
-			sprite.play("Walk")
+			_update_locomotion_visual()
 		State.JUMP:
-			sprite.play("Jump")
-		State.ATTACK:
-			sprite.play("Attack")
+			presentation.play_actor(&"Jump")
+		State.HURT:
+			presentation.play_actor(&"Hurt")
 		State.DEAD:
-			sprite.play("Dead")
+			presentation.play_actor(&"Dead")
 
+# The hitbox clock selects preparation, active and recovery clips for the accepted weapon.
 func _on_attack_phase_changed(phase: int) -> void:
-	# La ventana activa siempre coincide con el cuadro del tajo (el último).
-	if phase == MeleeAttack.Phase.ACTIVE and current_state == State.ATTACK:
-		sprite.frame = sprite.sprite_frames.get_frame_count(&"Attack") - 1
+	if current_state == State.ATTACK:
+		presentation.play_attack_phase(phase, attack.spec)
 
 func _on_attack_finished(_interrupted: bool) -> void:
 	# Al terminar (o interrumpirse) el ataque, regresar al estado que corresponda
 	sprite.speed_scale = 1.0
+	presentation.end_attack()
 	if current_state == State.ATTACK:
 		if not is_on_floor():
 			change_state(State.JUMP)
@@ -250,6 +284,11 @@ func _on_attack_finished(_interrupted: bool) -> void:
 			change_state(State.WALK)
 		else:
 			change_state(State.IDLE)
+
+# A finished hurt clip returns to locomotion without adding an input or movement lock.
+func _on_animation_finished() -> void:
+	if current_state == State.HURT:
+		change_state(State.JUMP if not is_on_floor() else (State.WALK if absf(velocity.x) > 5.0 else State.IDLE))
 
 # --------------------------------------
 # --------- Lógica de combate ----------
@@ -308,7 +347,7 @@ func try_interact() -> int:
 ## animación ni daño. Los datos del golpe se fijan aquí, al aceptarlo.
 func execute_attack(slot: int) -> bool:
 	var weapon: WeaponData = inventory.get_weapon(slot)
-	if not weapon or current_state == State.DEAD:
+	if not weapon or current_state == State.DEAD or not attack.can_start():
 		return false
 	
 	var spec := MeleeAttack.Spec.new()
@@ -322,20 +361,22 @@ func execute_attack(slot: int) -> bool:
 	spec.recovery = weapon.recovery
 	spec.cooldown = weapon.attack_cooldown
 	spec.facing = -1 if sprite.flip_h else 1
+	var previous_state: State = current_state
+	current_state = State.ATTACK
+	presentation.begin_attack(weapon, spec.facing)
 	if not attack.start(spec):
+		presentation.end_attack()
+		current_state = previous_state
 		return false
 	
 	# El último ataque válido decide qué ranura recibirá un intercambio.
 	inventory.active_weapon_slot = slot
 	SoundBank.play(self, &"attack")
-	# Los cuadros de preparación duran lo que la anticipación; el último cuadro
-	# (el tajo) aparece al abrirse la ventana activa y se mantiene en la recuperación.
-	sprite.speed_scale = _attack_windup_length / maxf(spec.startup, 0.01)
-	change_state(State.ATTACK)
 	return true
 
 func _on_damaged(_amount: float, source: Node) -> void:
 	attack.cancel()
+	change_state(State.HURT)
 	SoundBank.play(self, &"hit", 0.7)
 	var away: float = 1.0
 	if source is Node2D and (source as Node2D).global_position.x > global_position.x:
@@ -348,4 +389,4 @@ func _on_died(_source: Node) -> void:
 	attack.cancel()
 	sprite.speed_scale = 1.0
 	current_state = State.DEAD
-	sprite.play("Dead")
+	presentation.play_actor(&"Dead")

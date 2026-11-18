@@ -129,7 +129,8 @@ attack_damage = 20.0
 [node name="Art" type="Sprite2D" parent="Encounter/Guard"]
 z_index = 1
 texture = ExtResource("18_r")
-hframes = 4
+hframes = 36
+offset = Vector2(0, -24)
 
 [node name="Raider" parent="Encounter" instance=ExtResource("17_r")]
 position = Vector2(720, 232)
@@ -137,7 +138,8 @@ position = Vector2(720, 232)
 [node name="Art" type="Sprite2D" parent="Encounter/Raider"]
 z_index = 1
 texture = ExtResource("18_r")
-hframes = 4
+hframes = 36
+offset = Vector2(0, -24)
 
 [node name="Exit" type="Area2D" parent="."]
 position = Vector2(928, 208)

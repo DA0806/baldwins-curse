@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-17",
+  "purpose": "Independent prerendered equipment and world pickups",
+  "budget_credits": 120,
+  "assets": {
+    "sword": {
+      "prompt": "One original medieval arming sword, complete isolated object. 12th century western straight double edged steel blade with a simple fuller, modest copper crossguard, dark leather grip and small disc pommel. Austere funerary abbey style, aged cold steel #6D8297, tarnished copper #B96A47, ivory edge #E5D6B3. No jewels, no skulls, no runes, no fantasy oversized blade. Horizontal side view, handle and pommel at left, sharp tip at right, fully unobstructed. Stylized realistic 3D game asset, readable large forms, plain neutral grey background, soft studio lighting, no shadow on floor, no text.",
+      "reference_task_id": "01a1ea39-a2b8-748f-8380-2737a3a6aa2c",
+      "reference_credits": 9,
+      "geometry_model": "meshy-t2",
+      "texture_model": "meshy-n1",
+      "target_polycount": 8000,
+      "model_task_id": "01a1ea3a-e201-73aa-853c-c6b4dbf6328a",
+      "model_consumed_credits": 15,
+      "source_glb": "Art/Meshy/animation_v2/equipment/models/sword.glb",
+      "sha256": "181918c5496e16a2e2e31e760c368cf405484e63a104e4e1a39692a0eb9acd09"
+    },
+    "mace": {
+      "prompt": "One original medieval one handed iron mace, complete isolated object. Short dark leather wrapped shaft, modest copper grip rings, heavy compact six-flanged blunt iron head, solid convincing weight. Austere gothic funerary abbey game, dark cold steel #303B4A and worn edges #6D8297, muted aged copper #B96A47. No spikes, no chains, no skull, no ornaments, no text. Horizontal side view, pommel and hand grip at left, heavy metal head at right. Stylized realistic 3D game prop with readable large forms, whole object unobstructed on a plain neutral grey background, soft studio lighting.",
+      "reference_task_id": "01a1ea39-a9b4-71a1-8631-56919ee072ac",
+      "reference_credits": 9,
+      "geometry_model": "meshy-t2",
+      "texture_model": "meshy-n1",
+      "target_polycount": 8000,
+      "model_task_id": "01a1ea3a-ea32-761c-80df-4ace63700476",
+      "model_consumed_credits": 15,
+      "source_glb": "Art/Meshy/animation_v2/equipment/models/mace.glb",
+      "sha256": "557a807e288839ab95cd07ca18028e1ef8727e8058b788dcaa487dba1c8fddc3"
+    },
+    "scythe": {
+      "prompt": "One original gothic fantasy abbot scythe, complete isolated weapon. Long straight dark ashwood shaft wrapped in worn dark leather at lower grip, restrained aged copper ferrules, a single forged cold steel crescent blade at the far end, elegant broad but simple hook. Funerary abbey, solemn and austere, palette #303B4A #6D8297 #B96A47 #E5D6B3. No skulls, no chains, no glowing effects, no jewels, no text. Horizontal side profile: lower hand grip and shaft base at left, scythe head at far right with the curved blade turning DOWN, clearly visible silhouette. Complete object on plain neutral grey background, stylized realistic 3D game prop, soft studio lighting.",
+      "reference_task_id": "01a1ea39-aee8-7529-a7c9-03d759804b4e",
+      "reference_credits": 9,
+      "geometry_model": "meshy-t2",
+      "texture_model": "meshy-n1",
+      "target_polycount": 8000,
+      "model_task_id": "01a1ea3a-f237-7639-8ce7-1a9335c8ddca",
+      "model_consumed_credits": 15,
+      "source_glb": "Art/Meshy/animation_v2/equipment/models/scythe.glb",
+      "sha256": "91e1a34160222c541606b3076eaece30358e974bd2d5333ab93e2e4292ff04f6"
+    },
+    "censer": {
+      "prompt": "One original medieval liturgical hanging censer, complete isolated object. Small weathered copper rounded bowl with pierced pointed lid, three fine bronze chains joining at a single hand ring at top. Entire chain and ring visible; bowl hangs vertically below ring. Austere Romanesque abbey prop, restrained geometric cutouts, aged copper #B96A47, soot dark #303B4A, ivory worn edges. No crosses, no skulls, no smoke, no fire, no background scenery, no text. Stylized realistic 3D game prop, frontal slight three quarter view, whole item unobstructed on plain neutral grey background, soft studio lighting.",
+      "reference_task_id": "01a1ea39-b8ff-7615-b94b-96c233d800b3",
+      "reference_credits": 9,
+      "geometry_model": "meshy-t2",
+      "texture_model": "meshy-n1",
+      "target_polycount": 8000,
+      "model_task_id": "01a1ea3a-fa6c-73d7-a470-f599686e1254",
+      "model_consumed_credits": 15,
+      "source_glb": "Art/Meshy/animation_v2/equipment/models/censer.glb",
+      "sha256": "0f335293c1b7b1bf50d0149af2d38878d644cd2969a3c7f218cb122f6938f439"
+    },
+    "potion": {
+      "prompt": "One original small medieval healing potion bottle, complete isolated object upright. Thick smoky translucent glass round squat body, short narrow neck, large plain cork stopper, simple aged copper collar and leather tie. Bottle contains muted deep red liquid, readable large volume rather than tiny detail. Funerary abbey fantasy game, dark steel blue glass shadows #303B4A, aged copper #B96A47, ivory edge reflection #E5D6B3. No label, no letters, no runes, no skull, no glow, no scenery, no pedestal. Stylized realistic 3D game prop, front slight three quarter view, entire object on plain neutral grey background, soft studio lighting.",
+      "reference_task_id": "01a1ea39-bdf3-7397-b74d-b6027815d508",
+      "reference_credits": 9,
+      "geometry_model": "meshy-t2",
+      "texture_model": "meshy-n1",
+      "target_polycount": 8000,
+      "model_task_id": "01a1ea3b-02b5-71bf-b47a-408d1f625eb4",
+      "model_consumed_credits": 15,
+      "source_glb": "Art/Meshy/animation_v2/equipment/models/potion.glb",
+      "sha256": "1b0a1fb8d4992d5942254e00e24f2fa9b27fe2cf16b24606b669150c65546484"
+    }
+  },
+  "consumed_credits": 120
+}

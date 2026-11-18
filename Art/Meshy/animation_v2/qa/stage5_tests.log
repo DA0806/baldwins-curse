@@ -1,0 +1,76 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+
+# Contrato de la ruta (10 salas)
+  ok   diez salas en el orden de docs/etapa5/ruta.md
+  ok   salidas, llegadas y room_id coherentes; huecos ≤ 96 px y escalones ≤ 64 px []
+  ok   cinco puntos de control con ID único: [&"checkpoint_atrio_2", &"checkpoint_atrio_3", &"checkpoint_cripta_1", &"checkpoint_cripta_3", &"checkpoint_capilla_2"]
+  ok   recogidas únicas sin IDs repetidos (4)
+  ok   tres inscripciones (3)
+  ok   sólo la arena del jefe termina la partida
+
+# Recorrido completo de inicio a epílogo
+  ok   plano de entrada con la motivación de Baldwin
+  ok   la salida tras el Abad lleva al epílogo
+  ok   el epílogo cierra la historia
+  ok   recorre las diez salas en orden
+  ok   llega con espada y maza
+  ok   llega con Voto y Ascua
+
+# Reintento desde cada punto de control
+  ok   atrio_2: muerte -> reaparece en checkpoint_atrio_2 con su equipo
+  ok   atrio_3: muerte -> reaparece en checkpoint_atrio_3 con su equipo
+  ok   cripta_1: muerte -> reaparece en checkpoint_cripta_1 con su equipo
+  ok   cripta_3: muerte -> reaparece en checkpoint_cripta_3 con su equipo
+  ok   capilla_2: muerte -> reaparece en checkpoint_capilla_2 con su equipo
+
+# Acólito de la Ascua (enemigo a distancia)
+  ok   anticipa (con "!") y lanza una brasa
+  ok   la brasa quita 12 sin máscara (12.0)
+  ok   con Voto quita 9,6
+  ok   saltar a tiempo la esquiva
+  ok   la lápida detiene la brasa (se apagó en x 644)
+
+# Abad Sellado: patrones, ventanas y fase 2
+  ok   dormido hasta que Baldwin se acerca
+  ok   despierta con un rugido y muestra su barra
+  ok   usa los dos patrones: { &"sweep": 1, &"rain": 1 }
+  ok   anticipación del tajo de 0,8 s (47 ticks)
+  ok   anticipación de la lluvia de 0,9 s (54 ticks)
+  ok   lluvia de 3 brasas a 80 px
+  ok   ventanas de castigo tras cada patrón
+  ok   su zona vulnerable está apagada fuera de las ventanas
+  ok   y encendida durante ellas
+  ok   a la mitad ruge (1,2 s sin daño) y pasa a la fase 2
+  ok   fase 2: anticipaciones un 25 % más cortas
+  ok   fase 2: dos tajos por cada lluvia ([&"sweep", &"sweep", &"rain"])
+  ok   fase 2: lluvia de 5 brasas a 64 px
+
+# Combate completo: copper_sword + mask_vow
+  ok   vence al Abad en 18 s (salud final 100, golpes recibidos 0)
+  ok   al caer el Abad se abre la salida
+
+# Combate completo: copper_sword + mask_ember
+  ok   vence al Abad en 15 s (salud final 100, golpes recibidos 0)
+  ok   al caer el Abad se abre la salida
+
+# Combate completo: crypt_mace + mask_vow
+  ok   vence al Abad en 19 s (salud final 100, golpes recibidos 0)
+  ok   al caer el Abad se abre la salida
+
+# Combate completo: crypt_mace + mask_ember
+  ok   vence al Abad en 17 s (salud final 100, golpes recibidos 0)
+  ok   al caer el Abad se abre la salida
+
+# Morir ante el Abad y repetir
+  ok   vuelve al brasero de la antesala
+  ok   el Abad vuelve entero y dormido
+
+== 45 comprobaciones, 0 fallas ==
+WARNING: 19 RIDs of type "CanvasItem" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+WARNING: 21 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 1 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

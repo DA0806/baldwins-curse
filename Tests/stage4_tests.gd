@@ -98,15 +98,30 @@ func _test_room() -> void:
 
 	var enemy = room.get_node("GroundEnemy")
 	var art: Sprite2D = enemy.get_node("Art")
-	check(not enemy.body.visible and art.frame == 0, "custodio en reposo con su arte")
+	var definition: Dictionary = enemy._presentation.definition
+	var initial_clip: String = enemy._presentation.current_clip
+	var initial_sequence: Dictionary = definition.clips[initial_clip]
+	check(not enemy.body.visible and initial_clip in ["Idle", "Walk"]
+		and art.frame >= initial_sequence.start and art.frame < initial_sequence.start + initial_sequence.count,
+		"custodio usa su secuencia de reposo o patrulla")
 	player.respawn_at(enemy.global_position + Vector2(-30, -8))
 	var seen := {}
+	var startup_frames := {}
 	for i in 240:
 		await physics_frame
 		seen[enemy.attack.phase] = art.frame
+		if enemy.attack.phase == P.STARTUP:
+			startup_frames[art.frame] = true
 		if seen.has(P.RECOVERY):
 			break
-	check(seen.get(P.STARTUP) == 1 and seen.get(P.ACTIVE) == 2 and seen.get(P.RECOVERY) == 3, "pose por fase: anticipación 1, golpe 2, recuperación 3 (%s)" % seen)
+	var phase_ranges := {P.STARTUP: "Startup", P.ACTIVE: "Active", P.RECOVERY: "Recovery"}
+	var correct_ranges := true
+	for phase in phase_ranges:
+		var sequence: Dictionary = definition.clips[phase_ranges[phase]]
+		var sampled: int = seen.get(phase, -1)
+		correct_ranges = correct_ranges and sampled >= sequence.start and sampled < sequence.start + sequence.count
+	check(correct_ranges, "cada fase usa su secuencia propia, sincronizada con el combate (%s)" % seen)
+	check(startup_frames.size() > 1, "anticipación avanza por varios cuadros antes del daño")
 	check(art.flip_h, "mira al jugador (a su izquierda)")
 
 	player.health.reset()

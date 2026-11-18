@@ -1,0 +1,159 @@
+{
+  "sheets": [
+    {
+      "file": "Sprites/Characters/Baldwin/Idle.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 8,
+      "sha256": "aeeb1125471b50d4988612641a6d972032f826da9469f47554cfe4895dbb3f32"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/Walk.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 16,
+      "sha256": "bd58e71fb6a64f40ac7c867f63c281ff9f55d9d4563c50108eb961bc5fd270d5"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/Jump.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 10,
+      "sha256": "3c67b56063efe54db4d1547d2eb917bc98a309782f99f4eff7806e715cda1ad9"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/Hurt.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 6,
+      "sha256": "604ead2e50f567d682aac01acb5559665335149c71f5e898444bb73962f6d3e3"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/Dead.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 12,
+      "sha256": "f65e8503854ca97c8aae191fae905474aad7a13e9cd2e7007c247e87719c88c6"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/Dash.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 12,
+      "sha256": "f25914b8adac689a5fd9aa6167d22308696a70fb02c8b1520eec1a08e969f44f"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/AttackSwordStartup.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 6,
+      "sha256": "9df7707ef8771356fe1eeaf6af0f5088f5f6abcd2f707e6cc6cc91fcac067433"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/AttackSwordActive.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 4,
+      "sha256": "620e11a5bea48cf955aaaadb686c1da463dd57b950cc68a12a707980eaea38a9"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/AttackSwordRecovery.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 6,
+      "sha256": "d2e02952f46e9c3ee48e30e3747ece58531428846f976c1c5955b9651e67c496"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/AttackMaceStartup.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 8,
+      "sha256": "e83f64f42f7fb2474ac8ec4fc13e774496388a27ccf6020be5b761ec9245ea7b"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/AttackMaceActive.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 4,
+      "sha256": "5c19707efd7585b2bf0fe09efd1783ef8c9c1eb159072e692b76b25ffb5fd446"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/AttackMaceRecovery.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 8,
+      "sha256": "598715741f4286b9054d77b0e02c52822ca15e44098a006a74293aa88d071a4a"
+    },
+    {
+      "file": "Sprites/Characters/Baldwin/Run.png",
+      "cell": [
+        128,
+        128
+      ],
+      "frames": 16,
+      "sha256": "f7647aed9dce847fec25368cfc531d3ec75c54128f6477f6e0c213df6e328ac6"
+    },
+    {
+      "file": "Sprites/Enemies/custodio.png",
+      "cell": [
+        128,
+        96
+      ],
+      "frames": 36,
+      "sha256": "c5441a1a26f097acbda6ac120de30f2c83b3b3b308ce28a12eef744b00e734c7"
+    },
+    {
+      "file": "Sprites/Enemies/custodio_sellado.png",
+      "cell": [
+        128,
+        96
+      ],
+      "frames": 36,
+      "sha256": "53ca64ac7cf841bd48bf37aaf08606bbc3b06311d9cbfe221a6c1a12c6a33bef"
+    },
+    {
+      "file": "Sprites/Enemies/acolito.png",
+      "cell": [
+        96,
+        96
+      ],
+      "frames": 30,
+      "sha256": "8d94b46976544fea58f8324da4ce050b14ce06524de37d467f7ef355155860c2"
+    },
+    {
+      "file": "Sprites/Bosses/abad.png",
+      "cell": [
+        256,
+        160
+      ],
+      "frames": 88,
+      "sha256": "20500a61103b8110c58fad6282cb957e57b2cd6d536cc5e52eee85eb59e6ae60"
+    }
+  ],
+  "frames": 306,
+  "source_scale": 4
+}

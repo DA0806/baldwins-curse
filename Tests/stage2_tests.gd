@@ -26,6 +26,7 @@ var failures := 0
 var phases: Array = []
 var active_rect := Rect2()
 var active_frame := -1
+var active_clip: StringName = &""
 
 func _initialize() -> void:
 	_run()
@@ -94,6 +95,7 @@ func _on_player_phase(phase: int) -> void:
 	if phase == P.ACTIVE:
 		active_rect = player.attack.hitbox.get_world_rect()
 		active_frame = player.sprite.frame
+		active_clip = player.sprite.animation
 
 func attack_starts() -> int:
 	return phases.filter(func(entry): return entry[0] == P.STARTUP).size()
@@ -155,7 +157,7 @@ func _test_weapons_and_empty_slot() -> void:
 	await tap(&"attack_weapon_1")
 	await tap(&"attack_weapon_2")
 	await ticks(20)
-	check(attack_starts() == 0 and player.current_state != player.State.ATTACK and player.sprite.animation != &"Attack",
+	check(attack_starts() == 0 and player.current_state != player.State.ATTACK and not String(player.sprite.animation).begins_with("Attack"),
 		"ranura vacía: ni ataque ni animación de ataque")
 	check(dummy.hit_log.is_empty(), "ranura vacía: cero daño")
 
@@ -168,14 +170,14 @@ func _test_hits_and_damage() -> void:
 	await stand(320)
 
 	await tap(&"attack_weapon_1")
-	check(player.current_state == player.State.ATTACK and player.sprite.animation == &"Attack", "Z con espada: ataque y animación")
+	check(player.current_state == player.State.ATTACK and player.sprite.animation == &"AttackSwordStartup", "Z con espada: ataque y animación")
 	await ticks(40)
 	check(dummy.hit_log.size() == 1 and dummy.hit_log[0].damage == 20.0, "la espada golpea una vez por 20")
 	check(dummy.health.current == dummy.health.max_health - 20.0, "la salud del objetivo baja exactamente 20")
 	var delay: int = dummy.hit_log[0].frame - last_start_frame()
 	check(delay >= floori(sword.startup / TICK) and delay <= ceili((sword.startup + sword.active_time) / TICK) + 1,
 		"el golpe cae dentro de la ventana activa (%d ticks tras aceptar el ataque)" % delay)
-	check(active_frame == 4, "al abrirse la ventana la animación está en el cuadro del tajo (cuadro %d)" % (active_frame + 1))
+	check(active_clip == &"AttackSwordActive" and active_frame == 0, "la ventana de daño inicia el clip activo de espada desde su primer cuadro")
 	check(inv.active_weapon_slot == 0, "atacar con Z deja la ranura 1 como ranura de intercambio")
 
 	await tap(&"attack_weapon_2")
@@ -184,6 +186,7 @@ func _test_hits_and_damage() -> void:
 	delay = dummy.hit_log[1].frame - last_start_frame()
 	check(delay >= floori(mace.startup / TICK) and delay <= ceili((mace.startup + mace.active_time) / TICK) + 1,
 		"la maza tarda más en golpear (%d ticks)" % delay)
+	check(active_clip == &"AttackMaceActive" and active_frame == 0, "la maza inicia su propio clip activo con la misma autoridad de daño")
 	check(inv.active_weapon_slot == 1 and hud.weapon_key_labels[1].text == "[X]", "atacar con X mueve la ranura de intercambio y el HUD lo muestra")
 	check(player.current_state != player.State.ATTACK and not any_hitbox_active(), "al terminar no queda zona de golpe abierta")
 

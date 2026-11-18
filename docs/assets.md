@@ -65,3 +65,13 @@ Lote nuevo con cuatro referencias, cuatro modelos Meshy t2.5/n1 (objetivo de 12 
 | `Art/Meshy/prerendered/sprites/Bosses/abad.png` → `Sprites/Bosses/abad.png` | Abad y sus nueve estados | Modelo/rig Meshy; poses óseas, IK, guadaña, incensario y sello locales | Lote Abad | Pendiente para el material derivado de Meshy | Según derechos confirmados | Pendiente de integración final |
 
 Los iconos, proyectiles y fondos conservan sus procedencias anteriores salvo sustitución explícitamente registrada. No regenerar los sprites con herramientas legadas después de instalar este lote: podrían sobrescribirlo. La existencia de modelos, renders o pruebas funcionales no resuelve licencias pendientes ni demuestra una revisión visual completa.
+
+## Animación y equipo independiente — 17 de noviembre de 2026
+
+| Archivos | Procedencia | Créditos / estado |
+| --- | --- | --- |
+| `Sprites/Characters/Baldwin/*.png` (clips actuales), `Sprites/Enemies/*.png` (custodios/acólito), `Sprites/Bosses/abad.png`, `Scripts/Presentation/*PoseData.gd` | Rigs Meshy de la pasada anterior, poses/rig y render Blender4.5.9 con receta `tools/render_animation_v2.py` | 306cuadros de cuerpo, capas sin arma. Incluye Dash preparado. |
+| `Sprites/Equipment/{sword,mace,scythe,censer}.png`, iconosWeapons y `Sprites/Items/Consumables/Healing_Potion.png` | Cinco modelos Meshy con referencias propias; `Art/Meshy/animation_v2/equipment/manifest.json` registra tareas ySHA256 | 120créditos reales. Sujetos a condiciones de la cuenta Meshy conectada. |
+| `Sprites/Items/World/*.png` | Render de los props y reducción de máscaras existentes para el mundo | Separados de iconosHUD; no activa consumo o healing. |
+
+Esta pasada no modifica el estado de permisos de los assets legados. Ver `docs/animation_v2/README.md` para contratos, límites y regeneración.

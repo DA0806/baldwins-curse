@@ -1,0 +1,29 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+  ok   enemy presentation supports layered animation
+  ok   idle advances without restarting on repeated updates
+  ok   startup samples its own range from authoritative phase progress
+  ok   body and weapon consume the same sampled pose
+  ok   turning mirrors the hand without advancing the clock
+  ok   weapon angle and scale reflect together
+  ok   weapon rotates around its authored grip
+  ok   body keeps its authored root instead of centering the silhouette
+  ok   active begins on its first frame immediately
+  ok   death clears equipment according to the same pose
+  ok   grid atlas preserves row-major frame indices across rows
+  ok   custodian body and hurtbox grow upward while preserving floor at +24
+  ok   accepted strike immediately shows startup without opening damage
+  ok   startup moves through real intermediate poses
+  ok   active pose follows damage authority and retains accepted facing
+  ok   recovery starts when the hitbox closes
+  ok   cancel returns to locomotion without a stale strike pose
+  ok   acolyte grows upward while preserving floor at +24
+  ok   casting tell is sampled from its actual timer
+  ok   throw enters its own clip immediately
+  ok   abbot shrinks to 88px without moving floor +56 or low attack origin
+  ok   rain anticipation samples the state timer
+  ok   exhaustion switches to its distinct recovery clip
+  ok   death begins its authored clip immediately
+
+== 24 comprobaciones, 0 fallas ==

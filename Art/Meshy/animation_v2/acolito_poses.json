@@ -1,0 +1,330 @@
+{
+  "Idle": {
+    "count": 8,
+    "fps": 3.0,
+    "loop": true,
+    "poses": [
+      {
+        "hand": [
+          4.8969,
+          -8.8188
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.2428,
+          -9.031
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.3849,
+          -9.1167
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.2428,
+          -9.031
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          4.8969,
+          -8.8188
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          4.5476,
+          -8.5998
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          4.4018,
+          -8.5071
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          4.5476,
+          -8.5998
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "Tell": {
+    "count": 8,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          4.7467,
+          -8.8497
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.7599,
+          -10.6915
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.7597,
+          -13.9824
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.7595,
+          -17.2726
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.7594,
+          -20.5652
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.7597,
+          -23.857
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.7597,
+          -27.1483
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.7599,
+          -30.4399
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "Throw": {
+    "count": 6,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          12.5979,
+          -9.8352
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          12.7027,
+          -9.7472
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          12.8042,
+          -9.6582
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          12.9024,
+          -9.5681
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          12.9971,
+          -9.4771
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          13.0884,
+          -9.3852
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "Recover": {
+    "count": 8,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          9.5999,
+          -14.1201
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.2208,
+          -12.9409
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.4755,
+          -12.0631
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          7.7284,
+          -11.2715
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          6.9905,
+          -10.5596
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          6.2692,
+          -9.9191
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.5703,
+          -9.3417
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          4.8969,
+          -8.8188
+        ],
+        "angle": 0,
+        "weapon": "censer",
+        "weapon_scale": 0.45,
+        "weapon_visible": true
+      }
+    ]
+  }
+}

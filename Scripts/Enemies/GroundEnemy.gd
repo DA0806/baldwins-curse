@@ -34,10 +34,12 @@ enum State { PATROL, CHASE, ATTACK, DEAD }
 const COLOR_IDLE := Color(0.42, 0.16, 0.2)
 const COLOR_TELEGRAPH := Color(0.94, 0.65, 0.35) # brasa
 const COLOR_RECOVERY := Color(0.26, 0.12, 0.16)
+const PRESENTATION = preload("res://Scripts/Presentation/EnemyPresentation.gd")
 
 var state: State = State.PATROL
 var facing: int = -1
 var home: Vector2
+var _presentation
 
 @onready var health: Health = $Health
 @onready var hurtbox: Hurtbox = $Hurtbox
@@ -46,7 +48,7 @@ var home: Vector2
 @onready var eye: ColorRect = $Eye
 @onready var blade: ColorRect = $Blade
 @onready var alert: Label = $Alert
-## Hijo opcional "Art" (Sprite2D, 4 poses: reposo, anticipación, golpe, recuperación).
+## Optional body atlas; its sibling WeaponArt shares the sampled pose.
 @onready var art: Sprite2D = get_node_or_null("Art") as Sprite2D
 
 func _ready() -> void:
@@ -60,6 +62,9 @@ func _ready() -> void:
 	health.died.connect(_on_died)
 	attack.phase_changed.connect(_on_attack_phase_changed)
 	attack.finished.connect(_on_attack_finished)
+	if art:
+		var actor := "custodio_sellado" if "custodio_sellado" in art.texture.resource_path else "custodio"
+		_presentation = PRESENTATION.for_actor(art, actor)
 	_update_visual()
 
 func _physics_process(delta: float) -> void:
@@ -87,7 +92,7 @@ func _physics_process(delta: float) -> void:
 				elif (global_position.x - home.x) * facing < patrol_distance:
 					velocity.x = facing * chase_speed
 	move_and_slide()
-	_update_visual()
+	_update_visual(delta)
 
 func _find_player() -> Node2D:
 	var player := get_tree().get_first_node_in_group("player") as Node2D
@@ -147,7 +152,7 @@ func reset_encounter() -> void:
 
 ## La anticipación se lee por color, por el signo "!" y por la hoja que se
 ## levanta; la hoja extendida marca la ventana activa.
-func _update_visual() -> void:
+func _update_visual(delta: float = 0.0) -> void:
 	var phase: int = attack.phase
 	var attack_facing: int = attack.spec.facing if phase != MeleeAttack.Phase.IDLE else facing
 	eye.position.x = 4.0 if attack_facing > 0 else -10.0
@@ -156,6 +161,24 @@ func _update_visual() -> void:
 		body.visible = false
 		eye.visible = false
 		blade.visible = false
+		if _presentation:
+			var clip := "Walk" if absf(velocity.x) > 0.1 else "Idle"
+			var duration := -1.0
+			var progress := -1.0
+			match phase:
+				MeleeAttack.Phase.STARTUP:
+					clip = "Startup"
+					duration = attack.spec.startup
+				MeleeAttack.Phase.ACTIVE:
+					clip = "Active"
+					duration = attack.spec.active
+				MeleeAttack.Phase.RECOVERY:
+					clip = "Recovery"
+					duration = attack.spec.recovery
+			if duration > 0.0:
+				progress = 1.0 - attack._phase_left / duration
+			_presentation.update(clip, delta, attack_facing, duration, progress)
+			return
 		art.flip_h = attack_facing < 0
 		match phase:
 			MeleeAttack.Phase.STARTUP: art.frame = 1

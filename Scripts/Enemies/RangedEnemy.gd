@@ -11,6 +11,7 @@ enum State { IDLE, TELL, THROW, RECOVER, DEAD }
 const COLOR_IDLE := Color(0.478, 0.227, 0.133) # cobre oscuro
 const COLOR_TELL := Color(0.94, 0.65, 0.35)    # brasa
 const COLOR_RECOVER := Color(0.3, 0.16, 0.12)
+const PRESENTATION = preload("res://Scripts/Presentation/EnemyPresentation.gd")
 
 signal threw(orb: EmberOrb)
 
@@ -31,12 +32,14 @@ var facing: int = -1
 var timer: float = 0.0
 var cooldown_left: float = 0.0
 var home: Vector2
+var _presentation
+var _state_duration := 0.0
 
 @onready var health: Health = $Health
 @onready var hurtbox: Hurtbox = $Hurtbox
 @onready var body: ColorRect = $Body
 @onready var alert: Label = $Alert
-## Hijo opcional "Art" (Sprite2D, 4 cuadros: reposo, anticipación, lanzamiento, recuperación).
+## Optional body atlas; equipment is sampled from the same presentation clock.
 @onready var art: Sprite2D = get_node_or_null("Art") as Sprite2D
 
 func _ready() -> void:
@@ -47,6 +50,7 @@ func _ready() -> void:
 	health.damaged.connect(func(_amount: float, _source: Node):
 		modulate = GameSettings.flash_color()
 		create_tween().tween_property(self, "modulate", Color.WHITE, 0.15))
+	_presentation = PRESENTATION.for_actor(art, "acolito")
 	_update_visual()
 
 func _physics_process(delta: float) -> void:
@@ -76,10 +80,12 @@ func _physics_process(delta: float) -> void:
 			if timer <= 0.0:
 				cooldown_left = cooldown
 				_set_state(State.IDLE, 0.0)
+	_update_visual(delta)
 
 func _set_state(new_state: State, duration: float) -> void:
 	state = new_state
 	timer = duration
+	_state_duration = duration
 	_update_visual()
 
 func _throw() -> void:
@@ -116,10 +122,15 @@ func reset_encounter() -> void:
 	show()
 	_set_state(State.IDLE, 0.0)
 
-func _update_visual() -> void:
+func _update_visual(delta: float = 0.0) -> void:
 	alert.visible = state == State.TELL
 	if art:
 		body.visible = false
+		if _presentation:
+			var clip: String = {State.TELL: "Tell", State.THROW: "Throw", State.RECOVER: "Recover"}.get(state, "Idle")
+			var progress := 1.0 - timer / _state_duration if _state_duration > 0.0 else -1.0
+			_presentation.update(clip, delta, facing, _state_duration, progress)
+			return
 		art.flip_h = facing < 0
 		art.frame = {State.TELL: 1, State.THROW: 2, State.RECOVER: 3}.get(state, 0)
 		return

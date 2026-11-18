@@ -1,0 +1,107 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+
+[sprites] celdas completas y pivote en los pies
+  ok   AttackMaceActive usa celdas de 128x128 (sin recorte)
+  ok   AttackMaceActive mantiene los pies en y=32 en todos los cuadros
+  ok   AttackMaceRecovery usa celdas de 128x128 (sin recorte)
+  ok   AttackMaceRecovery mantiene los pies en y=32 en todos los cuadros
+  ok   AttackMaceStartup usa celdas de 128x128 (sin recorte)
+  ok   AttackMaceStartup mantiene los pies en y=32 en todos los cuadros
+  ok   AttackSwordActive usa celdas de 128x128 (sin recorte)
+  ok   AttackSwordActive mantiene los pies en y=32 en todos los cuadros
+  ok   AttackSwordRecovery usa celdas de 128x128 (sin recorte)
+  ok   AttackSwordRecovery mantiene los pies en y=32 en todos los cuadros
+  ok   AttackSwordStartup usa celdas de 128x128 (sin recorte)
+  ok   AttackSwordStartup mantiene los pies en y=32 en todos los cuadros
+  ok   Dash usa celdas de 128x128 (sin recorte)
+  ok   Dash conserva su apoyo dentro de un píxel de y=32
+  ok   Dead usa celdas de 128x128 (sin recorte)
+  ok   Dead conserva su apoyo dentro de un píxel de y=32
+  ok   Hurt usa celdas de 128x128 (sin recorte)
+  ok   Hurt conserva su apoyo dentro de un píxel de y=32
+  ok   Idle usa celdas de 128x128 (sin recorte)
+  ok   Idle mantiene los pies en y=32 en todos los cuadros
+  ok   Jump usa celdas de 128x128 (sin recorte)
+  ok   Jump conserva su apoyo dentro de un píxel de y=32
+  ok   Run usa celdas de 128x128 (sin recorte)
+  ok   Run mantiene los pies en y=32 en todos los cuadros
+  ok   Walk usa celdas de 128x128 (sin recorte)
+  ok   Walk mantiene los pies en y=32 en todos los cuadros
+  ok   offset del sprite (32, -32): pivote en la celda (32, 96)
+  ok   al mirar a la izquierda el offset se refleja (-32)
+
+[salto] medidas
+     altura larga 76.9 px (0.67 s en el aire) · altura corta 19.2 px (0.32 s)
+  ok   el salto largo supera el escalón de 64 px
+  ok   el salto corto queda por debajo del escalón de 32 px
+     alcance horizontal a velocidad máxima: derecha 129.0 px · izquierda 129.0 px
+  ok   el alcance es simétrico en espejo
+  ok   el alcance supera el hueco de 96 px
+
+[salto] coyote time
+     último salto aceptado 7 ticks (0.117 s) tras dejar el borde
+  ok   coyote de 0.12 s con tolerancia de un tick
+
+[salto] buffer
+     pulsación más temprana aceptada: 8 ticks (0.133 s) antes del salto
+  ok   buffer de 0.14 s con tolerancia de un tick
+
+[salto] techo y corrección de esquinas
+  ok   bajo el techo el salto se detiene a 32 px (32.0)
+  ok   bajo el techo no hay desplazamiento lateral
+  ok   borde izquierdo: la corrección libra el techo (altura 76.9, desvío -6.0 px)
+  ok   borde derecho: la corrección libra el techo (altura 76.9, desvío +6.0 px)
+  ok   el desvío es simétrico y de 12 px como máximo
+
+[sala] diez caídas con reaparición
+  ok   10/10 caídas reaparecen en el punto con la cámara en su sitio (10)
+  ok   el HUD sigue enlazado tras reaparecer
+  ok   la vista no sale de la sala al caminar contra la pared derecha (exceso 0.0 px)
+  ok   la vista no sale de la sala al caminar contra la pared izquierda (exceso 0.0 px)
+
+[recogida] un objetivo por pulsación
+  ok   el aviso está oculto fuera de rango
+  ok   dos objetos al empezar
+  ok   aviso en rango con la tecla del InputMap: '[R] Copper Sword'
+  ok   hueco libre: la primera espada entra en la ranura 0
+  ok   el pickup recogido desaparece
+  ok   el HUD muestra la ranura 0
+  ok   la segunda arma entra en la ranura 1
+  ok   dos transacciones, total de objetos conservado
+  ok   inventario lleno: intercambia en la ranura de intercambio (0)
+  ok   el arma desplazada queda en el suelo
+  ok   el aviso del objeto desplazado sigue visible
+  ok   el pickup muestra la textura de mundo del objeto desplazado
+  ok   el intercambio conserva el total de objetos
+  ok   pickups solapados: una pulsación produce una sola transacción
+  ok   empate de distancia: gana el primero en orden de árbol
+  ok   se elige el pickup más cercano
+  ok   total conservado tras los intercambios
+  ok   con ranura de intercambio 1 se reemplaza la ranura 1
+  ok   pickup sin objeto: nada cambia
+  ok   tipo sin manejador: el pickup y el inventario quedan sin cambios
+
+[inventario] invariante de dos ranuras
+  ok   un arreglo vacío se normaliza a dos ranuras
+  ok   un arreglo de tres se recorta a dos
+  ok   ranura de intercambio 7 se ajusta a 1
+  ok   ranura de intercambio -3 se ajusta a 0
+  ok   leer una ranura inválida devuelve vacío sin error
+  ok   equipar en una ranura inválida se rechaza
+  ok   se llena primero el hueco libre aunque la ranura de intercambio sea otra
+  ok   un objeto nulo se rechaza sin tocar el inventario
+  ok   la acción jump ya no trae un evento nulo
+
+[HUD] enlace idempotente
+  ok   reenlazar el mismo inventario no duplica conexiones
+  ok   las teclas del HUD salen del InputMap y marcan la ranura de intercambio
+  ok   el HUD sigue a la ranura de intercambio
+  ok   el HUD refleja el arma equipada
+  ok   el HUD se enlaza al inventario del jugador nuevo
+  ok   el inventario anterior queda desconectado
+  ok   el HUD muestra el estado del inventario nuevo
+  ok   las señales del inventario nuevo actualizan el HUD
+
+== 80 comprobaciones, 0 fallas ==

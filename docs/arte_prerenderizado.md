@@ -1,5 +1,7 @@
 # Sprites prerenderizados de Baldwin's Curse
 
+> La pasada actual de animación y equipo independiente se documenta en [animation_v2/README.md](animation_v2/README.md). Los conteos y comandos de esta primera pasada se conservan como registro histórico.
+
 Fecha: 17 de noviembre de 2026. Estado: lote integrado de 10 hojas y 52 cuadros; cuatro modelos Meshy con rigs y animación base de Baldwin. Verificación técnica y capturas del juego completadas; partida humana pendiente. Esta guía conserva el combate y los contratos de las escenas. Complementa [arte.md](arte.md) y [DIRECCION_ARTISTICA.md](DIRECCION_ARTISTICA.md).
 
 ## Intención visual

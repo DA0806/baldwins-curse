@@ -7,16 +7,17 @@
 [ext_resource type="Script" path="res://Scripts/Combat/Hitbox.gd" id="5_hitbox"]
 
 [sub_resource type="RectangleShape2D" id="Shape_body"]
-size = Vector2(24, 48)
+size = Vector2(24, 60)
 
 [sub_resource type="RectangleShape2D" id="Shape_hurt"]
-size = Vector2(24, 48)
+size = Vector2(24, 60)
 
 [node name="GroundEnemy" type="CharacterBody2D"]
 collision_layer = 4
 script = ExtResource("1_enemy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
 shape = SubResource("Shape_body")
 
 [node name="Body" type="ColorRect" parent="."]
@@ -61,6 +62,7 @@ script = ExtResource("3_hurtbox")
 health = NodePath("../Health")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -6)
 shape = SubResource("Shape_hurt")
 
 [node name="MeleeAttack" type="Node2D" parent="."]

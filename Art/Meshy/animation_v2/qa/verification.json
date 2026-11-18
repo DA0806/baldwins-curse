@@ -1,0 +1,14 @@
+{
+  "godot": "4.7.2",
+  "checks": 369,
+  "failures": 0,
+  "body_sheets": 17,
+  "body_frames": 306,
+  "equipment_sprites": 13,
+  "new_meshy_models": 5,
+  "consumed_credits": 120,
+  "dash_gameplay": false,
+  "healing_gameplay": false,
+  "independent_review": "no blockers; capture tint corrected",
+  "capture_count": 11
+}

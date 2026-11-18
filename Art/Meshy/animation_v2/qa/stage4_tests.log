@@ -1,0 +1,34 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+
+# Proyecto, tema y jugador
+  ok   tema de interfaz del proyecto cargado
+  ok   la fuente cubre los glifos del español
+  ok   buses Music y SFX
+  ok   las zonas de golpe no se dibujan por defecto (F3)
+  ok   colisionador y rayos simétricos respecto al pivote
+
+# Atrio 2 (sala de referencia)
+  ok   el Atrio 1 suena con el ambiente del Atrio
+  ok   la salida funde a negro antes de cambiar de sala
+  ok   llega al Atrio 2
+  ok   entra el ambiente del Atrio
+  ok   el fundido se aclara al llegar
+  ok   suelo con tiles de 16 px
+  ok   brasero apagado antes de tocarlo
+  ok   brasero encendido al activarlo
+  ok   custodio usa su secuencia de reposo o patrulla
+  ok   cada fase usa su secuencia propia, sincronizada con el combate ({ 0: 0, 1: 23, 2: 27, 3: 28 })
+  ok   anticipación avanza por varios cuadros antes del daño
+  ok   mira al jugador (a su izquierda)
+  ok   dentro del Atrio el ambiente sigue sin cortes
+  ok   al entrar en la Cripta cambia al ambiente de la Cripta
+
+== 19 comprobaciones, 0 fallas ==
+WARNING: 1 RID of type "CanvasItem" was leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2733)
+WARNING: 3 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 1 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)
