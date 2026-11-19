@@ -122,7 +122,8 @@ position = Vector2(860, 232)
 [node name="Art" type="Sprite2D" parent="Acolyte"]
 z_index = 1
 texture = ExtResource("18_r")
-hframes = 4
+hframes = 30
+offset = Vector2(0, -24)
 
 [node name="Exit" type="Area2D" parent="."]
 position = Vector2(1256, 208)

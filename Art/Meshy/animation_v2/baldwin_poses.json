@@ -1,0 +1,1255 @@
+{
+  "Idle": {
+    "count": 8,
+    "fps": 4.0,
+    "loop": true,
+    "poses": [
+      {
+        "hand": [
+          8.1588,
+          -4.4389
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.289,
+          -4.5925
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.8576,
+          -1.8138
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.7292,
+          -1.8677
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          6.9016,
+          -5.3104
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.0837,
+          -7.0914
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.5681,
+          -6.1023
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          7.8457,
+          -4.4557
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "Walk": {
+    "count": 16,
+    "fps": 16.0,
+    "loop": true,
+    "poses": [
+      {
+        "hand": [
+          8.2991,
+          -4.7757
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.4298,
+          -4.8092
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.8372,
+          -4.2321
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.3835,
+          -3.378
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.6264,
+          -2.957
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.296,
+          -3.4111
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.0928,
+          -3.6079
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.5721,
+          -4.2246
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.0258,
+          -4.8853
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          7.7438,
+          -5.1681
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          7.7993,
+          -4.939
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.0676,
+          -4.4009
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.4498,
+          -3.7199
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.3742,
+          -3.7746
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.4174,
+          -3.9001
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.4205,
+          -4.264
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ],
+    "stride_px": 54.5
+  },
+  "Jump": {
+    "count": 10,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          7.7468,
+          -9.3395
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.9352,
+          -6.2611
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.4105,
+          -6.728
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          7.0948,
+          -10.443
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.9354,
+          -6.2611
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          7.9921,
+          -9.081
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.9369,
+          -6.2605
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.9361,
+          -6.2604
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.5387,
+          -6.8392
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          7.9454,
+          -9.0816
+        ],
+        "angle": -0.35,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "Hurt": {
+    "count": 6,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          5.9497,
+          -4.0444
+        ],
+        "angle": 0.3,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.3315,
+          -1.8195
+        ],
+        "angle": 0.3,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.0081,
+          -0.3095
+        ],
+        "angle": 0.3,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.0081,
+          -0.3095
+        ],
+        "angle": 0.3,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.3315,
+          -1.8195
+        ],
+        "angle": 0.3,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          5.9497,
+          -4.0444
+        ],
+        "angle": 0.3,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "Dead": {
+    "count": 12,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          -3.1037,
+          -4.3631
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -1.0646,
+          -4.3909
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          2.6176,
+          -4.4723
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          18.9958,
+          -1.8156
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          19.3307,
+          1.0
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          22.2457,
+          3.8118
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          15.1017,
+          12.9599
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          30,
+          29
+        ],
+        "angle": 0,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": false
+      },
+      {
+        "hand": [
+          30,
+          29
+        ],
+        "angle": 0,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": false
+      },
+      {
+        "hand": [
+          30,
+          29
+        ],
+        "angle": 0,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": false
+      },
+      {
+        "hand": [
+          30,
+          29
+        ],
+        "angle": 0,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": false
+      },
+      {
+        "hand": [
+          30,
+          29
+        ],
+        "angle": 0,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": false
+      }
+    ]
+  },
+  "Dash": {
+    "count": 12,
+    "fps": 60.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          -3.7709,
+          -2.6915
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -4.9113,
+          -3.7294
+        ],
+        "angle": -1.28121,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -6.2984,
+          -2.8937
+        ],
+        "angle": -1.98673,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -7.0341,
+          -1.8472
+        ],
+        "angle": -2.44922,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -7.3377,
+          -1.0398
+        ],
+        "angle": -2.74042,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -7.4303,
+          -0.6191
+        ],
+        "angle": -2.8824,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -7.4301,
+          -0.6193
+        ],
+        "angle": -2.8824,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -7.3375,
+          -1.04
+        ],
+        "angle": -2.74042,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -7.0341,
+          -1.8471
+        ],
+        "angle": -2.44922,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -6.2984,
+          -2.8936
+        ],
+        "angle": -1.98673,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -4.9114,
+          -3.7289
+        ],
+        "angle": -1.28121,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          -3.7709,
+          -2.6909
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "AttackSwordStartup": {
+    "count": 6,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          8.1588,
+          -4.4389
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.3321,
+          -6.032
+        ],
+        "angle": 0.17332,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.3569,
+          -10.9597
+        ],
+        "angle": -0.60219,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.0962,
+          -15.931
+        ],
+        "angle": -1.24475,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.9191,
+          -14.2591
+        ],
+        "angle": -1.03111,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.9226,
+          -7.6542
+        ],
+        "angle": -0.12,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "AttackSwordActive": {
+    "count": 4,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          10.9226,
+          -7.6542
+        ],
+        "angle": -0.12,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.6861,
+          -7.0508
+        ],
+        "angle": -0.05778,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.2661,
+          -6.0884
+        ],
+        "angle": 0.05778,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.0521,
+          -5.6414
+        ],
+        "angle": 0.12,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "AttackSwordRecovery": {
+    "count": 6,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          10.0521,
+          -5.6414
+        ],
+        "angle": 0.12,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.2677,
+          -4.7266
+        ],
+        "angle": 0.35044,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.6879,
+          -4.2263
+        ],
+        "angle": 0.50084,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.5108,
+          -4.2904
+        ],
+        "angle": 0.5165,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.2734,
+          -4.3863
+        ],
+        "angle": 0.53871,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.1588,
+          -4.4389
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "AttackMaceStartup": {
+    "count": 8,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          8.1588,
+          -4.4389
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.1888,
+          -5.4803
+        ],
+        "angle": 0.31251,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.8255,
+          -9.5636
+        ],
+        "angle": -0.25035,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.8839,
+          -16.2864
+        ],
+        "angle": -0.91419,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.7096,
+          -21.2728
+        ],
+        "angle": -1.45461,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.2809,
+          -22.8607
+        ],
+        "angle": -1.64177,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.5107,
+          -16.3333
+        ],
+        "angle": -0.98039,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          12.0926,
+          -10.0119
+        ],
+        "angle": -0.4,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "AttackMaceActive": {
+    "count": 4,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          12.0926,
+          -10.0119
+        ],
+        "angle": -0.4,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          12.549,
+          -7.8325
+        ],
+        "angle": -0.24444,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          11.8075,
+          -5.0088
+        ],
+        "angle": 0.04444,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          11.3648,
+          -3.7431
+        ],
+        "angle": 0.2,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "AttackMaceRecovery": {
+    "count": 8,
+    "fps": 24.0,
+    "loop": false,
+    "poses": [
+      {
+        "hand": [
+          11.3648,
+          -3.7431
+        ],
+        "angle": 0.2,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.7151,
+          -3.3815
+        ],
+        "angle": 0.30914,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.727,
+          -2.9385
+        ],
+        "angle": 0.47336,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.5084,
+          -2.9404
+        ],
+        "angle": 0.50202,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.1886,
+          -3.2872
+        ],
+        "angle": 0.51345,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.7606,
+          -3.7448
+        ],
+        "angle": 0.52951,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.3756,
+          -4.1671
+        ],
+        "angle": 0.54382,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.1588,
+          -4.4389
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ]
+  },
+  "Run": {
+    "count": 16,
+    "fps": 24.0,
+    "loop": true,
+    "poses": [
+      {
+        "hand": [
+          10.8576,
+          -1.2287
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.8576,
+          -1.2287
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.8574,
+          -1.229
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.6352,
+          -1.6147
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.3328,
+          -2.1596
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.3091,
+          -2.1737
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.4996,
+          -1.7959
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.2066,
+          -2.1735
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.7692,
+          -2.6383
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.4874,
+          -1.594
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.4528,
+          -2.8383
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          8.869,
+          -3.7977
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.2479,
+          -3.3442
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          9.4318,
+          -3.3812
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.2619,
+          -2.1651
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      },
+      {
+        "hand": [
+          10.7539,
+          -1.3954
+        ],
+        "angle": 0.55,
+        "weapon": "sword",
+        "weapon_scale": 1.0,
+        "weapon_visible": true
+      }
+    ],
+    "stride_px": 64.4
+  }
+}

@@ -1,0 +1,26 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+  ok maza accepts its own windup clip
+  ok mace active art matches its real damage window
+  ok mace has a moving recovery instead of holding the strike
+  ok acceleration changes walk cadence without restarting its body clock
+  ok fast locomotion selects a run whose stride matches world movement
+  ok changing run speed preserves frame continuity
+  ok first occupied slot supplies resting equipment
+  ok sword windup fills exactly the accepted startup duration
+  ok equipment moves from the body's actual frame_changed signal
+  ok removing an accepted weapon cannot change an in-flight attack
+  ok active phase starts its own body frames
+  ok recovery uses its own clip
+  ok removed resting weapon falls back to the remaining slot
+  ok mace gesture and body orientation are captured together
+  ok left-facing weapon mirrors around its grip without a position jump
+  ok cancel restores the normal visual clock for damage
+  ok final death pose does not leave equipment floating in the hand
+  ok revive restores the carried equipment
+  ok empty inventory hides resting equipment
+  ok pickup uses pixel-sized world art, leaving HUD icon and interaction area unchanged
+  ok external resources without world art keep their icon fallback
+
+== 21 presentation checks, 0 failures ==

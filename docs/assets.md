@@ -49,3 +49,29 @@ Generados el 17 de noviembre de 2026 con Meshy (texto a 3D con textura, 300 cré
 | `Sprites/Items/Masks/Mask_Vow.png`, `Mask_Ember.png` | `mascara_voto`, `mascara_ascua` | El Ascua es de acero oscuro con ojos de brasa |
 
 **Licencia: pendiente.** Los derechos de uso dependen del plan de Meshy de la cuenta que los generó; hay que confirmarlo antes de distribuir una build. `tools/gen_atrio_assets.py` sigue generando las versiones anteriores dibujadas por código: ejecutarlo sobrescribe estos sprites, y después hay que volver a correr `python3 tools/meshy_to_sprites.py --install`.
+
+## Lote de personajes prerenderizados · 17 de noviembre de 2026
+
+Lote nuevo con cuatro referencias, cuatro modelos Meshy t2.5/n1 (objetivo de 12 000 polígonos), cuatro rigs y cuatro clips adicionales de Baldwin. Consumo registrado: 128 créditos Meshy (36 referencias, 60 modelos, 20 rigging, 12 clips). Los IDs de generación están en `Art/Meshy/prerendered/manifest.json`; los resultados de rigging/animación, en `rigs/*/meta.json` y `rigs/baldwin/actions/meta.json`. Las fuentes 3D están descargadas localmente, con huellas en [arte_prerenderizado.md](arte_prerenderizado.md).
+
+`tools/render_characters.py` renderiza huesos e IK en Blender 4.5.9; el equipo se modela localmente. `tools/pack_prerendered.py` convierte los renders a diez hojas/52 cuadros con la paleta de la guía. **Estado: primera pasada de render producida, con correcciones en curso; integración y QA final pendientes.** Las filas anteriores conservan la procedencia histórica de las versiones previas; no prueban los derechos del lote nuevo.
+
+| Archivo o grupo | Uso | Autor / elaboración | Fuente | Permiso de distribución | Créditos | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| `Art/Meshy/prerendered/references/`, `models/`, `rigs/` | Fuentes del lote de personajes | Generación con Meshy desde la cuenta del usuario; dirección artística del proyecto | IDs y prompts en `manifest.json`; metadatos de tareas en `rigs/` | Pendiente de comprobar según plan y términos aplicables | Meshy; texto final de crédito pendiente | Fuentes generadas y descargadas |
+| `Art/Meshy/prerendered/sprites/Characters/Baldwin/*.png` → `Sprites/Characters/Baldwin/*.png` | Baldwin: Idle, Walk, Jump, Attack, Dead y Hurt | Modelo/rig/clips Meshy, poses y equipo locales, render Blender y conversión del proyecto | Lote Baldwin; recetas `render_characters.py` y `pack_prerendered.py` | Pendiente para el material derivado de Meshy | Según derechos confirmados | Pendiente de integración final; Hurt sigue sin uso en runtime |
+| `Art/Meshy/prerendered/sprites/Enemies/custodio.png`, `custodio_sellado.png` → `Sprites/Enemies/` | Custodio y variante sellada | Modelo y rig Meshy compartidos; cuatro poses óseas por variante; sello, ataduras y espada locales | Lote custodio | Pendiente para el material derivado de Meshy | Según derechos confirmados | Pendiente de integración final |
+| `Art/Meshy/prerendered/sprites/Enemies/acolito.png` → `Sprites/Enemies/acolito.png` | Acólito y sus cuatro poses | Modelo/rig Meshy; poses óseas, IK e incensario local | Lote acólito | Pendiente para el material derivado de Meshy | Según derechos confirmados | Pendiente de integración final |
+| `Art/Meshy/prerendered/sprites/Bosses/abad.png` → `Sprites/Bosses/abad.png` | Abad y sus nueve estados | Modelo/rig Meshy; poses óseas, IK, guadaña, incensario y sello locales | Lote Abad | Pendiente para el material derivado de Meshy | Según derechos confirmados | Pendiente de integración final |
+
+Los iconos, proyectiles y fondos conservan sus procedencias anteriores salvo sustitución explícitamente registrada. No regenerar los sprites con herramientas legadas después de instalar este lote: podrían sobrescribirlo. La existencia de modelos, renders o pruebas funcionales no resuelve licencias pendientes ni demuestra una revisión visual completa.
+
+## Animación y equipo independiente — 17 de noviembre de 2026
+
+| Archivos | Procedencia | Créditos / estado |
+| --- | --- | --- |
+| `Sprites/Characters/Baldwin/*.png` (clips actuales), `Sprites/Enemies/*.png` (custodios/acólito), `Sprites/Bosses/abad.png`, `Scripts/Presentation/*PoseData.gd` | Rigs Meshy de la pasada anterior, poses/rig y render Blender4.5.9 con receta `tools/render_animation_v2.py` | 306cuadros de cuerpo, capas sin arma. Incluye Dash preparado. |
+| `Sprites/Equipment/{sword,mace,scythe,censer}.png`, iconosWeapons y `Sprites/Items/Consumables/Healing_Potion.png` | Cinco modelos Meshy con referencias propias; `Art/Meshy/animation_v2/equipment/manifest.json` registra tareas ySHA256 | 120créditos reales. Sujetos a condiciones de la cuenta Meshy conectada. |
+| `Sprites/Items/World/*.png` | Render de los props y reducción de máscaras existentes para el mundo | Separados de iconosHUD; no activa consumo o healing. |
+
+Esta pasada no modifica el estado de permisos de los assets legados. Ver `docs/animation_v2/README.md` para contratos, límites y regeneración.

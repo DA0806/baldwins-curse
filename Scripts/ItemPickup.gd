@@ -118,13 +118,15 @@ func update_appearance() -> void:
 		return
 		
 	if item_data:
-		sprite.texture = item_data.icon
+		sprite.texture = item_data.world_texture if item_data.world_texture else item_data.icon
+		sprite.scale = Vector2.ONE * item_data.world_scale
 		if show_key_prompt:
 			prompt_label.text = "[%s] %s" % [InputHints.key_text(&"interact"), item_data.name]
 		else:
 			prompt_label.text = item_data.name
 	else:
 		sprite.texture = null
+		sprite.scale = Vector2.ONE
 		prompt_label.text = ""
 	
 	# El aviso sigue visible mientras haya un jugador en rango y algo que recoger

@@ -1,0 +1,27 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+
+# Proyecto, tema y jugador
+  ok   tema de interfaz del proyecto cargado
+  ok   la fuente cubre los glifos del español
+  ok   buses Music y SFX
+  ok   las zonas de golpe no se dibujan por defecto (F3)
+  ok   colisionador y rayos simétricos respecto al pivote
+
+# Atrio 2 (sala de referencia)
+  ok   el Atrio 1 suena con el ambiente del Atrio
+  ok   la salida funde a negro antes de cambiar de sala
+  ok   llega al Atrio 2
+  ok   entra el ambiente del Atrio
+  ok   el fundido se aclara al llegar
+  ok   suelo con tiles de 16 px
+  ok   brasero apagado antes de tocarlo
+  ok   brasero encendido al activarlo
+  ok   custodio en reposo con su arte
+  ok   pose por fase: anticipación 1, golpe 2, recuperación 3 ({ 0: 0, 1: 1, 2: 2, 3: 3 })
+  ok   mira al jugador (a su izquierda)
+  ok   dentro del Atrio el ambiente sigue sin cortes
+  ok   al entrar en la Cripta cambia al ambiente de la Cripta
+
+== 18 comprobaciones, 0 fallas ==

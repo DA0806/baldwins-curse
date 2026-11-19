@@ -1,0 +1,97 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+
+# Recursos de máscara
+  ok   IDs estables mask_vow y mask_ember
+  ok   iconos distintos
+  ok   ItemCatalog resuelve los IDs
+  ok   ID vacío = nada
+
+# Modificadores (daño base 20)
+  ok   sin máscara recibe 20
+  ok   Voto: recibe 16
+  ok   Ascua no cambia el daño recibido
+  ok   Ascua: el ataque de 20 se fija en 25
+  ok   Voto no cambia el daño de arma
+
+# Cambio de máscara durante un ataque
+  ok   ataque con Ascua aceptado
+  ok   cambia a Voto durante la anticipación
+  ok   el golpe conserva 25 (Ascua al iniciar)
+  ok   ataque con Voto aceptado
+  ok   cambia a Ascua durante la anticipación
+  ok   el golpe conserva 20 (Voto al iniciar)
+
+# Ciclo y enfriamiento
+  ok   lista vacía: nada cambia ni se consume
+  ok   una máscara: nada cambia ni se consume
+  ok   tecla siguiente cambia a Ascua
+  ok   empieza 1 s de enfriamiento
+  ok   durante el enfriamiento se ignora
+  ok   el HUD muestra recarga y nombre
+  ok   el HUD muestra efecto e icono
+  ok   a los ~0,9 s sigue bloqueado
+  ok   pasado 1 s vuelve a cambiar
+  ok   el HUD sigue el cambio
+  ok   siguiente da la vuelta: ["mask_ember", "test_mask", "mask_vow"]
+  ok   anterior da la vuelta desde la primera
+
+# Capacidad y estado por IDs
+  ok   lleno: reemplaza la activa y devuelve la desplazada
+  ok   la capacidad nunca baja de 1
+  ok   to_state sólo guarda IDs
+  ok   from_state restaura armas y ranura
+  ok   from_state restaura máscaras y la activa
+  ok   IDs desconocidos se omiten sin romper
+
+# Circuito: partida normal y reintentos
+  ok   partida nueva en Atrio1 con punto inicial
+  ok   empieza sin equipo
+  ok   recoge la espada
+  ok   ataca al maniquí
+  ok   el maniquí registra el golpe
+  ok   la salida lleva el equipo a Atrio2
+  ok   aparece en from_atrio_1
+  ok   activa el punto de control
+  ok   guarda recogidas y armas
+  ok   recoge el Voto (después del punto)
+  ok   morir restaura el punto de control
+  ok   reaparece en la llama
+  ok   inventario del punto (sin el Voto posterior)
+  ok   salud completa de reaparición
+  ok   el Voto no guardado vuelve a estar en el suelo
+  ok   reactivar el punto guarda el Voto
+  ok   caer restaura el punto de control
+  ok   sin máscaras duplicadas tras el reintento
+  ok   el Voto guardado no reaparece
+  ok   no se puede recoger dos veces
+  ok   llega a Atrio3
+  ok   guardián: 100 de salud y golpe de 20
+  ok   su golpe con Voto quita 16
+  ok   la reja cierra la salida
+  ok   vencer a ambos abre la reja
+  ok   la reja abierta lleva a la Cripta con el equipo
+  ok   terminar la partida lleva al final
+  ok   el final muestra los reintentos
+  ok   el final vuelve al título
+  ok   volver a empezar limpia el estado
+  ok   los objetos vuelven en la partida nueva
+
+== 64 comprobaciones, 0 fallas ==
+WARNING: ItemCatalog: ID desconocido 'nope'
+     at: push_warning (core/variant/variant_utility.cpp:1033)
+     GDScript backtrace (most recent call first):
+         [0] get_item (res://Scripts/ItemCatalog.gd:24)
+         [1] from_state (res://Scripts/PlayerInventory.gd:100)
+         [2] _test_capacity_and_state (res://Tests/stage3_tests.gd:241)
+         [3] _run (res://Tests/stage3_tests.gd:42)
+         [4] _test_cycle_and_cooldown (res://Tests/stage3_tests.gd:215)
+WARNING: ItemCatalog: ID desconocido 'nope'
+     at: push_warning (core/variant/variant_utility.cpp:1033)
+     GDScript backtrace (most recent call first):
+         [0] get_item (res://Scripts/ItemCatalog.gd:24)
+         [1] from_state (res://Scripts/PlayerInventory.gd:105)
+         [2] _test_capacity_and_state (res://Tests/stage3_tests.gd:241)
+         [3] _run (res://Tests/stage3_tests.gd:42)
+         [4] _test_cycle_and_cooldown (res://Tests/stage3_tests.gd:215)

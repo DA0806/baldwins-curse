@@ -27,6 +27,7 @@ const FRAMES: Dictionary = {
 	State.SWEEP_TELL: 1, State.SWEEP: 2, State.SWEEP_RECOVER: 3, State.RAIN_TELL: 4,
 	State.RAIN: 5, State.EXHAUSTED: 6, State.STAGGER: 7, State.DEAD: 8,
 }
+const PRESENTATION = preload("res://Scripts/Presentation/EnemyPresentation.gd")
 
 signal woke
 signal pattern_started(pattern: StringName)
@@ -70,6 +71,8 @@ var pattern_index: int = 0
 var current_pattern: StringName = &""
 var rain_targets: Array[float] = []
 var vulnerable: bool = false
+var _presentation
+var _state_duration := 0.0
 
 @onready var health: Health = $Health
 @onready var hurtbox: Hurtbox = $Hurtbox
@@ -81,7 +84,7 @@ var vulnerable: bool = false
 @onready var alert: Label = $Alert
 @onready var bar_layer: CanvasLayer = $BossBar
 @onready var bar: ProgressBar = $BossBar/Bar
-## Hijo opcional "Art" (Sprite2D, 9 cuadros: ver FRAMES; 0 = reposo).
+## Optional animated body atlas; the scythe/censer is a separate synchronized layer.
 @onready var art: Sprite2D = get_node_or_null("Art") as Sprite2D
 
 func _ready() -> void:
@@ -97,6 +100,7 @@ func _ready() -> void:
 	bar.max_value = health.max_health
 	bar.value = health.current
 	bar_layer.visible = false
+	_presentation = PRESENTATION.for_actor(art, "abad")
 	_set_vulnerable(false)
 	_update_visual()
 
@@ -134,7 +138,7 @@ func _physics_process(delta: float) -> void:
 			if timer <= 0.0:
 				_enter(State.ADVANCE, 0.0)
 	move_and_slide()
-	_update_visual()
+	_update_visual(delta)
 
 func _think(player: Node2D) -> void:
 	var dx: float = player.global_position.x - global_position.x
@@ -187,6 +191,8 @@ func _finish_pattern() -> void:
 func _enter(new_state: State, duration: float) -> void:
 	state = new_state
 	timer = duration
+	_state_duration = duration
+	_update_visual()
 
 func _on_attack_phase(attack_phase: int) -> void:
 	match attack_phase:
@@ -245,11 +251,26 @@ func _find_player() -> Node2D:
 
 ## Forma antes que color: guadaña alzada (tajo) frente a incensario en alto
 ## (lluvia), cuerpo arrodillado y sello encendido cuando es vulnerable.
-func _update_visual() -> void:
+func _update_visual(delta: float = 0.0) -> void:
 	alert.visible = state == State.SWEEP_TELL
 	if art:
 		for node in [body, seal, scythe, censer]:
 			node.visible = false
+		if _presentation:
+			var clip: String = {
+				State.SWEEP_TELL: "SweepTell", State.SWEEP: "Sweep", State.SWEEP_RECOVER: "SweepRecover",
+				State.RAIN_TELL: "RainTell", State.RAIN: "Rain", State.EXHAUSTED: "Exhausted",
+				State.STAGGER: "Stagger", State.DEAD: "Dead",
+			}.get(state, "Advance" if absf(velocity.x) > 0.1 and state == State.ADVANCE else "Idle")
+			var duration := _state_duration
+			var progress := 1.0 - timer / duration if duration > 0.0 else -1.0
+			var visual_facing := facing
+			if state in [State.SWEEP_TELL, State.SWEEP, State.SWEEP_RECOVER] and attack.spec:
+				duration = {State.SWEEP_TELL: attack.spec.startup, State.SWEEP: attack.spec.active, State.SWEEP_RECOVER: attack.spec.recovery}[state]
+				progress = 1.0 - attack._phase_left / duration if duration > 0.0 else 1.0
+				visual_facing = attack.spec.facing
+			_presentation.update(clip, delta, visual_facing, duration, progress)
+			return
 		art.flip_h = facing < 0
 		art.frame = FRAMES.get(state, 0)
 		return

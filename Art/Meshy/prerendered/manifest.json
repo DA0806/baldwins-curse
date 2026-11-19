@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-17",
+  "characters": {
+    "baldwin": {
+      "reference": "01a1ea0e-77b2-7143-8cb7-1060260df22e",
+      "model": "01a1ea0f-6a00-7173-b605-ab44f7504dc2",
+      "prompt": "Single original game character, a young medieval knight inspired by 12th century Jerusalem King Baldwin IV, full body head to boots, neutral symmetrical A pose, empty hands apart, separate clearly visible legs. Dark steel chainmail hauberk and coif, simple aged ivory linen knee-length split surcoat, leather belt, modest copper circlet, short heavy ivory shoulder cape ending above elbows so arms visible. Original smooth ivory ritual half mask, not movie costume. No plate armor, no large pauldrons, no shield, no weapon, no pedestal. Stylized realistic 3D game model, solemn gothic funerary abbey, steel blue shadows #303B4A, aged ivory #E5D6B3, muted copper #B96A47, restrained clean large readable shapes. Front three-quarter view, entire silhouette unobstructed, plain medium grey background, soft studio lighting, no text.",
+      "geometry": "meshy-t2.5",
+      "texture": "meshy-n1",
+      "target_polycount": 12000,
+      "rig": "01a1ea11-15ca-73a2-af79-60f61fbbef41",
+      "consumed_model_credits": 15,
+      "license": "See connected Meshy task and account terms; no third-party costume copied",
+      "rig_consumed_credits": 5,
+      "files": {
+        "models/baldwin.glb": "7248ea85426746a2c882a63e3407724663e5913e2e87928df5751251ab967ab7",
+        "rigs/baldwin/rigged_character.glb": "b61949576967411e5fd9f62431696d26a1c40b832351422bbd069ca7f9cbc83d"
+      }
+    },
+    "custodio": {
+      "reference": "01a1ea0e-7ccd-70eb-84f5-8b101db0e5b2",
+      "model": "01a1ea0f-72e9-70da-8a1a-c58063d33921",
+      "prompt": "Single original medieval abbey custodian game character full body, neutral symmetric A pose with EMPTY HANDS apart and distinct legs, front three-quarter view. 12th century mail hauberk and coif under an austere conical nasal helmet, worn dark slate blue knee-length split tunic, leather belt and boots, small copper fastening, spectral dark face. Chainmail and fabric, no plate armor or giant shoulder pads. Athletic heavy silhouette, shorter cape tucked behind torso. No weapon, no shield, no props, no pedestal. Stylized realistic 3D game model for dark gothic funerary abbey, palette dark steel #303B4A #6D8297, worn ivory small edges #E5D6B3 and muted copper #B96A47. Strong readable material volumes, no spikes or neon. Entire body unobstructed, plain medium grey background, soft studio lighting, no text.",
+      "geometry": "meshy-t2.5",
+      "texture": "meshy-n1",
+      "target_polycount": 12000,
+      "rig": "01a1ea11-270e-7177-987d-df5e87be7756",
+      "consumed_model_credits": 15,
+      "license": "See connected Meshy task and account terms; no third-party costume copied",
+      "rig_consumed_credits": 5,
+      "files": {
+        "models/custodio.glb": "3bea8656e1b9c1de5438edd4b125e0e3d3392feb177dc7394e5db30ccf7607fb",
+        "rigs/custodio/rigged_character.glb": "2404681a0f4681a6517e2125597ff4f98909e0eb3aa904cb9388e5edef856972"
+      }
+    },
+    "acolito": {
+      "reference": "01a1ea0e-80d7-7271-ba07-174b70c92572",
+      "model": "01a1ea0f-7d39-73e1-be07-d70c1ac0fae5",
+      "prompt": "Single original gothic abbey acolyte game character full body, neutral symmetric A pose, empty hands apart visible outside sleeves, separate visible boots. Slim stooped monk, deep angular hood with face in shadow, austere weathered charcoal wool habit to mid-calf, rope belt with small copper medallion, narrow sleeves, no cape. Medieval monastic clothing inspired by 12th century materials. No weapon, no censer, no prop, no pedestal, no text. Stylized realistic 3D game model for a funerary abbey, dark slate blue #303B4A, aged copper #7A3A22 in shoulder cloth, cold steel light #6D8297, tiny aged ivory seam #A99C80. Clear large forms, matte heavy cloth, solemn fantasy. Front three-quarter view, whole head to boots unobstructed, plain medium grey background, soft studio lighting.",
+      "geometry": "meshy-t2.5",
+      "texture": "meshy-n1",
+      "target_polycount": 12000,
+      "rig": "01a1ea11-37dd-719d-8345-742abf1e7d81",
+      "consumed_model_credits": 15,
+      "license": "See connected Meshy task and account terms; no third-party costume copied",
+      "rig_consumed_credits": 5,
+      "files": {
+        "models/acolito.glb": "347381216dbe87bee39b93adfe2c17ec4a92f2d28e3dc55730678ee6361e4924",
+        "rigs/acolito/rigged_character.glb": "04b35bf7df60924241b5d399f49d287316ea92d011c1b144fb511896ecd18ef4"
+      }
+    },
+    "abad": {
+      "reference": "01a1ea0e-8578-7477-a2a9-bc1f528fae31",
+      "model": "01a1ea0f-85f5-7492-ad91-236642dc1b07",
+      "prompt": "Single original Sealed Abbot gothic fantasy boss full body, neutral symmetric A pose, empty hands apart with visible hands and distinct legs under split robe. Tall gaunt medieval abbot wearing austere tall mitre and layered heavy dark slate liturgical robe to ankle, small aged ivory stole, rope and copper clasps, a large circular carved copper soul seal at upper chest. Solemn authoritarian silhouette, medieval material reference not a specific historical person. Sleeves fitted enough for arm animation. No scythe, no staff, no censer, no weapon, no wings, no pedestal. Stylized realistic 3D game model funerary abbey, #232B37 #3E4B5E cloth, #A99C80 ivory, #B96A47 copper, restrained worn materials. Front three-quarter view, complete unobstructed body on plain grey background, no text.",
+      "geometry": "meshy-t2.5",
+      "texture": "meshy-n1",
+      "target_polycount": 12000,
+      "rig": "01a1ea11-4c1c-70cd-8a1f-126f46126a02",
+      "consumed_model_credits": 15,
+      "license": "See connected Meshy task and account terms; no third-party costume copied",
+      "rig_consumed_credits": 5,
+      "files": {
+        "models/abad.glb": "148330d7ab73e00d9ba1d5f4734cfbeabc59bcbad4c07e5648b821ebe13a8f2b",
+        "rigs/abad/rigged_character.glb": "2d1e8dc9f3821f0773eb4938021287cdb0df05fe06d396e8ed6a1aa559f1c4b3"
+      }
+    }
+  },
+  "baldwin_actions": {
+    "task_id": "01a1ea12-4115-739f-8ed8-896f4bddc7df",
+    "action_ids": [
+      0,
+      466,
+      189,
+      219
+    ],
+    "consumed_credits": 12
+  },
+  "estimated_total_credits": 128,
+  "credits": {
+    "balance_before": 4380,
+    "balance_after": 4252,
+    "consumed_total": 128,
+    "references": 36,
+    "textured_geometry": 60,
+    "rigging": 20,
+    "animations": 12
+  },
+  "render_sources": {
+    "blender": "4.5.9 LTS",
+    "renderer": "tools/render_characters.py",
+    "packer": "tools/pack_prerendered.py",
+    "source_scale": 4
+  }
+}

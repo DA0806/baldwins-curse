@@ -1,6 +1,6 @@
 # Guía de arte · Baldwin's Curse
 
-Abadía funeraria en pixel art. Esta guía fija las reglas con las que se hizo la sala de referencia (Atrio 2, etapa 4) y con las que se vestirán las demás salas en la etapa 5. El kit actual sale de `tools/gen_atrio_assets.py` (dibujo por código, sin recursos de terceros).
+Abadía funeraria en pixel art. Esta guía fija las reglas con las que se hizo la sala de referencia (Atrio 2, etapa 4) y se vistieron las demás salas en la etapa 5. El kit de referencia salió de `tools/gen_atrio_assets.py`; después se incorporaron derivados de Meshy. El pase de sprites prerenderizados se documenta en [arte_prerenderizado.md](arte_prerenderizado.md).
 
 ## Resolución y escala
 
@@ -38,9 +38,12 @@ El suelo pisable lleva una línea marfil gastada y otra de acero en su borde sup
 
 ## Siluetas y pivote
 
-- Pivote a los pies, en el centro del colisionador. El jugador usa celdas de 128×128 con el pie en la columna 32 y la fila 96 de la celda. Su colisionador (24×64) y sus rayos de esquina son simétricos respecto al pivote, de modo que al girar no se desplaza.
-- El custodio usa cuadros de 96×48 con origen en el centro: los pies quedan en +24, igual que el fondo de su colisionador.
+- La raíz del jugador está en el **centro del colisionador**, de 24×64. Sus celdas son de 128×128: el eje del cuerpo está en la columna 32 y el apoyo de los pies en la fila 127. Con `AnimatedSprite2D` centrado y `offset = (32, -32)`, la coordenada de celda `(32, 96)` corresponde a la raíz; los pies se dibujan en y local 31, sobre el borde inferior de colisión en +32. No confundir ese origen con el apoyo del pie.
+- Al mirar a la izquierda, `Player.gd` aplica `flip_h` e invierte `offset.x` a −32 para mantener el eje del cuerpo. El colisionador y los rayos de esquina permanecen simétricos respecto a la raíz.
+- El custodio usa cuadros de 96×48 centrados en `(48, 24)`: los pies ocupan la fila 47 (y local 23), sobre el borde de colisión en +24.
 - Contorno de acero de 1 px por arriba y a los lados en los personajes oscuros, para que no se pierdan contra la columnata.
+
+`Sprites/Characters/Baldwin/Hurt.png` es una hoja fuente de dos cuadros, pero `Scenes/player.tscn` no la incluye entre sus animaciones y `Player.gd` no la reproduce. El daño visible se comunica con empuje, interrupción del ataque y modulación rojiza del sprite. Renovar esa hoja no activa una animación de daño nueva.
 
 ## Anticipación, golpe y recuperación
 

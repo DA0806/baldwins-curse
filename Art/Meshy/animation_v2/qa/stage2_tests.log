@@ -1,0 +1,81 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+
+[armas] datos y ranura vacía
+  ok   las dos armas tienen IDs estables
+  ok   daño, alcance y recuperación distinguibles (espada 20/60 px/0.16 s · maza 35/44 px/0.32 s)
+  ok   ranura vacía: ni ataque ni animación de ataque
+  ok   ranura vacía: cero daño
+
+[golpe] daño exacto por arma y tiempos
+  ok   Z con espada: ataque y animación
+  ok   la espada golpea una vez por 20
+  ok   la salud del objetivo baja exactamente 20
+  ok   el golpe cae dentro de la ventana activa (11 ticks tras aceptar el ataque)
+  ok   la ventana de daño inicia el clip activo de espada desde su primer cuadro
+  ok   atacar con Z deja la ranura 1 como ranura de intercambio
+  ok   la maza golpea una vez por 35
+  ok   la maza tarda más en golpear (18 ticks)
+  ok   la maza inicia su propio clip activo con la misma autoridad de daño
+  ok   atacar con X mueve la ranura de intercambio y el HUD lo muestra
+  ok   al terminar no queda zona de golpe abierta
+
+[golpe] alcance, espalda y espejo
+  ok   derecha, objetivo dentro del alcance: recibe 20
+  ok   derecha, objetivo fuera del alcance: conserva su salud
+  ok   derecha, objetivo detrás del atacante: conserva su salud
+  ok   izquierda, objetivo dentro del alcance: recibe 20
+  ok   izquierda, objetivo fuera del alcance: conserva su salud
+  ok   izquierda, objetivo detrás del atacante: conserva su salud
+  ok   zona de golpe a la derecha: de +6 a +60 px
+  ok   zona de golpe a la izquierda: de -60 a -6 px (espejo exacto)
+
+[golpe] ventana activa y duplicados
+  ok   en la recuperación la zona de golpe está cerrada
+  ok   un objetivo que aparece fuera de la ventana conserva su salud
+  ok   dos zonas vulnerables del mismo objetivo: un solo golpe
+  ok   dos objetivos en la zona: cada uno recibe un golpe
+
+[golpe] tecla mantenida y pulsaciones repetidas
+  ok   mantener la tecla un segundo produce un solo ataque
+  ok   30 pulsaciones en un segundo: 3 ataques (máximo 3 por enfriamiento)
+  ok   cada ataque aceptado golpea una vez (3 golpes)
+  ok   entre ataques pasa al menos el enfriamiento del arma
+
+[jugador] interrupción, muerte y reintento
+  ok   ataque en anticipación
+  ok   recibir daño interrumpe el ataque
+  ok   el HUD muestra la salud tras el daño (95)
+  ok   invulnerabilidad breve tras el impacto
+  ok   el ataque interrumpido no hace daño
+  ok   la invulnerabilidad termina
+  ok   ventana activa abierta
+  ok   reaparecer cierra la zona de golpe
+  ok   sin salud el jugador muere
+  ok   morir cierra la zona de golpe
+  ok   muerto no ataca ni se mueve
+  ok   reintento automático tras la muerte
+  ok   el reintento restaura la salud y el HUD
+  ok   el reintento devuelve al punto de aparición
+  ok   el reintento conserva las armas
+  ok   tras el reintento no queda ninguna zona de golpe activa
+
+[enemigo] patrulla, anticipación, daño, derrota y victoria
+  ok   patrulla entre 1419 y 1685 sin salir de su zona
+  ok   detecta al jugador y lo persigue
+  ok   su golpe hace 15 de daño al jugador
+  ok   anticipa el golpe 0.48 s antes de que haga daño
+  ok   la anticipación se ve: signo de aviso y hoja levantada
+  ok   el daño cae dentro de su ventana activa
+  ok   tras el golpe se recupera y cierra su zona
+  ok   el jugador cae tras 7 golpes de 15 (7)
+  ok   cada golpe del enemigo daña como máximo una vez (7 golpes, 7 ataques)
+  ok   el reintento devuelve al enemigo a su origen con la salud completa
+  ok   el jugador reaparece sano y sin zonas de golpe activas
+  ok   el enemigo muere con tres golpes de espada de 20
+  ok   al morir desaparece y cierra su zona de golpe
+  ok   el jugador sobrevive al duelo
+  ok   un enemigo muerto ya no recibe golpes
+
+== 62 comprobaciones, 0 fallas ==

@@ -4,6 +4,8 @@ extends ItemData
 @export var base_damage: float = 20.0
 @export var attack_cooldown: float = 0.4
 @export var combo_animation_tag: String = "slash"
+## Independent 64x32 right-facing equipment; grip at pixel (8,16).
+@export var equipped_texture: Texture2D
 
 @export_group("Golpe")
 ## Alcance en píxeles desde el origen del atacante hasta el final de la zona de golpe.

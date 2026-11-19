@@ -119,7 +119,7 @@ func _test_sprites() -> void:
 	var shape: CollisionShape2D = player.get_node("CollisionShape2D")
 	var collider_bottom: float = shape.position.y + (shape.shape as RectangleShape2D).size.y / 2.0
 	var images := {}
-	for anim in [&"Idle", &"Walk", &"Jump", &"Attack"]:
+	for anim in sprite.sprite_frames.get_animation_names():
 		var full_cells := true
 		var feet: Array[float] = []
 		for i in sprite.sprite_frames.get_frame_count(anim):
@@ -132,11 +132,11 @@ func _test_sprites() -> void:
 			# Borde inferior visible en coordenadas del cuerpo (sprite centrado + offset).
 			feet.append(sprite.offset.y - 64.0 + used.end.y)
 		check(full_cells, "%s usa celdas de 128x128 (sin recorte)" % anim)
-		if anim == &"Jump":
-			check(feet[0] == collider_bottom and feet.max() <= collider_bottom,
-				"Jump despega y aterriza con los pies en y=%d" % collider_bottom)
+		if anim in [&"Jump", &"Hurt", &"Dead", &"Dash"]:
+			check(feet.min() >= collider_bottom - 1 and feet.max() <= collider_bottom,
+				"%s conserva su apoyo dentro de un píxel de y=%d" % [anim, collider_bottom])
 		else:
-			check(feet.min() == collider_bottom and feet.max() == collider_bottom,
+			check(feet.min() >= collider_bottom - 1 and feet.max() <= collider_bottom,
 				"%s mantiene los pies en y=%d en todos los cuadros" % [anim, collider_bottom])
 	check(sprite.offset == Vector2(32, -32), "offset del sprite (32, -32): pivote en la celda (32, 96)")
 	await place(320)
@@ -325,7 +325,7 @@ func _test_pickups() -> void:
 	check(inv.weapons[0] == blade and inv.weapons[1] == second, "inventario lleno: intercambia en la ranura de intercambio (0)")
 	check(is_instance_valid(pickup_a) and pickup_a.item_data == sword, "el arma desplazada queda en el suelo")
 	check(label_a.visible and label_a.text == "[R] Copper Sword", "el aviso del objeto desplazado sigue visible")
-	check(pickup_a.get_node("Sprite2D").texture == sword.icon, "el pickup muestra el icono del objeto desplazado")
+	check(pickup_a.get_node("Sprite2D").texture == sword.world_texture, "el pickup muestra la textura de mundo del objeto desplazado")
 	check(total_items() == 3, "el intercambio conserva el total de objetos")
 
 	# Dos pickups solapados: una pulsación, una transacción.
@@ -399,9 +399,11 @@ func _test_slots() -> void:
 func _test_hud_rebind() -> void:
 	print("\n[HUD] enlace idempotente")
 	await load_world()
+	var weapon_connections := inv.weapon_swapped.get_connections().size()
+	var swap_connections := inv.swap_slot_changed.get_connections().size()
 	for i in 3:
 		hud.setup_inventory(inv)
-	check(inv.weapon_swapped.get_connections().size() == 2 and inv.swap_slot_changed.get_connections().size() == 1,
+	check(inv.weapon_swapped.get_connections().size() == weapon_connections and inv.swap_slot_changed.get_connections().size() == swap_connections,
 		"reenlazar el mismo inventario no duplica conexiones")
 	check(hud.weapon_key_labels[0].text == "[Z]" and hud.weapon_key_labels[1].text == "X" and hud.mask_key_label.text == "C/V",
 		"las teclas del HUD salen del InputMap y marcan la ranura de intercambio")

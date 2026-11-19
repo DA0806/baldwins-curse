@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f0ljifrqmdye"
-path="res://.godot/imported/Attack.png-6db9cffb4d0a5bab5405a5fbfa5c2a4e.ctex"
+uid="uid://cpe66kotmhut0"
+path="res://.godot/imported/AttackMaceActive.png-6746cb75a3d312b7a52c789c6d4b552f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/Baldwin/Attack.png"
-dest_files=["res://.godot/imported/Attack.png-6db9cffb4d0a5bab5405a5fbfa5c2a4e.ctex"]
+source_file="res://Sprites/Characters/Baldwin/AttackMaceActive.png"
+dest_files=["res://.godot/imported/AttackMaceActive.png-6746cb75a3d312b7a52c789c6d4b552f.ctex"]
 
 [params]
 

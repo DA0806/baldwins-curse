@@ -1,0 +1,24 @@
+{
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "stage4": {
+    "checks": 18,
+    "failures": 0
+  },
+  "stage5": {
+    "checks": 45,
+    "failures": 0
+  },
+  "stage6": {
+    "checks": 54,
+    "failures": 0
+  },
+  "packer_tests": 3,
+  "sheets": 10,
+  "frames": 52,
+  "minimum_equipment_height_m": 0.02,
+  "captures": "docs/prerendered/capturas",
+  "manual_playtest": false,
+  "capture_count": 11,
+  "save_files_created_by_final_capture": false,
+  "independent_review": "completed; grip, ground and projectile alignment findings corrected"
+}

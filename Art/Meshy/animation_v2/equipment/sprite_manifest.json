@@ -1,0 +1,219 @@
+{
+  "equipment": {
+    "sword": {
+      "texture": "Sprites/Equipment/sword.png",
+      "grip": [
+        8,
+        16
+      ],
+      "canvas": [
+        64,
+        32
+      ]
+    },
+    "mace": {
+      "texture": "Sprites/Equipment/mace.png",
+      "grip": [
+        8,
+        16
+      ],
+      "canvas": [
+        64,
+        32
+      ]
+    },
+    "scythe": {
+      "texture": "Sprites/Equipment/scythe.png",
+      "grip": [
+        16,
+        32
+      ],
+      "canvas": [
+        128,
+        64
+      ]
+    },
+    "censer": {
+      "texture": "Sprites/Equipment/censer.png",
+      "grip": [
+        24,
+        8
+      ],
+      "canvas": [
+        48,
+        64
+      ]
+    }
+  },
+  "files": {
+    "Sprites/Equipment/sword.png": {
+      "size": [
+        64,
+        32
+      ],
+      "bbox": [
+        1,
+        12,
+        56,
+        21
+      ],
+      "sha256": "dfcd922390dcca08ba3696ebdabbb43e50876df7f698736cdd5da768a7b6624a"
+    },
+    "Sprites/Equipment/mace.png": {
+      "size": [
+        64,
+        32
+      ],
+      "bbox": [
+        1,
+        11,
+        41,
+        21
+      ],
+      "sha256": "4f30fc0ca7bd5b03b3fd87bd8376f1f8c1594a37e5c04912df5f7a270213a66f"
+    },
+    "Sprites/Equipment/scythe.png": {
+      "size": [
+        128,
+        64
+      ],
+      "bbox": [
+        3,
+        26,
+        115,
+        54
+      ],
+      "sha256": "8ac9e7a47c52a0e9f7aa7c69cacdb52b597b1f1b8959c2d46cba3412f3204b67"
+    },
+    "Sprites/Equipment/censer.png": {
+      "size": [
+        48,
+        64
+      ],
+      "bbox": [
+        11,
+        6,
+        36,
+        58
+      ],
+      "sha256": "372e93d9164647a9501c929efb1b9e393d9b96e901a153f4ccf912174d8c8123"
+    },
+    "Sprites/Items/Weapons/Baldwin_Sword.png": {
+      "size": [
+        64,
+        64
+      ],
+      "bbox": [
+        8,
+        8,
+        56,
+        55
+      ],
+      "sha256": "f3b3459267db08246337d175f30e12ae4978a4492e53b8e3a08280725b80f5d1"
+    },
+    "Sprites/Items/Weapons/Crypt_Mace.png": {
+      "size": [
+        64,
+        64
+      ],
+      "bbox": [
+        8,
+        8,
+        56,
+        56
+      ],
+      "sha256": "2a4894f3e5af116430a10e43a40cd6b58e795605c35b4a4c49693023b2f40075"
+    },
+    "Sprites/Items/Weapons/Test_Mace.png": {
+      "size": [
+        64,
+        64
+      ],
+      "bbox": [
+        8,
+        8,
+        56,
+        56
+      ],
+      "sha256": "7607b8dbd598e5f58b91d65073d70061651a2310654ae3ecef057e5e04d673cc"
+    },
+    "Sprites/Items/Consumables/Healing_Potion.png": {
+      "size": [
+        64,
+        64
+      ],
+      "bbox": [
+        13,
+        8,
+        51,
+        56
+      ],
+      "sha256": "8478433d3f050e9dc32c1a0d3e50282574da90e22446db7ef441a6ce4f127e13"
+    },
+    "Sprites/Items/World/sword.png": {
+      "size": [
+        32,
+        32
+      ],
+      "bbox": [
+        3,
+        4,
+        28,
+        29
+      ],
+      "sha256": "55fde83a9cfba5217e7c9171c4e70dcca40c83c49265495d1a855b9bed303ccd"
+    },
+    "Sprites/Items/World/mace.png": {
+      "size": [
+        28,
+        28
+      ],
+      "bbox": [
+        2,
+        2,
+        26,
+        26
+      ],
+      "sha256": "1fed32c0882fb8bef8bcc6737f956bd55a5afa0e3c4127f23f6658f8f7ca6484"
+    },
+    "Sprites/Items/World/potion.png": {
+      "size": [
+        16,
+        20
+      ],
+      "bbox": [
+        1,
+        2,
+        14,
+        18
+      ],
+      "sha256": "dcb45d1fbad6533e43ed40a6936786ee15b430a733c631d44c3cdc2f76f55931"
+    },
+    "Sprites/Items/World/mask_vow.png": {
+      "size": [
+        20,
+        24
+      ],
+      "bbox": [
+        2,
+        2,
+        17,
+        22
+      ],
+      "sha256": "bc97dc22b7149f46388105b4b1d26d9ad701293747f8dd7f2e15d44b9892cfb0"
+    },
+    "Sprites/Items/World/mask_ember.png": {
+      "size": [
+        20,
+        24
+      ],
+      "bbox": [
+        3,
+        5,
+        18,
+        19
+      ],
+      "sha256": "b01a426cc515968a4c548ca9248b6f32b9f3a71fd15b351d6bd2240db830b604"
+    }
+  }
+}

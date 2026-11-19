@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" path="res://Sprites/Items/Weapons/Test_Mace.png" id="1_icon"]
 [ext_resource type="Script" uid="uid://212wcwlgtnod" path="res://Scripts/Classes/WeaponData.gd" id="2_script"]
 
+[ext_resource type="Texture2D" path="res://Sprites/Equipment/mace.png" id="3_equipped"]
+[ext_resource type="Texture2D" path="res://Sprites/Items/World/mace.png" id="4_world"]
+
 [resource]
 script = ExtResource("2_script")
 id = "test_mace"
@@ -14,3 +17,6 @@ reach = 44.0
 startup = 0.28
 active_time = 0.1
 recovery = 0.32
+equipped_texture = ExtResource("3_equipped")
+world_texture = ExtResource("4_world")
+combo_animation_tag = "mace"
