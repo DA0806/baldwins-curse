@@ -1,5 +1,97 @@
 # Baldwin's Curse
 
+
+## Checkpoint 3 · juego de consola
+
+Requiere **Python 3.10 o posterior**. Para descargar la versión evaluable:
+
+```sh
+git clone --branch checkpoint-3 https://github.com/DA0806/baldwins-curse.git
+cd baldwins-curse
+```
+
+Desde la raíz del repositorio:
+
+```sh
+python3 main.py
+```
+
+No requiere instalar paquetes. La versión académica parte del prototipo Python del equipo. La versión gráfica es el proyecto de Godot y se abre por separado con `project.godot`.
+
+En consola puedes explorar el reino, abrir rutas alternativas, recuperar tesoros, administrar armas y máscaras, completar misiones con prerrequisitos, consultar el estado de las salas y deshacer acciones. La mazmorra recursiva, los turnos rotativos y los eventos FIFO vienen del Checkpoint 2.
+
+```sh
+python3 -m unittest discover -s tests_cp3 -v
+```
+
+| Estructura | Por qué se usa y cuánto cuesta |
+| --- | --- |
+| Lista de adyacencia | El mapa tiene pocas puertas por sala. BFS encuentra la ruta mínima y DFS las salas alcanzables, ambos en O(V + E). |
+| Árbol de misiones | Cada objetivo tiene un prerrequisito directo. Preorden dibuja las ramas y por niveles muestra los objetivos disponibles, en O(n). |
+| Diccionario del mundo | Consultar o cambiar una sala por su ID cuesta O(1) esperado. Los filtros del mapa recorren O(V) salas. |
+| Pila y deque | La pila revierte la última acción primero. El deque preserva el orden FIFO y rota los turnos. Sus operaciones de extremos cuestan O(1); copiar el estado para deshacer cuesta O(S). |
+| Mazmorra recursiva | El reino original se construye de raíz a hojas. Se visita cada sala una vez, O(V), y se mantienen O(h) llamadas activas. |
+
+**Deshacer** devuelve la posición, las misiones, la bolsa, el estado de las salas, los turnos y la cola a la situación previa. Un evento consumido vuelve a su lugar en la cola. La muerte cierra el historial.
+
+<details>
+<summary>Diagramas del mapa y de las misiones</summary>
+
+#### Grafo del reino
+
+El árbol recursivo del CP2 genera el Nexo y sus seis salas. La expedición conectada añade catorce salas y cuatro caminos alternativos. El mapa inicial tiene **21 salas y 24 conexiones**. Las líneas discontinuas son rutas alternativas; la última Capilla se abre al cumplir su requisito de misión.
+
+```mermaid
+flowchart LR
+    n["Nexo de Jerusalén"] --- jd["Desierto de Judá"]
+    n --- es["Egipto de Saladino"]
+    jd --- k["Castillo de Kerak"]
+    jd --- o["Oasis de los Peregrinos"]
+    es --- h["Campos de Hattin"]
+    es --- s["Siria de Nur"]
+    n --- a1["Atrio 1"]
+    a1 --- a2["Atrio 2"]
+    a1 --- os["Osario"]
+    a2 --- a3["Atrio 3"]
+    a2 --- t["Torre"]
+    a3 --- c1["Cripta 1"]
+    os --- d["Desagüe"]
+    c1 --- c2["Cripta 2"]
+    c2 --- c3["Cripta 3"]
+    c2 --- ci["Cisterna"]
+    c3 --- c4["Cripta 4"]
+    c4 --- p1["Capilla 1"]
+    p1 --- p2["Capilla 2"]
+    p2 --- p3["Capilla 3 · sellada"]
+    os -.- c1
+    ci -.- c4
+    t -.- a3
+    d -.- c3
+```
+
+#### Árbol de misiones
+
+Una misión tiene un solo padre. Completar el padre habilita a sus hijos; los hermanos pueden avanzar por separado. Los datos del árbol siguen la diapositiva 4 de la presentación del equipo.
+
+```mermaid
+flowchart TD
+    D["El Despertar del Rey"] --> J["El Juramento de la Vera Cruz"]
+    D --> M["Consejo del Médico Real"]
+    J --> C["Máscara del Rey Ciego"]
+    J --> L["Máscara de Lázaro"]
+    C --> R["Caballero Renegado"]
+    L --> P["Poción de Mirra"]
+    M --> E["Corona de Espinas Fundida"]
+    E --> S["Mameluco de Saladino"]
+    S --> U["La Última Cruzada"]
+```
+
+</details>
+
+[Guía de la versión Python y aportes del CP2](docs/checkpoint-3-python.md) · [Sesión grabada](docs/evidence-cp3/session.txt) · [Resultado de las pruebas](docs/evidence-cp3/tests.txt).
+
+## Proyecto gráfico en Godot
+
 Aventura de plataformas y acción 2D en Godot 4.7 con GDScript. Estado actual: **prototipo, etapas 0 a 6 del roadmap**: campaña completa de diez salas en tres zonas, del título al epílogo, con jefe final, menús navegables con teclado, pausa, guardado en el último brasero y ajustes de sonido, pantalla y efectos. Arte y sonido propios generados por código (`tools/gen_atrio_assets.py` y `tools/gen_zone_assets.py`). Falta la build 1.0 (etapa 7).
 
 - Alcance propuesto de la 1.0: [docs/alcance-1.0.md](docs/alcance-1.0.md)

@@ -1,0 +1,170 @@
+Evento encolado: enemigo: Mameluco de Saladino tiende una emboscada (-12)
+Evento encolado: mensaje: la Vera Cruz susurra: el reino aún es tuyo
+Evento encolado: trampa: dardos envenenados brotan de la arena (-8)
+Evento encolado: cofre: Bezante Sarraceno
+Evento encolado: enemigo: Caballero Renegado del Templo bloquea el paso (-12)
+Evento encolado: trampa: arena movediza en el camino del oasis (-8)
+Evento encolado: cofre: Poción de Mirra
+
+=== KING BALDWIN — THE LEPER'S CURSE ===
+=== CHECKPOINT 2: EL REINO RECURSIVO ===
+
+El Nexo de Jerusalén despierta. La Vera Cruz brilla entre tus
+manos y la lepra corroe tu carne. La Orden de San Lázaro te
+aguarda: resucitarás una y otra vez, rey leproso, hasta recuperar
+las Máscaras de la Tristeza y enfrentar al Sultán Saladino.
+
+--- MAZMORRA GENERADA (función recursiva, Guía 7) ---
+Salas del reino: 7 · profundidad real alcanzada: 2
+Salas por nivel: nivel 0 -> 1 salas · nivel 1 -> 2 salas · nivel 2 -> 4 salas
+Salas marcadas (las más profundas, con tesoro): Castillo de Kerak, Oasis de los Peregrinos, Campos de Hattin, Siria de Nur
+
+Árbol del reino:
+Nexo de Jerusalén
+   Desierto de Judá
+      Castillo de Kerak   [marcada: tesoro -> Reliquia de San Lázaro]
+      Oasis de los Peregrinos   [marcada: tesoro -> Poción de Mirra]
+   Egipto de Saladino
+      Campos de Hattin   [marcada: tesoro -> Sello del Sultán]
+      Siria de Nur   [marcada: tesoro -> Bezante Sarraceno]
+
+Eventos del mapa encolados: 7 (se procesan en orden de llegada, FIFO)
+Fila de turnos: Rey Balduino -> Mameluco de Saladino -> Caballero Renegado
+
+CHECKPOINT 3: mapas con ciclos, árbol de misiones y diccionario del mundo.
+El puente del Nexo conduce a atrio_1. Usa 10 para el diario y 12 para actuar.
+
+==========================================
+  KING BALDWIN — THE LEPER'S CURSE
+==========================================
+  Estás en: Nexo de Jerusalén
+  Vida: 100 · Podredumbre: fase 1/3
+  Arma activa: Espada del Sepulcro
+  Máscara equipada: (rostro descarnado)
+  Objetos en la bolsa: 5 / 6
+  Turno en curso: Rey Balduino
+  Eventos pendientes en la cola: 7
+  Historial (acciones apiladas): 0
+==========================================
+
+1 Moverse  2 Recoger  3 Deshacer  4 Historial  5 Turnos y eventos
+6 Inventario  7 Armas  8 Máscaras  9 Mapa  10 Misiones  11 Mundo
+12 Realizar objetivo de la sala  0 Salir
+Opción: Opción no válida: elige entre 0 y 12.
+
+==========================================
+  KING BALDWIN — THE LEPER'S CURSE
+==========================================
+  Estás en: Nexo de Jerusalén
+  Vida: 100 · Podredumbre: fase 1/3
+  Arma activa: Espada del Sepulcro
+  Máscara equipada: (rostro descarnado)
+  Objetos en la bolsa: 5 / 6
+  Turno en curso: Rey Balduino
+  Eventos pendientes en la cola: 7
+  Historial (acciones apiladas): 0
+==========================================
+
+1 Moverse  2 Recoger  3 Deshacer  4 Historial  5 Turnos y eventos
+6 Inventario  7 Armas  8 Máscaras  9 Mapa  10 Misiones  11 Mundo
+12 Realizar objetivo de la sala  0 Salir
+Opción: Salas conectadas (0 para volver):
+  1) Desierto de Judá — Desierto de Judá
+  2) Egipto de Saladino — Egipto de Saladino
+  3) atrio_1 — Atrio · 1
+Destino (número o ID): Te mueves a: atrio_1
+Procesando: enemigo: Mameluco de Saladino tiende una emboscada (-12)
+   -> El enemigo hiere al rey: -12 de vida (te quedan 88)
+Turno consumido: Rey Balduino
+Misión completada: El Despertar del Rey
+Acción registrada: mover: Nexo de Jerusalén -> atrio_1
+
+==========================================
+  KING BALDWIN — THE LEPER'S CURSE
+==========================================
+  Estás en: atrio_1
+  Vida: 88 · Podredumbre: fase 1/3
+  Arma activa: Espada del Sepulcro
+  Máscara equipada: (rostro descarnado)
+  Objetos en la bolsa: 5 / 6
+  Turno en curso: Mameluco de Saladino
+  Eventos pendientes en la cola: 6
+  Historial (acciones apiladas): 1
+==========================================
+
+1 Moverse  2 Recoger  3 Deshacer  4 Historial  5 Turnos y eventos
+6 Inventario  7 Armas  8 Máscaras  9 Mapa  10 Misiones  11 Mundo
+12 Realizar objetivo de la sala  0 Salir
+Opción:
+MISIONES: 1 Diario en preorden, 2 Disponibles por nivel, 3 Ruta a misión, 0 Volver
+Sub-opción: juramento: El Juramento de la Vera Cruz
+Ruta mínima BFS (1 pasos): atrio_1 -> atrio_2
+medico: Consejo del Médico Real
+Ruta mínima BFS (2 pasos): atrio_1 -> atrio_2 -> torre
+
+MISIONES: 1 Diario en preorden, 2 Disponibles por nivel, 3 Ruta a misión, 0 Volver
+Sub-opción:
+==========================================
+  KING BALDWIN — THE LEPER'S CURSE
+==========================================
+  Estás en: atrio_1
+  Vida: 88 · Podredumbre: fase 1/3
+  Arma activa: Espada del Sepulcro
+  Máscara equipada: (rostro descarnado)
+  Objetos en la bolsa: 5 / 6
+  Turno en curso: Mameluco de Saladino
+  Eventos pendientes en la cola: 6
+  Historial (acciones apiladas): 1
+==========================================
+
+1 Moverse  2 Recoger  3 Deshacer  4 Historial  5 Turnos y eventos
+6 Inventario  7 Armas  8 Máscaras  9 Mapa  10 Misiones  11 Mundo
+12 Realizar objetivo de la sala  0 Salir
+Opción: Deshaciendo: mover: Nexo de Jerusalén -> atrio_1
+Estado restaurado exactamente: mover: Nexo de Jerusalén -> atrio_1
+El evento vuelve al frente, con su orden y turno originales.
+
+==========================================
+  KING BALDWIN — THE LEPER'S CURSE
+==========================================
+  Estás en: Nexo de Jerusalén
+  Vida: 100 · Podredumbre: fase 1/3
+  Arma activa: Espada del Sepulcro
+  Máscara equipada: (rostro descarnado)
+  Objetos en la bolsa: 5 / 6
+  Turno en curso: Rey Balduino
+  Eventos pendientes en la cola: 7
+  Historial (acciones apiladas): 0
+==========================================
+
+1 Moverse  2 Recoger  3 Deshacer  4 Historial  5 Turnos y eventos
+6 Inventario  7 Armas  8 Máscaras  9 Mapa  10 Misiones  11 Mundo
+12 Realizar objetivo de la sala  0 Salir
+Opción:
+MAPA: 1 Alcance BFS, 2 Exploración DFS, 3 Ruta mínima, 0 Volver
+Sub-opción: IDs: Nexo de Jerusalén, Desierto de Judá, Castillo de Kerak, Oasis de los Peregrinos, Egipto de Saladino, Campos de Hattin, Siria de Nur, atrio_1, atrio_2, osario, atrio_3, torre, cripta_1, desague, cripta_2, cripta_3, cisterna, cripta_4, capilla_1, capilla_2, capilla_3
+ID de destino (0 para volver): Sin ruta: sala desconectada o puerta bloqueada.
+
+MAPA: 1 Alcance BFS, 2 Exploración DFS, 3 Ruta mínima, 0 Volver
+Sub-opción: Exploración DFS: Nexo de Jerusalén -> Desierto de Judá -> Castillo de Kerak -> Oasis de los Peregrinos -> Egipto de Saladino -> Campos de Hattin -> Siria de Nur -> atrio_1 -> atrio_2 -> atrio_3 -> cripta_1 -> cripta_2 -> cripta_3 -> cripta_4 -> capilla_1 -> capilla_2 -> cisterna -> desague -> osario -> torre
+Pendientes de visitar: Desierto de Judá, Castillo de Kerak, Oasis de los Peregrinos, Egipto de Saladino, Campos de Hattin, Siria de Nur, atrio_1, atrio_2, atrio_3, cripta_1, cripta_2, cripta_3, cripta_4, capilla_1, capilla_2, cisterna, desague, osario, torre
+
+MAPA: 1 Alcance BFS, 2 Exploración DFS, 3 Ruta mínima, 0 Volver
+Sub-opción:
+==========================================
+  KING BALDWIN — THE LEPER'S CURSE
+==========================================
+  Estás en: Nexo de Jerusalén
+  Vida: 100 · Podredumbre: fase 1/3
+  Arma activa: Espada del Sepulcro
+  Máscara equipada: (rostro descarnado)
+  Objetos en la bolsa: 5 / 6
+  Turno en curso: Rey Balduino
+  Eventos pendientes en la cola: 7
+  Historial (acciones apiladas): 0
+==========================================
+
+1 Moverse  2 Recoger  3 Deshacer  4 Historial  5 Turnos y eventos
+6 Inventario  7 Armas  8 Máscaras  9 Mapa  10 Misiones  11 Mundo
+12 Realizar objetivo de la sala  0 Salir
+Opción: Abandonas el reino. Fin de la sesión.

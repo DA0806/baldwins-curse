@@ -1,0 +1,20 @@
+test_all_ten_missions_and_sealed_final_chamber (test_campaign.CampaignTests.test_all_ten_missions_and_sealed_final_chamber) ... ok
+test_auxiliary_room_updates_graph_and_rewinds_deletion (test_campaign.CampaignTests.test_auxiliary_room_updates_graph_and_rewinds_deletion) ... ok
+test_undo_mission_restores_dependents_and_item (test_campaign.CampaignTests.test_undo_mission_restores_dependents_and_item) ... ok
+test_destinations_reject_non_decimal_and_out_of_range_input (test_cli.ConsoleEntryPointTests.test_destinations_reject_non_decimal_and_out_of_range_input) ... ok
+test_eof_leaves_cleanly (test_cli.ConsoleEntryPointTests.test_eof_leaves_cleanly) ... ok
+test_invalid_danger_stays_in_world_menu (test_cli.ConsoleEntryPointTests.test_invalid_danger_stays_in_world_menu) ... ok
+test_invalid_main_menu_values_and_zero_to_exit (test_cli.ConsoleEntryPointTests.test_invalid_main_menu_values_and_zero_to_exit) ... ok
+test_original_dungeon_route_with_event_and_undo (test_cli.ConsoleEntryPointTests.test_original_dungeon_route_with_event_and_undo) ... ok
+test_submenus_accept_invalid_values_without_crashing (test_cli.ConsoleEntryPointTests.test_submenus_accept_invalid_values_without_crashing) ... ok
+test_unknown_and_sealed_routes_from_the_map (test_cli.ConsoleEntryPointTests.test_unknown_and_sealed_routes_from_the_map) ... ok
+test_movement_and_its_event_are_one_reversible_action (test_rewind.RewindTests.test_movement_and_its_event_are_one_reversible_action) ... ok
+test_undo_empty_history_leaves_game_running (test_rewind.RewindTests.test_undo_empty_history_leaves_game_running) ... ok
+test_bfs_shortest_path_and_dfs_on_cycles_and_isolated_nodes (test_structures.StructuresTests.test_bfs_shortest_path_and_dfs_on_cycles_and_isolated_nodes) ... ok
+test_mission_guards_and_orders (test_structures.StructuresTests.test_mission_guards_and_orders) ... ok
+test_world_dictionary_mutations_and_two_queries (test_structures.StructuresTests.test_world_dictionary_mutations_and_two_queries) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 2.618s
+
+OK
